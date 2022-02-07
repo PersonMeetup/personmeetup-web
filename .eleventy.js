@@ -1,8 +1,11 @@
 const markdownIt = require("markdown-it");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
 module.exports = function(eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true);
+    
+    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     // Parse markdown referenced within nunjucks
     eleventyConfig.addPairedShortcode("markdown", function(content) {

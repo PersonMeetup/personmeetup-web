@@ -9,13 +9,21 @@
     
     <meta name="generator" content="{{ site.generator }}">
 
-    <link rel="stylesheet" href="{{ '/css/boilerplate.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/header.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/footer.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/fonts.css' | url }}">
+    <link rel="stylesheet" href="/css/boilerplate.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/fonts.css">
 </head>
 <body>
-    {{ content | safe }}
+    <header>
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+    </header>
+    <main>
+        {{ content | safe }}
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
