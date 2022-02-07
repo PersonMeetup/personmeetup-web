@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    
+    <meta name="generator" content="{{ site.generator }}">
+
+    <link rel="stylesheet" href="{{ '/css/boilerplate.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/header.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/footer.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/fonts.css' | url }}">
+</head>
+<body>
+    {{ content | safe }}
+</body>
+</html>
