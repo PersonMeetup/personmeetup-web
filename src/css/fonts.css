@@ -7,13 +7,17 @@ p {
 }
 h1 {
     font-family: 'Source Sans Pro';
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 900;
     margin-bottom: .25em;
 }
 h2 {
     font-family: 'Source Sans Pro';
     margin-bottom: .15em;
+}
+nav {
+    font-family: 'Source Sans Pro';
+    font-size: 18px;
 }
 
 /*=== FONT FAMILIES ===*/

@@ -4,9 +4,12 @@
 }
 body, html {
     min-height: 100vh;
-    max-width: 100ch;
+    max-width: 140ch;
     margin-left: auto;
     margin-right: auto;
+}
+body {
+    background: center / 195% url("/img/background_test.jpg");
 }
 img {
     max-width: 100%;

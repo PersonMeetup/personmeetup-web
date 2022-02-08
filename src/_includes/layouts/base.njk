@@ -17,7 +17,9 @@
 </head>
 <body>
     <header>
-        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+        <nav>
+            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+        </nav>
     </header>
     <main>
         {{ content | safe }}
@@ -33,7 +35,7 @@
             </ul>
         </section>
         <section>
-            <p>Generic licence information will go here. It better be under creative commons or your an idiot.</p>
+            <p>Generic licence information will go here. It better be under creative commons or your an idiot. Also include details on what you use to make the site and host it.</p>
         </section>
     </footer>
 </body>

@@ -1,0 +1,11 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 2ch;
+}
+footer ul {
+    list-style: none;
+}
+footer li {
+    margin-bottom: .2em;
+}

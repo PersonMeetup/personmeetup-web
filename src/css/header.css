@@ -1,0 +1,13 @@
+header nav {
+    padding: 35px 0;
+}
+header nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+header nav ul li {
+    display: inline-block;
+}
