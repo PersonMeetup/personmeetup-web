@@ -2,6 +2,21 @@ main {
     padding: 2ch 10ch;
 }
 
+main .index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 500px 100px;
+    gap: 10px;
+}
+main .indexItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin: 0;
+    border: 3px #bbbbbb solid;
+}
+
 main nav.blogNav {
     display: grid;
     grid-template-columns: 3fr 1fr;
