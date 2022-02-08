@@ -9,3 +9,6 @@ footer ul {
 footer li {
     margin-bottom: .2em;
 }
+footer aside {
+    padding-right: 40px;
+}
