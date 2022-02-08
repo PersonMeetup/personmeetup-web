@@ -1,5 +1,5 @@
 ---
-layout: layouts/article.njk
+layout: layouts/post.njk
 title: Test Post
 ---
 # Irvin's assignment research
