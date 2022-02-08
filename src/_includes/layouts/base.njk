@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="primary" class="header">
             {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
         </nav>
     </header>
@@ -25,7 +25,7 @@
         {{ content | safe }}
     </main>
     <footer>
-        <section>
+        <nav aria-label="secondary">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/portfolio/">Portfolio</a></li>
@@ -33,10 +33,10 @@
                 <li><a href="/contact/">Contact</a></li>
                 <li><a href="/privacy-policy/">Privacy Policy</a></li>
             </ul>
-        </section>
-        <section>
+        </nav>
+        <aside>
             <p>Generic licence information will go here. It better be under creative commons or your an idiot. Also include details on what you use to make the site and host it.</p>
-        </section>
+        </aside>
     </footer>
 </body>
 </html>

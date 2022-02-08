@@ -1,12 +1,16 @@
 ---
 layout: layouts/post.njk
-title: Test Post
+title: Irvin's Assignment Research
+description: That late night helping Irvin with his assignment payed off in the end
+tags:
+  - pain
+date: 2021-11-03
 ---
-# Irvin's assignment research
+# Irvin's Assignment Research
 
 Imagine the scene; your relaxing after a long day of work when you get a call from one of your friends. You find out they have an assignment due tonight that they're just getting started on. Worst part is, you just watched a rabbit hole gateway video that morning that covers some of the assignment's material.
 
-Being blunt; a while back one of my friends on Discord called saying they needed to submit a clickbait article on brewing coffee by midnight. Not wanting to see them fail I got to work with them, brainstorming ideas for the article. It also helps that just that morning I watched [Tom Scott's collab with James Hoffmann](), so I ended up in a mini rabbit hole of YouTube coffee content. Perfect.
+Being blunt; a while back one of my friends on Discord called saying they needed to submit a clickbait article on brewing coffee by midnight. Not wanting to see them fail I got to work with them, brainstorming ideas for the article. It also helps that just that morning I watched [Tom Scott's collab with James Hoffmann](#), so I ended up in a mini rabbit hole of YouTube coffee content. Perfect.
 
 ## Get yourself some WHOLE BEANS!
 

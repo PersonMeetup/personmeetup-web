@@ -1,9 +1,18 @@
 body {
     font-family: 'system';
+    font-size: 18px;
+}
+p.caption {
+    font-size: 16px;
 }
 p {
-    font-size: 16px;
     margin-bottom: 1em;
+}
+h1.special {
+    font-size: 40px;
+}
+.special {
+    text-align: center;
 }
 h1 {
     font-family: 'Source Sans Pro';
@@ -15,7 +24,10 @@ h2 {
     font-family: 'Source Sans Pro';
     margin-bottom: .15em;
 }
-nav {
+h3 {
+    font-family: 'Source Sans Pro';
+}
+nav.header {
     font-family: 'Source Sans Pro';
     font-size: 18px;
 }
