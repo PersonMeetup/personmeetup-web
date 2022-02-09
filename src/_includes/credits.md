@@ -1,0 +1,1 @@
+This site uses locally hosted icons and fonts from the [Google Fonts](https://fonts.google.com/) library, which was set up with the help of [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts). It's also built from [Eleventy](https://www.11ty.dev/).
