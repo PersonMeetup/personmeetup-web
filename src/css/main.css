@@ -28,3 +28,22 @@ main .blogNavItem {
     border: 3px #bbbbbb dashed;
     margin-bottom: 10px;
 }
+
+main .portfolioNav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 400px; height: 50px;
+    margin: auto;
+}
+
+main .portfolioNav ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+main .portfolioNav ul li {
+    display: inline-block;
+}

@@ -25,13 +25,18 @@ module.exports = function(eleventyConfig) {
         return array.slice(0, n);
     });
 
-    eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
-    });
-
     // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+        if (typeof dateObj === 'string') {
+            return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+        }
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    });
+    eleventyConfig.addFilter("readableDate", dateObj => {
+        if (typeof dateObj === 'string') {
+            return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+        }
+        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
     });
 
     function filterTagList(tags) {

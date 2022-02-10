@@ -4,8 +4,8 @@
   "description": "Personal website for Leslie 'Person Meeutp' Swan",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve"
+    "build": "eleventy --quiet",
+    "start": "eleventy --serve --quiet"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+---
+  <h1 class="special">{{ title }}</h1>
+
+  <nav class="portfolioNav">
+    <ul>
+      <li><a href="/portfolio/">All</a></li>
+      <li><a href="/portfolio/games/">Games</a></li>
+      <li><a href="/portfolio/music/">Music</a></li>
+      <li><a href="/portfolio/video/">Video</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">Programming</a></li>
+      <li><a href="#">Competitive</a></li>
+      <li><a href="#">Web Design</a></li>
+    </ul>
+  </nav>
+
+  <nav class="projectNav">
+    {{ content | safe }}
+  </nav>

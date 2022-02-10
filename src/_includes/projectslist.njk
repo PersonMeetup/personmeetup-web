@@ -1,0 +1,6 @@
+<div>
+  <h2><a href="{{ project.url | url }}">{{ project.title }}</a></h2>
+  <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+  <p>{{ post.data.description }}</p>
+  <!--Postmortem Link Here-->
+</div>
