@@ -1,6 +1,6 @@
 {
   "name": "personmeetup-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Personal website for Leslie 'Person Meeutp' Swan",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,8 @@
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "luxon": "^2.3.0",
-    "markdown-it": "^12.3.2"
+    "markdown-it": "^12.3.2",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mark": "^3.0.1"
   }
 }

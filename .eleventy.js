@@ -1,5 +1,10 @@
 const { DateTime } = require("luxon");
-const markdownIt = require("markdown-it");
+const markdownIt = require("markdown-it")({
+                        html: true,
+                        breaks: true,
+                        linkify: true
+                })  .use(require("markdown-it-footnote"))
+                    .use(require("markdown-it-mark"));
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
@@ -10,7 +15,7 @@ module.exports = function(eleventyConfig) {
 
     // Parse markdown referenced within nunjucks
     eleventyConfig.addPairedShortcode("markdown", function(content) {
-        return markdownIt().render(content);
+        return markdownIt.render(content);
     });
 
     // Get the first `n` elements of a collection.
@@ -61,11 +66,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/js");
 
     // Customize Markdown library and settings:
-    eleventyConfig.setLibrary("md", markdownIt({
-        html: true,
-        breaks: true,
-        linkify: true
-    }));
+    eleventyConfig.setLibrary("md", markdownIt);
 
     return {
         markdownTemplateEngine: "njk",
