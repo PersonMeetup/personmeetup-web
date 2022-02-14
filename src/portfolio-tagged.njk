@@ -8,6 +8,7 @@ types:
   - Games
   - Music
   - Video
+  - Web Design
 layout: layouts/browse-portfolio.njk
 eleventyComputed:
   title: "{{ type }}"
@@ -16,13 +17,10 @@ permalink: /portfolio/{{ type | slugify }}/
 {% set filter = type %}
 {% set projectslist = projects %}
 
-<section>
 {% for project in projectslist | reverse %}
   {% if filter and filter == project.type %}
     {% include "projectslist.njk" %}
   {% endif %}
 {% endfor %}
-</section>
-
 
 

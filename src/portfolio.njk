@@ -6,9 +6,7 @@ eleventyNavigation:
   order: 1
 ---
 {% set projectslist = projects %}
-
-<section>
+{% set class = "projectNavGeneral" %}
 {% for project in projectslist | reverse %}
   {% include "projectslist.njk" %}
 {% endfor %}
-</section>

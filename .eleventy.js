@@ -9,72 +9,72 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
 module.exports = function(eleventyConfig) {
-    eleventyConfig.setDataDeepMerge(true);
+  eleventyConfig.setDataDeepMerge(true);
     
-    eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-    // Parse markdown referenced within nunjucks
-    eleventyConfig.addPairedShortcode("markdown", function(content) {
-        return markdownIt.render(content);
-    });
+  // Parse markdown referenced within nunjucks
+  eleventyConfig.addPairedShortcode("markdown", function(content) {
+    return markdownIt.render(content);
+  });
 
-    // Get the first `n` elements of a collection.
-    eleventyConfig.addFilter("head", (array, n) => {
-        if(!Array.isArray(array) || array.length === 0) {
-            return [];
-        }
-        if( n < 0 ) {
-            return array.slice(n);
-        }
-
-        return array.slice(0, n);
-    });
-
-    // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        if (typeof dateObj === 'string') {
-            return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-        }
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-    });
-    eleventyConfig.addFilter("readableDate", dateObj => {
-        if (typeof dateObj === 'string') {
-            return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
-        }
-        return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
-    });
-
-    function filterTagList(tags) {
-        return (tags || []).filter(tag => ["all", "nav", "blog"].indexOf(tag) === -1);
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter("head", (array, n) => {
+    if(!Array.isArray(array) || array.length === 0) {
+      return [];
     }
-    eleventyConfig.addFilter("filterTagList", filterTagList);
+    if( n < 0 ) {
+      return array.slice(n);
+    }
 
-    // Create an array of all tags
-    eleventyConfig.addCollection("tagList", function(collection) {
-        let tagSet = new Set();
-        collection.getAll().forEach(item => {
-            (item.data.tags || []).forEach(tag => tagSet.add(tag));
-        });
+    return array.slice(0, n);
+  });
 
-        return filterTagList([...tagSet]);
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    if (typeof dateObj === 'string') {
+      return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    }
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  });
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    if (typeof dateObj === 'string') {
+      return DateTime.fromISO(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+    }
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  });
+
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "blog"].indexOf(tag) === -1);
+  }
+  eleventyConfig.addFilter("filterTagList", filterTagList);
+
+  // Create an array of all tags
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
     });
 
-    // Copy media folders to the output
-    eleventyConfig.addPassthroughCopy("src/img");
-    eleventyConfig.addPassthroughCopy("src/css");
-    eleventyConfig.addPassthroughCopy("src/fonts");
-    eleventyConfig.addPassthroughCopy("src/js");
+    return filterTagList([...tagSet]);
+  });
 
-    // Customize Markdown library and settings:
-    eleventyConfig.setLibrary("md", markdownIt);
+  // Copy media folders to the output
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/js");
 
-    return {
-        markdownTemplateEngine: "njk",
-        HTMLTemplateEngine: "njk",
-        dataTemplateEngine: false,
-        dir: {
-            input: "src",
-            output: "dist"
-        }
-    };
+  // Customize Markdown library and settings:
+  eleventyConfig.setLibrary("md", markdownIt);
+
+  return {
+    markdownTemplateEngine: "njk",
+    HTMLTemplateEngine: "njk",
+    dataTemplateEngine: false,
+    dir: {
+      input: "src",
+      output: "dist"
+    }
+  };
 };

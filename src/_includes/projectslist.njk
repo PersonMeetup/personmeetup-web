@@ -1,4 +1,7 @@
-<div>
+<div class="{{ class }}">
+  {% if project.img %}
+  <a href="{{ project.url | url }}"><img src="{{ project.img }}"></a>
+  {% endif %}
   <h2><a href="{{ project.url | url }}">{{ project.title }}</a></h2>
   <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
   <p>{{ post.data.description }}</p>

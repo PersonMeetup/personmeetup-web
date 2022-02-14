@@ -5,23 +5,31 @@ eleventyNavigation:
   order: 3
 ---
 <section class="index">
-    <h2 class="indexItem indexItemPrimary">GAMES</h2>
-    <h2 class="indexItem indexItemPrimary">MUSIC</h2>
-    <h2 class="indexItem indexItemPrimary">VIDEO</h2>
-    <h3 class="indexItem indexItemSecondary">PROGRAMMING</h3>
-    <h3 class="indexItem indexItemSecondary">COMPETITIVE</h3>
-    <h3 class="indexItem indexItemSecondary">WEB DESIGN</h3>
+  <h2 class="indexItem indexItemPrimary">GAMES</h2>
+  <h2 class="indexItem indexItemPrimary">MUSIC</h2>
+  <h2 class="indexItem indexItemPrimary">VIDEO</h2>
+  <h3 class="indexItem indexItemSecondary">PROGRAMMING</h3>
+  <h3 class="indexItem indexItemSecondary">COMPETITIVE</h3>
+  <h3 class="indexItem indexItemSecondary">WEB DESIGN</h3>
 </section>
 
 
 <figure class="about" id="about">
-    <img src="#" alt="Person Image">
-    <figcaption>This is a paragraph about me. God, I dread having to be narsaistic.</figcaption>
+  <img src="#" alt="Person Image">
+  <figcaption>{% markdown %}{% include "about.md" %}{% endmarkdown %}</figcaption>
 </figure>
 
 <section>
-    <!--Recent Project Release-->
+  <h2>Latest Project</h2>
+  {% set projectslist = projects | head(-1) %}
+  {% for project in projectslist | reverse %}
+    {% include "projectslist.njk" %}
+  {% endfor %}
 </section>
 <section>
-    <!--Recent Blog Post-->
+  <h2>Latest Blogpost</h2>
+  {% set postslist = collections.blog | head(-1) %}
+  {% for post in postslist | reverse %}
+    {% include "postslist.njk" %}
+  {% endfor %}
 </section>

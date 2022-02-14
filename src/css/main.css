@@ -35,7 +35,6 @@ main .portfolioNav {
     width: 400px; height: 50px;
     margin: auto;
 }
-
 main .portfolioNav ul {
     list-style-type: none;
     padding-left: 0;
@@ -43,7 +42,25 @@ main .portfolioNav ul {
     justify-content: center;
     column-gap: 20px;
 }
-
 main .portfolioNav ul li {
     display: inline-block;
+}
+main .projectNav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+main .projectNavGeneral {
+    border: 3px #bbbbbb dashed;
+    padding: 5px;
+    width: 340px;
+    text-align: center;
+}
+main .projectNavGeneral a {
+    display: flex;
+    justify-content: center;
+}
+main .projectNavGeneral img {
+    border: 2px #333333 solid;
+    height: 170px;
 }
