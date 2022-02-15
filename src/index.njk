@@ -4,14 +4,14 @@ eleventyNavigation:
   key: Person Meetup
   order: 3
 ---
-<section class="index">
+<nav class="index">
   <h2 class="indexItem indexItemPrimary">GAMES</h2>
   <h2 class="indexItem indexItemPrimary">MUSIC</h2>
   <h2 class="indexItem indexItemPrimary">VIDEO</h2>
   <h3 class="indexItem indexItemSecondary">PROGRAMMING</h3>
   <h3 class="indexItem indexItemSecondary">COMPETITIVE</h3>
   <h3 class="indexItem indexItemSecondary">WEB DESIGN</h3>
-</section>
+</nav>
 
 
 <figure class="about" id="about">
@@ -19,17 +19,20 @@ eleventyNavigation:
   <figcaption>{% markdown %}{% include "about.md" %}{% endmarkdown %}</figcaption>
 </figure>
 
-<section>
-  <h2>Latest Project</h2>
-  {% set projectslist = projects | head(-1) %}
-  {% for project in projectslist | reverse %}
-    {% include "projectslist.njk" %}
-  {% endfor %}
-</section>
-<section>
-  <h2>Latest Blogpost</h2>
-  {% set postslist = collections.blog | head(-1) %}
-  {% for post in postslist | reverse %}
-    {% include "postslist.njk" %}
-  {% endfor %}
-</section>
+<nav class="latest">
+  {% set class = "latestItem" %}
+  <section>
+    <h2>Latest Project</h2>
+    {% set projectslist = projects | head(-1) %}
+    {% for project in projectslist | reverse %}
+      {% include "projectslist.njk" %}
+    {% endfor %}
+  </section>
+  <section>
+    <h2>Latest Blogpost</h2>
+    {% set postslist = collections.blog | head(-1) %}
+    {% for post in postslist | reverse %}
+      {% include "postslist.njk" %}
+    {% endfor %}
+  </section>
+</nav>

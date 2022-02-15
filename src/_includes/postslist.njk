@@ -1,5 +1,10 @@
 <div class="{{ class }}">
-  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+  {% if class == "latestItem" %}
+    <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+  {% else %}
+    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+  {% endif %}
+
   <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}<a href="{{ tagUrl | url }}">{{ tag }}</a>{% endfor %}</p>
   <p>{{ post.data.description }}</p>
 </div>

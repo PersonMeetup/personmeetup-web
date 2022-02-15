@@ -18,6 +18,20 @@ main .indexItem {
     border: 3px #bbbbbb solid;
 }
 
+main .latest {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+main .latestItem {
+    border: 2px #bbbbbb dashed;
+    padding: 5px;
+    min-height: 16ch;
+}
+main .latestItem img {
+    height: 140px;
+}
+
 main nav.blogNav {
     display: grid;
     grid-template-columns: 3fr 1fr;
