@@ -7,6 +7,8 @@ const markdownIt = require("markdown-it")({
                     .use(require("markdown-it-mark"));
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
+const Image = require("@11ty/eleventy-img");
+
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
 module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);

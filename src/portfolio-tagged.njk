@@ -17,10 +17,18 @@ permalink: /portfolio/{{ type | slugify }}/
 {% set filter = type %}
 {% set projectslist = projects %}
 
-{% for project in projectslist | reverse %}
-  {% if filter and filter == project.type %}
-    {% include "projectslist.njk" %}
-  {% endif %}
-{% endfor %}
-
-
+{% if not (type == "Music") %}
+  {% set class = "projectNavGeneral" %}
+  {% for project in projectslist | reverse %}
+    {% if filter == project.type %}
+      {% include "projectslist.njk" %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% set class = "projectNavMusic" %}
+  {% for project in projectslist | reverse %}
+    {% if filter == project.type %}
+      {% include "projectslist.njk" %}
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -33,7 +33,7 @@ main .portfolioNav {
     display: grid;
     grid-template-rows: 1fr 1fr;
     width: 400px; height: 50px;
-    margin: auto;
+    margin: 0 auto 24px;
 }
 main .portfolioNav ul {
     list-style-type: none;
@@ -47,6 +47,8 @@ main .portfolioNav ul li {
 }
 main .projectNav {
     display: grid;
+    position: relative;
+    right: 6ch;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
 }
@@ -63,4 +65,11 @@ main .projectNavGeneral a {
 main .projectNavGeneral img {
     border: 2px #333333 solid;
     height: 170px;
+}
+
+main .projectNavMusic {
+    border: 3px #bbbbbb dashed;
+    padding: 5px;
+    width: 340px;
+    text-align: center;
 }
