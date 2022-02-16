@@ -26,7 +26,10 @@ main .latest {
 main .latestItem {
     border: 2px #bbbbbb dashed;
     padding: 5px;
-    min-height: 16ch;
+    height: 160px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 main .latestItem img {
     height: 140px;
@@ -86,4 +89,7 @@ main .projectNavMusic {
     padding: 5px;
     width: 340px;
     text-align: center;
+}
+main .projectNavMusic iframe {
+    border: 2px #333333 solid;
 }

@@ -1,10 +1,13 @@
 <div class="{{ class }}">
   {% if class == "latestItem" %}
-    <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+    <div>
+      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+      <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}<a href="{{ tagUrl | url }}">{{ tag }}</a>{% endfor %}</p>
+      <p>{{ post.data.description }}</p>
+    </div>
   {% else %}
     <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+    <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}<a href="{{ tagUrl | url }}">{{ tag }}</a>{% endfor %}</p>
+    <p>{{ post.data.description }}</p>
   {% endif %}
-
-  <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}<a href="{{ tagUrl | url }}">{{ tag }}</a>{% endfor %}</p>
-  <p>{{ post.data.description }}</p>
 </div>

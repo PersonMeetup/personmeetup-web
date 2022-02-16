@@ -2,7 +2,6 @@
 title: Pinnacle of Web Design
 layout: layouts/base.njk
 ---
-<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.3.1/lite-youtube.js"></script>
 <style>
     .frog {
         position: absolute;
@@ -12,7 +11,9 @@ layout: layouts/base.njk
 </style>
 
 <h1 class="special">INTERNET LINKZ</h1>
-<lite-youtube style="width: 640px; margin: auto;" videoid="wBTsFZGzoho" nocookie="true" videotitle="You're going surfing on the internet!"></lite-youtube>
+{% set videoTitle = "You're going surfing on the internet!" %}
+{% set videoId = "wBTsFZGzoho" %}
+{% include 'youtube.njk' %}
 <p class="special">(This is as close as this website will get to the design of the retro web. Better take in that peak graphical design.)</p>
 <p class="special">((Oh, ya, my apologies to those using screen readers.))</p>
 

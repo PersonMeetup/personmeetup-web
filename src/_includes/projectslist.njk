@@ -6,12 +6,14 @@
   {% endif %}
 
   {% if class == "latestItem" %}
-    <h3><a href="{{ project.url | url }}">{{ project.title }}</a></h3>
+    <div>
+      <h3><a href="{{ project.url | url }}">{{ project.title }}</a></h3>
+      <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+      <!--Postmortem Link Here-->
+    </div>
   {% else %}
     <h2><a href="{{ project.url | url }}">{{ project.title }}</a></h2>
+    <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+    <!--Postmortem Link Here-->
   {% endif %}
-
-  <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
-  <p>{{ post.data.description }}</p>
-  <!--Postmortem Link Here-->
 </div>
