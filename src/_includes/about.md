@@ -1,1 +1,3 @@
-This is a paragraph about me. God, I dread having to be narsaistic.
+Leslie "Person Meetup" Swan is a Canadian New-Media Designer who consistantly works hard on the projects they're given. They've been working with Valve's *Source* Engine for over 5 years, making several Portal 2 maps along the way. During that time they've also gotten into composing and video editing, albiet to a lesser extent. They enjoy spending their time learning more about technology and creating things for others to hopefully smile at.
+
+Social Media Platform links can go here maybe?
