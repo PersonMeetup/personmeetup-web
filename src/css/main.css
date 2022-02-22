@@ -13,10 +13,30 @@ main .indexItem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
     margin: 0;
     border: 3px #bbbbbb solid;
+    color: #fff; text-decoration: none;
+    transition: font-size 200ms, filter 1s;
+    filter: grayscale(1);
 }
+main .indexItem:hover {
+    font-size: 27px;
+    filter: grayscale(0);
+}
+main .indexItemGames {
+    background: center url("/img/index-games.jpg");
+}
+main .indexItemMusic {
+    background: center url("/img/index-music.jpg");
+}
+main .indexItemVideo {
+    background: center url("/img/index-video.jpg");
+}
+main .indexItemSecondary {
+    background-color: #63c5fd;
+}
+
+
 
 main .latest {
     display: grid;
