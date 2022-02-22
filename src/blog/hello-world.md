@@ -1,18 +1,16 @@
 ---
 layout: layouts/post.njk
 title: Hello, World!
-description: Hey there! My name's Leslie Swan, and this is the first blog post to my website.
+description: We all need to start from somewhere...
 date: 2022-02-12
 tags:
   - Meta
 ---
-# Hello, World!
-
 Hey there! My name's Leslie Swan, and this is the first blog post to my website. Being honest, it feels kinda weird to introduce myself by my real name, since I often go by Person Meetup online. Even this website itself is named that!
 
 Speaking of this website, its purpose is to give me a space to show off my work and give me a way to discuss things that come to mind. This will mostly consist of reflections on finished projects and different ideas about design, but I may throw in an wild card occasionally.
 
-## A deeper About Me
+## How did we get here?
 
 I included an [about section](/#about) on the index, but I want to go deeper regarding how I got into my main interests. It also serves as a jumping off point for my past, which I'm sure I'll end up mentioning in the future.
 
