@@ -14,3 +14,7 @@ This site utilizes a LOT of open-source projects. This page serves to give them 
 - [SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
 
 You can also find the GitHub for this site [here](#).
+
+## Open Fonts
+
+This site uses [*Source Sans Pro*](https://fonts.google.com/specimen/Source+Sans+Pro) and [*League Script*](https://fonts.google.com/specimen/League+Script) from the Google Fonts Library under the [Open Font Licence](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). It also uses Haley Wakamatsu's [*Determination*](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font) font.

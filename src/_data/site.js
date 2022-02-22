@@ -8,7 +8,7 @@ module.exports = function () {
     title: "Person Meetup",
     url: "https://personmeetup.neocities.org/",
     language: "en",
-    description: "Bap",
+    description: "I like to create stuff",
     feed: {
         subtitle: "Bap",
         filename: "feed.xml",
@@ -22,7 +22,7 @@ module.exports = function () {
     author: {
         name: "Leslie Swan",
         email: "youremailaddress@example.com",
-        url: "https://example.com/about-me/"
+        url: "https://example.com/#about"
     }
   };
 };

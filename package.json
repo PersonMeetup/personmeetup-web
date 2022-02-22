@@ -1,7 +1,7 @@
 {
   "name": "personmeetup-web",
-  "version": "0.2.0",
-  "description": "Personal website for Leslie 'Person Meeutp' Swan",
+  "version": "0.3.0",
+  "description": "Personal website for Leslie 'Person Meetup' Swan",
   "main": "index.js",
   "scripts": {
     "build": "eleventy --quiet",

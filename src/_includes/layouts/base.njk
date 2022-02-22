@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ description or site.description }}">
-    
-    <meta name="generator" content="{{ site.generator }}">
+  <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
 
-    <link rel="stylesheet" href="/css/boilerplate.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/lite-yt-embed.css">
+  <link rel="stylesheet" href="/css/boilerplate.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/lite-yt-embed.css">
+
+  <meta name="generator" content="{{ site.generator }}">
 </head>
 <body>
-    <header>
-        <nav aria-label="primary">
-            {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-        </nav>
-    </header>
-    <main>
-        {{ content | safe }}
-    </main>
-    <footer>
-        <nav aria-label="secondary">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/portfolio/">Portfolio</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/contact/">Contact</a></li>
-                <li><a href="/privacy/">Privacy Policy</a></li>
-            </ul>
-        </nav>
-        <aside>
-            {% markdown %}{% include "credits.md" %}{% endmarkdown %}
-        </aside>
-    </footer>
+  <header>
+    <nav aria-label="primary">
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <nav aria-label="secondary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <aside>
+      {% markdown %}{% include "credits.md" %}{% endmarkdown %}
+    </aside>
+  </footer>
 </body>
 </html>

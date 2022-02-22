@@ -1,4 +1,4 @@
-The credits section is needing to be redone. That is all.
+This site is built from [open-source](/open-source/) projects.
 
 <div class="social socialMid">{% include "social.njk" %}</div>
 
