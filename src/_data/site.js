@@ -10,19 +10,15 @@ module.exports = function () {
     language: "en",
     description: "I like to create stuff",
     feed: {
-        subtitle: "Bap",
+        subtitle: "I like to create stuff",
         filename: "feed.xml",
-        path: "/feed/feed.xml",
-        id: "https://example.com/"
-      },
-    jsonfeed: {
-        path: "/feed/feed.json",
-        url: "https://example.com/feed/feed.json"
+        path: "/feed.xml",
+        id: "https://personmeetup.neocities.org/"
       },
     author: {
         name: "Leslie Swan",
-        email: "youremailaddress@example.com",
-        url: "https://example.com/#about"
+        email: "myemailaddress@notyet.com",
+        url: "https://personmeetup.neocities.org/#about"
     }
   };
 };

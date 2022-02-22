@@ -5,15 +5,17 @@ const markdownIt = require("markdown-it")({
                         linkify: true
                 })  .use(require("markdown-it-footnote"))
                     .use(require("markdown-it-mark"));
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const eleventyNav = require("@11ty/eleventy-navigation");
+const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 
-const Image = require("@11ty/eleventy-img");
+const eleventyImg = require("@11ty/eleventy-img");
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
 module.exports = function(eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
     
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyNav);
+  eleventyConfig.addPlugin(eleventyRSS);
 
   // Parse markdown referenced within nunjucks
   eleventyConfig.addPairedShortcode("markdown", function(content) {
