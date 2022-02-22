@@ -6,7 +6,7 @@ body {
 p.caption {
     font-size: 16px;
 }
-p {
+p, hr {
     margin-bottom: 1em;
 }
 h1.special {
