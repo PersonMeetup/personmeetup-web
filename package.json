@@ -1,6 +1,6 @@
 {
   "name": "personmeetup-web",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Personal website for Leslie 'Person Meetup' Swan",
   "main": "index.js",
   "scripts": {

@@ -12,3 +12,11 @@ footer li {
 footer aside {
     padding-right: 40px;
 }
+
+footer a {
+    color: #444444;
+    text-decoration: underline;
+}
+footer a:hover {
+    text-decoration: none;
+}

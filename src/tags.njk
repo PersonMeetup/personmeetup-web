@@ -15,4 +15,9 @@ eleventyComputed:
 permalink: /blog/tags/{{ tag | slugify }}/
 ---
 {% set postslist = collections[ tag ] %}
-{% include "postslist.njk" %}
+{% set class = "blogNavItem" %}
+<section>
+{% for post in postslist | reverse %}
+  {% include "postslist.njk" %}
+{% endfor %}
+</section>

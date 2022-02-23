@@ -16,7 +16,7 @@ main .indexItem {
     margin: 0;
     border: 3px #bbbbbb solid;
     color: #fff; text-decoration: none;
-    transition: font-size 200ms, filter 1s;
+    transition: font-size 200ms, filter 800ms;
     filter: grayscale(1);
 }
 main .indexItem:hover {
@@ -36,12 +36,13 @@ main .indexItemSecondary {
     background-color: #63c5fd;
 }
 
-
-
 main .latest {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
+}
+main .latest h2 {
+    text-align: center;
 }
 main .latestItem {
     border: 2px #bbbbbb dashed;
@@ -53,6 +54,7 @@ main .latestItem {
 }
 main .latestItem img {
     height: 140px;
+    border: 2px solid #333333;
 }
 
 main nav.blogNav {
@@ -123,4 +125,8 @@ main .compPlaytime {
 main .compExtra {
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+main a:hover {
+    text-decoration: none;
 }

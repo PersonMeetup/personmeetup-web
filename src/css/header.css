@@ -5,9 +5,27 @@ header nav ul {
     list-style-type: none;
     padding-left: 0;
     display: flex;
-    justify-content: center;
+    align-items: center; justify-content: center;
     column-gap: 20px;
+    text-align: center;
 }
 header nav ul li {
     display: inline-block;
+}
+header nav a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+header a:hover:not(.person) {
+    text-decoration: underline;
+}
+header .person {
+    font-weight: 700;
+    font-size: 24px;
+    padding: 8px;
+    transition: background-color 200ms;
+    border-radius: 8px;
+}
+header .person:hover {
+    background-color: #63c5fd;
 }

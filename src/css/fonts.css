@@ -33,9 +33,13 @@ h2 {
 h3 {
     font-family: 'Source Sans Pro';
 }
+
 header nav {
     font-family: 'Source Sans Pro';
     font-size: 18px;
+}
+footer {
+    font-family: 'Source Sans Pro';
 }
 
 main .indexItem.indexItemPrimary {
