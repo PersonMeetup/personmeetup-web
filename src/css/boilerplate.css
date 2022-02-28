@@ -10,7 +10,7 @@ body, html {
 }
 
 body {
-    background: center / 195% url("/img/background_test.jpg");
+    background: center / 195% url("/img/background.jpg");
 }
 img {
     max-width: 100%;

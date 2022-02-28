@@ -54,10 +54,13 @@ main .latest h2 {
 main .latestItem {
     border: 2px #bbbbbb dashed;
     padding: 5px;
-    height: 160px;
+    height: 156px;
     display: flex;
     gap: 10px;
     align-items: center;
+}
+main .latestItem a {
+    max-height: 140px;
 }
 main .latestItem img {
     height: 140px;

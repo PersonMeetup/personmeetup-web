@@ -16,8 +16,13 @@ header nav a {
     color: #1a1a1a;
     text-decoration: none;
 }
-header a:hover:not(.person) {
-    text-decoration: underline;
+header li:not(.person) {
+    padding: 4px;
+    border-bottom: 2px solid #fff;
+    transition: border-bottom 150ms;
+}
+header li:hover:not(.person) {
+    border-bottom: 2px solid #1a1a1a;
 }
 header .person {
     font-weight: 700;
