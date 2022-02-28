@@ -130,3 +130,13 @@ main .compExtra {
 main a:hover {
     text-decoration: none;
 }
+
+main .construction {
+    background-color: #ffdd44;
+    border: 4px dashed #333333;
+    padding: 16px;
+    margin: 0 32px 32px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

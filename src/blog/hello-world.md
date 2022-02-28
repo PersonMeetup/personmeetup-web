@@ -1,10 +1,10 @@
 ---
-layout: layouts/post.njk
 title: Hello, World!
 description: We all need to start from somewhere...
 date: 2022-02-12
 tags:
   - Meta
+layout: layouts/post.njk
 ---
 Hey there! My name's Leslie Swan, and this is the first blog post to my website. Being honest, it feels kinda weird to introduce myself by my real name, since I often go by Person Meetup online. Even this website itself is named that!
 

@@ -1,4 +1,4 @@
-This site is built from [open-source](/open-source/) projects.
+This site uses [open-source](/open-source/) projects, and has its code available on [GitHub](#).
 
 <div class="social socialMid">{% include "social.njk" %}</div>
 
