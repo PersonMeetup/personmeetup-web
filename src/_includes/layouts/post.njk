@@ -6,6 +6,7 @@ layout: layouts/base.njk
 
     {{ content | safe }}
 
+    {% if not(meta) %}
     <script src="https://giscus.app/client.js"
             data-repo="personmeetup/personmeetup-web"
             data-repo-id="R_kgDOG7XQQw"
@@ -20,4 +21,5 @@ layout: layouts/base.njk
             crossorigin="anonymous"
             async>
     </script>
+    {% endif %}
 </article>

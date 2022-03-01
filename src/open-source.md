@@ -1,6 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Open Source
+meta: True
 ---
 This site utilizes a LOT of open-source projects. This page serves to give them credit!
 

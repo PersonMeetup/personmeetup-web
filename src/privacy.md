@@ -4,6 +4,7 @@ title: Privacy Policy
 eleventyNavigation:
   key: Privacy Policy
   order: 5
+meta: True
 ---
 
 I could say that this site doesn't collect any user data (**which it doesn't, at all**), but we both know it's more complicated than that. If the **extrernally hosted services** you're using aren't GDPR compliant, neither are you. For the services this site does use, the general rule of thumb I've taken has been "**prioritize user privacy within reason**." That means if there's an approach to protect a users privacy while still providing the desired content, I'll take it.
