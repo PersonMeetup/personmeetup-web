@@ -28,3 +28,11 @@ https://soundcloud.com/pages/privacy
 This site uses [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed) to provide YouTube embeds in some pages. A special thank you to Sia Karamalegos for their article "[Faster YouTube embeds in Eleventy](https://sia.codes/posts/lite-youtube-embed-eleventy/)," and to Bryce Wray for mentioning them in [his Privacy Policy](https://www.brycewray.com/privacy/).
 
 https://policies.google.com/privacy
+
+## GitHub
+
+This site uses Giscus, a comment system powered by GitHub Discussions. While Giscus itself does not track users, commenting does require signing into GitHub.
+
+https://docs.github.com/en/github/site-policy/github-privacy-statement
+https://docs.github.com/en/github/site-policy/github-data-protection-agreement
+https://docs.github.com/en/github/site-policy/global-privacy-practices
