@@ -9,6 +9,7 @@ module.exports = function () {
     url: "https://personmeetup.neocities.org/",
     language: "en",
     description: "I like to create stuff",
+    image: "/img/opengraph.jpg",
     feed: {
         subtitle: "I like to create stuff",
         filename: "feed.xml",
