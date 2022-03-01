@@ -13,7 +13,7 @@ This site utilizes a LOT of open-source projects. This page serves to give them 
 - [giscus](https://github.com/giscus/giscus)
 - [SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
 
-You can also find the GitHub for this site [here](#).
+You can also find the GitHub for this site [here](https://github.com/PersonMeetup/personmeetup-web).
 
 ## Open Fonts
 

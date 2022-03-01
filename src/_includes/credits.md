@@ -1,4 +1,4 @@
-This site uses [open-source](/open-source/) projects, and has its code available on [GitHub](#).
+This site uses [open-source](/open-source/) projects, and has its code available on [GitHub](https://github.com/PersonMeetup/personmeetup-web).
 
 <div class="social socialMid">{% include "social.njk" %}</div>
 
