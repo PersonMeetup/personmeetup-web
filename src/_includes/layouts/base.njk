@@ -19,7 +19,7 @@
 </head>
 <body>
   <header>
-    <nav aria-label="primary">
+    <nav aria-label="Primary">
       <ul>
         <a href="/portfolio/"><li>Portfolio</li></a>
         <a href="/blog/"><li>Blog</li></a>
@@ -34,10 +34,10 @@
     {{ content | safe }}
   </main>
   <footer>
-    <nav aria-label="secondary">
+    <nav aria-label="Secondary">
       {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
     </nav>
-    <aside>
+    <aside aria-label="Credits">
       {% markdown %}{% include "credits.md" %}{% endmarkdown %}
     </aside>
   </footer>

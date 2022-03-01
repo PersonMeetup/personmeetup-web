@@ -4,7 +4,7 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-<nav class="index">
+<nav class="index" aria-label="Portfolio">
   <a href="/portfolio/games/" class="indexItem indexItemGames"><h2>GAMES</h2></a>
   <a href="/portfolio/music/" class="indexItem indexItemMusic"><h2>MUSIC</h2></a>
   <a href="/portfolio/video/" class="indexItem indexItemVideo"><h2>VIDEO</h2></a>
@@ -19,7 +19,7 @@ eleventyNavigation:
   <figcaption>{% markdown %}{% include "about.md" %}{% endmarkdown %}</figcaption>
 </figure>
 
-<nav class="latest">
+<nav class="latest" aria-label="Latest">
   {% set class = "latestItem" %}
   <section>
     <h2>Latest Project</h2>

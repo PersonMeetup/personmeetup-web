@@ -67,7 +67,7 @@ main .latestItem img {
     border: 2px solid #333333;
 }
 
-main nav.blogNav {
+main .blogNav {
     display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 10px;

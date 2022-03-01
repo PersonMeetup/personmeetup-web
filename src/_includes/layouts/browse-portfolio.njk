@@ -3,7 +3,7 @@ layout: layouts/base.njk
 ---
 
 
-  <nav class="portfolioNav">
+  <nav class="portfolioNav" aria-label="Portfolio">
     <h1 class="special">Portfolio</h1>
     <ul>
       <li><a href="/portfolio/">All</a></li>
@@ -21,7 +21,7 @@ layout: layouts/base.njk
   {% if not(title == "Portfolio") %}<h1 class="specialPortfolio">{{ title }}</h1>{% endif %}
 
   {% if not(title == "Competitive") %}
-  <nav class="projectNav">
+  <nav class="projectNav" aria-label="Projects">
     {{ content | safe }}
   </nav>
   {% else %}
