@@ -4,12 +4,12 @@
   "description": "Personal website for Leslie 'Person Meetup' Swan",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy --quiet",
+    "build": "eleventy",
     "start": "eleventy --serve --quiet"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
