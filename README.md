@@ -1,4 +1,4 @@
-# [personmeetup](https://personmeetup.neocities.org/)
+# [personmeetup.ca](https://personmeetup.ca/)
 
 ## Running Locally
 

@@ -150,3 +150,7 @@ main .construction {
     flex-flow: column;
     align-items: center;
 }
+
+main .contact {
+    text-align: center;
+}

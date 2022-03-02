@@ -6,7 +6,7 @@ module.exports = function () {
   return {
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
     title: "Person Meetup",
-    url: "https://personmeetup.neocities.org/",
+    url: "https://personmeetup.ca/",
     language: "en",
     description: "I like to create stuff",
     image: "/img/opengraph.jpg",
@@ -14,12 +14,12 @@ module.exports = function () {
         subtitle: "I like to create stuff",
         filename: "feed.xml",
         path: "/feed.xml",
-        id: "https://personmeetup.neocities.org/"
+        id: "https://personmeetup.ca/"
       },
     author: {
         name: "Leslie Swan",
         email: "myemailaddress@notyet.com",
-        url: "https://personmeetup.neocities.org/#about"
+        url: "https://personmeetup.ca/#about"
     }
   };
 };
