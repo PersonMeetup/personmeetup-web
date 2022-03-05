@@ -9,7 +9,7 @@ module.exports = function () {
     url: "https://personmeetup.ca/",
     language: "en",
     description: "I like to create stuff",
-    image: "/img/opengraph.jpg",
+    image: "/img/opengraph.png",
     feed: {
         subtitle: "I like to create stuff",
         filename: "feed.xml",

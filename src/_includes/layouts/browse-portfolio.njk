@@ -3,19 +3,21 @@ layout: layouts/base.njk
 ---
 
 
-  <nav class="portfolioNav" aria-label="Portfolio">
-    <h1 class="special">Portfolio</h1>
-    <ul>
-      <li><a href="/portfolio/">All</a></li>
-      <li><a href="/portfolio/games/">Games</a></li>
-      <li><a href="/portfolio/music/">Music</a></li>
-      <li><a href="/portfolio/video/">Video</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://github.com/PersonMeetup">Programming</a></li>
-      <li><a href="/portfolio/competitive/">Competitive</a></li>
-      <li><a href="/portfolio/web-design/">Web Design</a></li>
-    </ul>
+  <nav class="portfolioNavCenter" aria-label="Portfolio">
+    <div class="portfolioNav">
+      <h1 class="special">Portfolio</h1>
+      <ul>
+        <li><a href="/portfolio/">All</a></li>
+        <li><a href="/portfolio/games/">Games</a></li>
+        <li><a href="/portfolio/music/">Music</a></li>
+        <li><a href="/portfolio/video/">Video</a></li>
+      </ul>
+      <ul>
+        <li><a href="https://github.com/PersonMeetup">Programming</a></li>
+        <li><a href="/portfolio/competitive/">Competitive</a></li>
+        <li><a href="/portfolio/web-design/">Web Design</a></li>
+      </ul>
+    </div>
   </nav>
 
   {% if not(title == "Portfolio") %}<h1 class="specialPortfolio">{{ title }}</h1>{% endif %}

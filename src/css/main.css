@@ -1,5 +1,5 @@
 main {
-    padding: 2ch 10ch;
+    padding: 0 10ch;
 }
 
 main .index {
@@ -10,6 +10,7 @@ main .index {
     margin-bottom: 50px;
 }
 main .indexItem {
+    min-width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +68,8 @@ main .latestItem img {
     border: 2px solid #333333;
 }
 
+
+
 main .blogNav {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -77,6 +80,8 @@ main .blogNavItem {
     border: 3px #bbbbbb dashed;
     margin-bottom: 10px;
 }
+
+
 
 main .portfolioNav {
     display: grid;
@@ -96,17 +101,24 @@ main .portfolioNav ul {
 main .portfolioNav ul li {
     display: inline-block;
 }
+main .portfolioNavCenter {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
 main .projectNav {
     display: grid;
     position: relative;
-    right: 6ch;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 340px 340px 340px;
     gap: 10px;
+    justify-content: center;
+    margin-bottom: 50px;
 }
+
 main .projectNavGeneral {
     border: 3px #bbbbbb dashed;
     padding: 5px;
-    width: 340px;
     text-align: center;
 }
 main .projectNavGeneral a {
@@ -121,12 +133,13 @@ main .projectNavGeneral img {
 main .projectNavMusic {
     border: 3px #bbbbbb dashed;
     padding: 5px;
-    width: 340px;
     text-align: center;
 }
 main .projectNavMusic iframe {
     border: 2px #333333 solid;
 }
+
+
 
 main .compPlaytime {
     text-align: center;
@@ -136,6 +149,8 @@ main .compExtra {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
 
 main a:hover {
     text-decoration: none;
@@ -153,4 +168,69 @@ main .construction {
 
 main .contact {
     text-align: center;
+}
+
+
+
+@media screen and (max-width: 1120px) {
+    
+}
+@media screen and (max-width: 1050px) {
+    main {
+        padding: 0 4ch;
+    }
+    main .projectNav {
+        grid-template-columns: 340px 340px;
+    }
+}
+@media screen and (max-width: 940px) {
+    main .about img {
+        width: 256px;
+    }
+    main .index {
+        grid-template-columns: none;
+        grid-template-rows: 55px 55px 55px 55px 55px 55px;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 880px) { 
+    main .latest {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 5px;
+        margin-bottom: 80px;
+    }
+}
+@media screen and (max-width: 690px) {
+    main .projectNav {
+        grid-template-columns: 340px;
+    }
+    main .blogNav {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        column-gap: 10px;
+    }
+    main .blogNavItem {
+        grid-row: 1;
+    }
+}
+@media screen and (max-width: 660px) {
+    main .about {
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width: 480px) {
+    main .portfolioNav {
+        width: 340px;
+    }
+    main .portfolioNav ul {
+        column-gap: 10px;
+    }
+}
+@media screen and (max-width: 440px) {
+    main {
+        padding: 0 2ch;
+    }
 }

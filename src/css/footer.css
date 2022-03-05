@@ -20,3 +20,9 @@ footer a {
 footer a:hover {
     text-decoration: none;
 }
+
+@media screen and (max-width: 880px) {
+    footer .mobileHide {
+        display: none;
+    }
+}
