@@ -7,6 +7,7 @@ const markdownIt = require("markdown-it")({
                     .use(require("markdown-it-mark"));
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
+const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const eleventyImg = require("@11ty/eleventy-img");
 
@@ -16,6 +17,7 @@ module.exports = function(eleventyConfig) {
     
   eleventyConfig.addPlugin(eleventyNav);
   eleventyConfig.addPlugin(eleventyRSS);
+  eleventyConfig.addPlugin(eleventySyntax);
 
   // Parse markdown referenced within nunjucks
   eleventyConfig.addPairedShortcode("markdown", function(content) {

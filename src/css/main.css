@@ -139,6 +139,17 @@ main .projectNavMusic iframe {
     border: 2px #333333 solid;
 }
 
+main article img {
+    border: 2px #333333 solid;
+}
+main article .gallery {
+    display: flex;
+}
+main article blockquote {
+    padding: 0 2em;
+    border-left: #333333 2px solid;
+    font-style: italic;
+}
 
 
 main .compPlaytime {
@@ -158,7 +169,7 @@ main a:hover {
 
 main .construction {
     background-color: #ffdd44;
-    border: 4px dashed #333333;
+    border: 3px dashed #333333;
     padding: 16px;
     margin: 0 32px 32px;
     display: flex;
