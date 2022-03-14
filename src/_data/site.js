@@ -18,7 +18,7 @@ module.exports = function () {
       },
     author: {
         name: "Leslie Swan",
-        email: "myemailaddress@notyet.com",
+        email: "contact@personmeetup.ca",
         url: "https://personmeetup.ca/#about"
     }
   };
