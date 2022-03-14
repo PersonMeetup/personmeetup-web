@@ -67,6 +67,9 @@ main .latestItem img {
     height: 140px;
     border: 2px solid #333333;
 }
+main .latestItem .caption {
+    margin-bottom: .3em;
+}
 
 
 
@@ -150,6 +153,20 @@ main article blockquote {
     border-left: #333333 2px solid;
     font-style: italic;
 }
+
+main .blogTag {
+    background: #868686;
+    transition: background .2s;
+	padding: 0 .3rem .2rem;
+	border-radius: .2em;
+	white-space: normal;
+    text-decoration: none;
+    color: #fff;
+}
+main .blogTag:hover {
+    background: #aaa;
+}
+
 
 
 main .compPlaytime {
