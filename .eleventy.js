@@ -1,10 +1,18 @@
 const { DateTime } = require("luxon");
+const markdownItAnchor = require("markdown-it-anchor");
 const markdownIt = require("markdown-it")({
-                        html: true,
-                        breaks: true,
-                        linkify: true
-                })  .use(require("markdown-it-footnote"))
-                    .use(require("markdown-it-mark"));
+                      html: true,
+                      breaks: true,
+                      linkify: true
+                    })  
+                    .use(require("markdown-it-footnote"))
+                    .use(require("markdown-it-mark"))
+                    .use(markdownItAnchor,{
+                      permalink: markdownItAnchor.permalink.headerLink()
+                    })
+                    .use(require("markdown-it-table-of-contents"),{
+                      includeLevel: [2,3,4,5,6]
+                    });
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");

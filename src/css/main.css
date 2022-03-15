@@ -153,6 +153,13 @@ main article blockquote {
     border-left: #333333 2px solid;
     font-style: italic;
 }
+main article .table-of-contents {
+    border: 3px #bbbbbb dashed;
+    padding: 1em 1em 1em 0em;
+    margin: 0 0 1em 1em;
+    width: fit-content;
+    float: right;
+}
 
 main .blogTag {
     background: #868686;
@@ -228,6 +235,11 @@ main .contact {
         grid-template-rows: 1fr 1fr;
         row-gap: 5px;
         margin-bottom: 80px;
+    }
+    main article .table-of-contents {
+        float: none;
+        width: auto;
+        margin-left: 0;
     }
 }
 @media screen and (max-width: 690px) {
