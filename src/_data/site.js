@@ -6,7 +6,7 @@ module.exports = function () {
   return {
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
     title: "Person Meetup",
-    url: "https://personmeetup.ca/",
+    url: "https://personmeetup.ca",
     language: "en",
     description: "I like to create stuff",
     image: "/img/opengraph.png",
@@ -14,7 +14,7 @@ module.exports = function () {
         subtitle: "I like to create stuff",
         filename: "feed.xml",
         path: "/feed.xml",
-        id: "https://personmeetup.ca/"
+        id: "https://personmeetup.ca"
       },
     author: {
         name: "Leslie Swan",

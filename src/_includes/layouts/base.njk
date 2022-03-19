@@ -9,11 +9,11 @@
 
   <meta property="og:title" content="{{ title or site.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
-  <meta property="og:image" content="{{ site.image | url }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.image | url }}">
   <meta property="og:locale" content="en_CA">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ page.url }}">
-  <link rel="canonical" href="{{ page.url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <link rel="stylesheet" href="/css/boilerplate.css">
   <link rel="stylesheet" href="/css/header.css">
