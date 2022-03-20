@@ -34,7 +34,7 @@ main .indexItemVideo {
     background: center url("/img/index-video.jpg");
 }
 main .indexItemSecondary {
-    background-color: #63c5fd;
+    background-color: #17a5f7;
 }
 
 main .about {
@@ -162,7 +162,7 @@ main article .table-of-contents {
 }
 
 main .blogTag {
-    background: #868686;
+    background: #707070;
     transition: background .2s;
 	padding: 0 .3rem .2rem;
 	border-radius: .2em;
