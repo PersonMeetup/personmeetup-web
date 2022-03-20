@@ -10,28 +10,27 @@ header nav ul {
     text-align: center;
 }
 header nav ul li {
-    display: inline-block;
+    display: block;
 }
 header nav a {
     color: #1a1a1a;
     text-decoration: none;
 }
 header li:not(.person) {
-    padding: 4px;
     border-bottom: 2px solid #fff;
     transition: border-bottom 150ms;
 }
 header li:hover:not(.person) {
     border-bottom: 2px solid #1a1a1a;
 }
-header .person {
+header div.person {
     font-weight: 700;
     font-size: 24px;
     padding: 8px;
     transition: background-color 200ms;
     border-radius: 8px;
 }
-header .person:hover {
+header div.person:hover {
     background-color: #63c5fd;
 }
 
