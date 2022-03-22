@@ -59,6 +59,7 @@
         "url": "https://www.youtube.com/watch?v=QjKefgd_pzU",
         "img": "/img/portfolio/thoughts-about-vr.png",
         "type": "Video",
+        "videoID": "QjKefgd_pzU",
         "postmortem": ""
     },
     {
@@ -92,6 +93,7 @@
         "url": "https://www.youtube.com/watch?v=BLQ3_954sRs",
         "img":"/img/portfolio/rations.jpg",
         "type": "Video",
+        "videoID": "BLQ3_954sRs",
         "postmortem": ""
     },
     {
