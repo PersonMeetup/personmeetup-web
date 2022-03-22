@@ -142,6 +142,15 @@ main .projectNavMusic iframe {
     border: 2px #333333 solid;
 }
 
+main .projectNavVideo {
+    border: 3px #bbbbbb dashed;
+    padding: 5px;
+    text-align: center;
+}
+main .projectNavVideo lite-youtube {
+    border: 2px #333333 solid;
+}
+
 main article img {
     border: 2px #333333 solid;
 }
