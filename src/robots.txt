@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personmeetup.ca/sitemap.xml
