@@ -1,6 +1,9 @@
 ---
 layout: layouts/post.njk
 title: Open Source
+eleventyNavigation:
+  key: Open Source
+  order: 6
 meta: True
 ---
 This site utilizes a LOT of open-source projects. This page serves to give them credit!

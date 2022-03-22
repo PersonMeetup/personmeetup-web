@@ -1,0 +1,15 @@
+---
+title: Sitemap
+layout: layouts/post.njk
+meta: True
+---
+<div class="container-narrower sitemapDiv">
+  <h2>Main pages</h2>
+  {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+  <h2>Posts</h2>
+  <ul>
+    {% for post in collections.blog | reverse %}
+    <li><a href="{{ site.url }}{{ blog.url }}">{{ post.data.title }}</a> &bull; {{ post.date | readableDate }}</li>
+    {%- endfor %}
+  </ul>
+</div>

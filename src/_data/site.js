@@ -16,6 +16,10 @@ module.exports = function () {
         path: "/feed.xml",
         id: "https://personmeetup.ca"
       },
+    jsonfeed: {
+        path: "/feed.json",
+        url: "https://personmeetup.ca/feed.json"
+      },
     author: {
         name: "Leslie Swan",
         email: "contact@personmeetup.ca",
