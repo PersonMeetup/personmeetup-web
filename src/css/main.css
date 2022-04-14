@@ -265,6 +265,9 @@ main .construction {
     main .about {
         flex-direction: column-reverse;
     }
+    main .latestItem {
+        height: auto;
+    }
 }
 @media screen and (max-width: 480px) {
     main .portfolioNav {
