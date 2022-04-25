@@ -1,11 +1,11 @@
 ---
-layout: layouts/post.njk
 title: "Ignore the JAM, Focus on the Bread: A Look at Streamlining Web Development"
 description: Today I'll teach you how to bake a loaf of whole wheat bread without any mention of strawberry jam.
 date: 2022-03-14
 tags:
   - Web Design
   - Programming
+layout: layouts/post.njk
 ---
 [[toc]]
 
