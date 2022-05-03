@@ -22,6 +22,8 @@ jobs:
       run: |
         npm i
         npm run build
+      with:
+        STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
     # When the dist_dir is ready, deploy it to neocities
     - name: Deploy to neocities
       uses: bcomnes/deploy-to-neocities@v1
