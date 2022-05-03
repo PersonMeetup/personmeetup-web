@@ -1,5 +1,6 @@
 const axios = require("axios");
 require("dotenv").config();
+console.log(process.env)
 
 module.exports = async function getUser() {
   var hours = {
