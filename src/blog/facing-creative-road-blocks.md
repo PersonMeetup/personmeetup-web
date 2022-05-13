@@ -1,9 +1,10 @@
 ---
 title: Facing Creative Road-Blocks
 description: I find myself not working on the things I really want to. This blog-post is me pointing out the reasons why.
-date: 2022-04-24
 tags:
   - Meta
+date: 2022-04-25T04:40:00+00:00
+lastmod:
 layout: layouts/post.njk
 ---
 At the start of March I launched this site with the idea to expand it further with blog posts going over coding concepts I found interesting, reviewing video games, looking back at finished projects, and other ideas that may come to mind. Nearly 2 months later and, aside from various tweaks to the HTML templates, this site is dead. Activity wise, that is. Don't get me wrong, I do want to keep working on this site. I think it's a great application for the web-design skills I've developed in the past two years, and it gives me another outlet to express myself and my interests. But for some reason, I find it hard to write for the site.
