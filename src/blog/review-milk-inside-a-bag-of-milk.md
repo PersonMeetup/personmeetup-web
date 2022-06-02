@@ -24,4 +24,4 @@ If it's not clear by now, everything in *Milk inside a bag of milk* has a purpos
 
 With all that said, *Milk inside a bag of milk inside a bag of milk* is a great story that worth experiencing. If you have some pocket change lying around and you're comfortable confronting sensitive subject matters such as abuse, mental health and death, this is a visual novel well worth looking into. It's a creative idea that I throughly appreciate and hope to see more of in the genre.
 
-[You can purchase *Milk inside a bag of milk inside a bag of milk* on Steam.](https://store.steampowered.com/app/1392820)
+You can purchase *Milk inside a bag of milk inside a bag of milk* on [Steam](https://store.steampowered.com/app/1392820) and [itch.io](https://nikita-kryukov.itch.io/pmkm).
