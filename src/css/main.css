@@ -2,6 +2,8 @@ main {
     padding: 0 10ch;
 }
 
+/*=== INDEX ===*/
+
 main .index {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -17,13 +19,21 @@ main .indexItem {
     margin: 0;
     border: 3px #bbbbbb solid;
     color: #fff; text-decoration: none;
-    transition: font-size 200ms, filter 800ms;
-    filter: grayscale(1);
 }
 main .indexItem:hover {
     font-size: 27px;
+}
+
+/* Portfolio: Primary */
+
+main .indexItemPrimary {
+    transition: font-size 200ms, filter 800ms;
+    filter: grayscale(1);
+}
+main .indexItemPrimary:hover {
     filter: grayscale(0);
 }
+
 main .indexItemGames {
     background: center url("/img/index-games.jpg");
 }
@@ -33,9 +43,24 @@ main .indexItemMusic {
 main .indexItemVideo {
     background: center url("/img/index-video.jpg");
 }
+
+/* Portfolio: Secondary */
+
 main .indexItemSecondary {
+    background-color: #272727;
+    transition: font-size 200ms, background-color 400ms;
+}
+main .indexItemSec1:hover {
+    background-color: #f31818;
+}
+main .indexItemSec2:hover {
+    background-color: #4aca00;
+}
+main .indexItemSec3:hover {
     background-color: #17a5f7;
 }
+
+/* About */
 
 main .about {
     display: flex;
@@ -72,6 +97,10 @@ main .latestItem .caption {
 }
 
 
+
+/*=== NAVIGATION ===*/
+
+/* Blog */
 
 main .blogNav {
     display: grid;
