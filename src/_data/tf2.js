@@ -1,4 +1,4 @@
-const axios = require("axios");
+const eleventyFetch = require("@11ty/eleventy-fetch");
 require("dotenv").config();
 
 module.exports = async function getUser() {
@@ -17,7 +17,10 @@ module.exports = async function getUser() {
 
   try {
     // Get playtime for Team Fortress 2
-    const overall = await axios.get(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${process.env.STEAM_API_KEY}&steamid=76561198121851448&include_played_free_games=true&format=json`);
+    const overall = await eleventyFetch(`http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=${process.env.STEAM_API_KEY}&steamid=76561198121851448&include_played_free_games=true&format=json`, {
+      duration: '1d',
+      type: 'json'
+    });
     overall.data.response.games.forEach(game => {
       if (game.appid == 440) {
         hours.total = game.playtime_forever / 60;
@@ -25,7 +28,10 @@ module.exports = async function getUser() {
     });
 
     // Get playtime for individual classes
-    const indiv = await axios.get(`http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=${process.env.STEAM_API_KEY}&steamid=76561198121851448&format=json`);
+    const indiv = await eleventyFetch(`http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=440&key=${process.env.STEAM_API_KEY}&steamid=76561198121851448&format=json`, {
+      duration: '1d',
+      type: 'json'
+    });
     indiv.data.playerstats.stats.forEach(stat => {
       if (stat.name.includes(".accum.iPlayTime")) {
         // Apply each classes playtime to the `hours` object
