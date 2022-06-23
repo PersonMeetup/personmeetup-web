@@ -13,11 +13,11 @@
   "dependencies": {},
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-img": "^1.0.0",
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "axios": "^0.27.2",
     "dotenv": "^16.0.0",
     "luxon": "^2.3.0",
     "markdown-it": "^12.3.2",
