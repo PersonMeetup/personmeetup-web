@@ -3,7 +3,7 @@ title: Hello, World!
 description: We all need to start from somewhere...
 tags:
   - Meta
-date: 2022-02-13T16:43:08-07:00
+date: 2022-02-13T16:43:08
 lastmod: 
 layout: layouts/post.njk
 ---

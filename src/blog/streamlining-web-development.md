@@ -4,7 +4,7 @@ description: Today I'll teach you how to bake a loaf of whole wheat bread withou
 tags:
   - Web Design
   - Programming
-date: 2022-03-14T11:37:47-06:00
+date: 2022-03-14T11:37:47
 lastmod: 
 layout: layouts/post.njk
 ---
