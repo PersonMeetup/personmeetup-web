@@ -4,15 +4,15 @@ require("dotenv").config();
 module.exports = async function getUser() {
   var hours = {
     total: 0,
-    scout: 0,
-    soldier: 0,
-    pyro: 0,
-    demoman: 0,
-    heavyweapons: 0,
-    engineer: 0,
-    medice: 0,
-    sniper: 0,
-    spy: 0
+    Scout: 0,
+    Soldier: 0,
+    Pyro: 0,
+    Demoman: 0,
+    Heavy: 0,
+    Engineer: 0,
+    Medic: 0,
+    Sniper: 0,
+    Spy: 0
   }
 
   try {
@@ -21,9 +21,9 @@ module.exports = async function getUser() {
       duration: '1d',
       type: 'json'
     });
-    overall.data.response.games.forEach(game => {
+    overall.response.games.forEach(game => {
       if (game.appid == 440) {
-        hours.total = game.playtime_forever / 60;
+        hours.total = Math.round(game.playtime_forever / 60);
       }
     });
 
@@ -32,12 +32,36 @@ module.exports = async function getUser() {
       duration: '1d',
       type: 'json'
     });
-    indiv.data.playerstats.stats.forEach(stat => {
+    indiv.playerstats.stats.forEach(stat => {
       if (stat.name.includes(".accum.iPlayTime")) {
-        // Apply each classes playtime to the `hours` object
-        console.log(stat)
-      };
-    });
+				/**
+				Apply each classes playtime to the `hours` object
+
+				The JSON this loop works with has the following format:
+				{ name: 'Scout.accum.iPlayTime', value: 1124137 }
+				Note also that `value` is playtime given in seconds.
+
+				The loop below compares the `name` value of the current `stat` 
+				object with the `hours` objects keys in similar notation.
+				If the two are equal, the `mercFlag` variable is set with
+				the equalizing `hours` object key.
+
+				Going through the loop again, the raised flag is detected
+				and sets the value of the key within the `hours` object
+				with the `value` interger, converting it from seconds to
+				hours.
+				 */
+				var mercFlag = null;
+
+				for (const [key, value] of Object.entries(stat)) {
+					if (!(mercFlag === null)) {
+						hours[mercFlag] = Math.round(value / (60 ** 2));
+						mercFlag = null;
+					} else {
+						for (const [merc, playtime] of Object.entries(hours)) {
+							if (value === `${merc}.accum.iPlayTime`) {
+								mercFlag = merc;
+		};};};};};});
   } catch (error) {
     console.error(error);
   };
