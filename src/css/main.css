@@ -1,5 +1,6 @@
 main {
     padding: 0 10ch;
+    margin-bottom: 100px;
 }
 
 /*=== INDEX ===*/
@@ -24,7 +25,7 @@ main .indexItem:hover {
     font-size: 27px;
 }
 
-/* Portfolio: Primary */
+/* Index Portfolio: Primary */
 
 main .indexItemPrimary {
     transition: font-size 200ms, filter 800ms;
@@ -44,10 +45,10 @@ main .indexItemVideo {
     background: center url("/img/index-video.jpg");
 }
 
-/* Portfolio: Secondary */
+/* Index Portfolio: Secondary */
 
 main .indexItemSecondary {
-    background-color: #272727;
+    background-color: #4d4d4d;
     transition: font-size 200ms, background-color 400ms;
 }
 main .indexItemSec1:hover {
@@ -65,14 +66,15 @@ main .indexItemSec3:hover {
 main .about {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
+
+/* Latest Work */
 
 main .latest {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
-    margin-bottom: 100px;
 }
 main .latest h2 {
     text-align: center;
@@ -113,7 +115,7 @@ main .blogNavItem {
     margin-bottom: 10px;
 }
 
-
+/* Portfolio */
 
 main .portfolioNav {
     display: grid;
@@ -180,6 +182,15 @@ main .projectNavVideo lite-youtube {
     border: 2px #333333 solid;
 }
 
+
+
+/*=== BLOG POSTS ===*/
+
+main article {
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
 main article img {
     border: 2px #333333 solid;
 }
@@ -197,6 +208,11 @@ main article .table-of-contents {
     margin: 0 0 1em 1em;
     width: fit-content;
     float: right;
+}
+
+main article .plug img {
+    border: none;
+    height: 30px;
 }
 
 main .blogTag {

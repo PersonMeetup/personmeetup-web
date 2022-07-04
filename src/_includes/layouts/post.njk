@@ -3,6 +3,9 @@ layout: layouts/base.njk
 ---
 <article>
     <h1 {% if meta %}class="special"{% endif %}>{{ title }}</h1>
+    {% if not(meta) %}
+    <p class="caption"><time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+    {% endif %}
 
     {{ content | safe }}
 
@@ -22,6 +25,5 @@ layout: layouts/base.njk
             crossorigin="anonymous"
             async>
     </script>
-    <p>Commenting by <a href="https://giscus.app/">giscus</a></p>
     {% endif %}
 </article>
