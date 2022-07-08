@@ -151,9 +151,10 @@ main .projectNav {
 }
 
 main .projectNavGeneral {
-    border: 3px #bbbbbb dashed;
-    padding: 5px;
-    text-align: center;
+	border: 3px #bbbbbb dashed;
+	padding: 5px;
+	text-align: center;
+	height: 340px;
 }
 main .projectNavGeneral a {
     display: flex;
@@ -163,20 +164,38 @@ main .projectNavGeneral img {
     border: 2px #333333 solid;
     height: 170px;
 }
+main .projectNavGeneral .svg {
+    border: none;
+    height: 40px;
+}
 
 main .projectNavMusic {
     border: 3px #bbbbbb dashed;
     padding: 5px;
     text-align: center;
+	height: 340px;
 }
-main .projectNavMusic iframe {
+main .projectNavMusic img {
     border: 2px #333333 solid;
+    height: 170px;
 }
+main .projectNavMusic .svg {
+    border: none;
+    height: 40px;
+}
+/*main .projectNavMusic iframe {
+    border: 2px #333333 solid;
+}*/
 
 main .projectNavVideo {
     border: 3px #bbbbbb dashed;
     padding: 5px;
     text-align: center;
+	height: 340px;
+}
+main .projectNavVideo .svg {
+    border: none;
+    height: 40px;
 }
 main .projectNavVideo lite-youtube {
     border: 2px #333333 solid;

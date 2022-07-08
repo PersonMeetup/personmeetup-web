@@ -1,25 +1,62 @@
 <div class="{{ class }}">
-  {% if class == "projectNavMusic" %}
-    <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ project.url }}&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"></iframe>
-  {% elif class == "projectNavVideo"%}
+  {% if class == "projectNavVideo" %}
     <lite-youtube videoid="{{ project.videoID }}" style="background-image: url('https://i.ytimg.com/vi/{{ project.videoID }}/hqdefault.jpg');">
       <button type="button" class="lty-playbtn">
         <span class="lyt-visually-hidden">Play Video: {{ project.title }}</span>
       </button>
     </lite-youtube>
-  {% elif project.img %}
-    <a href="{{ project.url | url }}"><img src="{{ project.img }}" alt="{{ project.title }} Thumbnail"></a>
+  {% else %}
+    <a href="/portfolio/{{ project.title | slugify }}/"><img src="{{ project.img }}" alt="{{ project.title }} Thumbnail"></a>
   {% endif %}
 
   {% if class == "latestItem" %}
     <div>
-      <h3><a href="{{ project.url | url }}">{{ project.title }}</a></h3>
+      <h3><a href="/portfolio/{{ project.title | slugify }}/">{{ project.title }}</a></h3>
       <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
       <!--Postmortem Link Here-->
     </div>
   {% else %}
-    <h2><a href="{{ project.url | url }}">{{ project.title }}</a></h2>
+    <h2><a href="/portfolio/{{ project.title | slugify }}/">{{ project.title }}</a></h2>
     <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
     <!--Postmortem Link Here-->
+
+		{% set link = project.links %}
+
+		{% if class != "projectNavMusic" %}
+			{% if link.steam %}
+				<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
+			{% elif link.youtube %}
+				<a href="https://www.youtube.com/watch?v={{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
+			{% elif link.soundcloud %}
+				<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
+			{% elif link.other %}
+				<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
+			{% endif %}
+		{% else %}
+			<details>
+				<summary>Listen In</summary>
+				<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ link.soundcloud }}&inverse=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" loading="lazy"></iframe>
+			</details>
+		{% endif %}	
   {% endif %}
+<!--
+
+
+	<details>
+		<summary>Embeds</summary>
+		{% if link.youtube %}
+		<lite-youtube videoid="{{ link.youtube }}" style="background-image: url('https://i.ytimg.com/vi/{{ link.youtube }}/hqdefault.jpg');">
+      <button type="button" class="lty-playbtn">
+        <span class="lyt-visually-hidden">Play Video: {{ project.title }}</span>
+      </button>
+    </lite-youtube>
+		{% elif link.soundcloud %}
+			<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ link.soundcloud }}&inverse=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" loading="lazy"></iframe>
+		{% endif %}
+	</details>
+
+
+  {% if class == "projectNavMusic" %}
+    
+  {% endif %}-->
 </div>

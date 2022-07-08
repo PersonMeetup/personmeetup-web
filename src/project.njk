@@ -1,0 +1,41 @@
+---
+pagination:
+  data: projects
+  size: 1
+  alias: project
+  resolve: values
+  addAllPagesToCollections: true
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ project.title }}"
+permalink: /portfolio/{{ project.title | slugify }}/
+---
+<article>
+	<!--Embed project at the top. If impossible, link image (Maybe?)-->
+	<img src="{{ project.img }}" alt="Thumbnail for ">
+	<h1>{{ title }}</h1>
+	<p class="caption"><time class="postlist-date" datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+
+	<!--Post links to where the project could be found-->
+	{% for link in links %}
+		{% if link %}
+			<p>{{ link }}</p>
+		{% endif %}
+	{% endfor %}
+
+	<script src="https://giscus.app/client.js"
+			data-repo="personmeetup/personmeetup-web"
+			data-repo-id="R_kgDOG7XQQw"
+			data-category="Comments"
+			data-category-id="DIC_kwDOG7XQQ84CN5y1"
+			data-mapping="og:title"
+			data-reactions-enabled="1"
+			data-loading="lazy"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="light"
+			data-lang="en"
+			crossorigin="anonymous"
+			async>
+	</script>
+</article>
