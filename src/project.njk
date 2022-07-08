@@ -14,14 +14,27 @@ permalink: /portfolio/{{ project.title | slugify }}/
 	<!--Embed project at the top. If impossible, link image (Maybe?)-->
 	<img src="{{ project.img }}" alt="Thumbnail for ">
 	<h1>{{ title }}</h1>
-	<p class="caption"><time class="postlist-date" datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+	
+	<p class="majorCaption">Released <time class="postlist-date" datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
 
-	<!--Post links to where the project could be found-->
-	{% for link in links %}
-		{% if link %}
-			<p>{{ link }}</p>
-		{% endif %}
-	{% endfor %}
+	<div class="projectLinks">
+		<h2>Availible On:</h2>
+		<div class="projectLinksPlatforms">
+			{% set link = project.links %}
+
+			{% if link.steam %}
+				<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
+			{% elif link.youtube %}
+				<a href="https://www.youtube.com/watch?v={{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
+			{% elif link.soundcloud %}
+				<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
+			{% elif link.other %}
+				<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
+			{% endif %}
+		</div>
+	</div>
+
+	<p>{{ project.description }}</p>
 
 	<script src="https://giscus.app/client.js"
 			data-repo="personmeetup/personmeetup-web"

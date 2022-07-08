@@ -201,6 +201,22 @@ main .projectNavVideo lite-youtube {
     border: 2px #333333 solid;
 }
 
+main .projectLinks {
+	border: 3px #bbbbbb dashed;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main .projectLinks img {
+	height: 50px;
+	border: none;
+}
+
 
 
 /*=== BLOG POSTS ===*/
