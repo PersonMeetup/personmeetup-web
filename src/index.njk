@@ -23,7 +23,7 @@ eleventyNavigation:
   {% set class = "latestItem" %}
   <section>
     <h2>Latest Project</h2>
-    {% set projectslist = projects | head(-1) %}
+    {% set projectslist = collections.portfolio | head(-1) %}
     {% for project in projectslist | reverse %}
       {% include "projectslist.njk" %}
     {% endfor %}
