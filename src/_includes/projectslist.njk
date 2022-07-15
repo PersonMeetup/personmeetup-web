@@ -1,10 +1,14 @@
 <div class="{{ class }}">
   {% if class == "projectNavVideo" %}
-    <lite-youtube videoid="{{ project.links.youtube }}" style="background-image: url('https://i.ytimg.com/vi/{{ project.links.youtube }}/hqdefault.jpg');">
-      <button type="button" class="lty-playbtn">
-        <span class="lyt-visually-hidden">Play Video: {{ project.data.title }}</span>
-      </button>
-    </lite-youtube>
+		{% for link in project.data.links %}
+			{% if link.youtube %}
+				<lite-youtube videoid="{{ link.youtube }}" style="background-image: url('https://i.ytimg.com/vi/{{ link.youtube }}/hqdefault.jpg');">
+					<button type="button" class="lty-playbtn">
+						<span class="lyt-visually-hidden">Play Video: {{ project.data.title }}</span>
+					</button>
+				</lite-youtube>
+			{% endif %}
+		{% endfor %}
   {% else %}
     <a href="{{ project.url | url }}"><img src="{{ project.data.img }}" alt="{{ project.data.title }} Thumbnail"></a>
   {% endif %}
@@ -13,15 +17,13 @@
     <div>
       <h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
       <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
-      <!--Postmortem Link Here-->
     </div>
   {% else %}
     <h2><a href="{{ project.url | url }}">{{ project.data.title }}</a></h2>
     <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
-    <!--Postmortem Link Here-->
 
-		{% for link in project.data.links %}
-			{% if class != "projectNavMusic" %}
+		{% if class != "projectNavMusic" %}
+			{% for link in project.data.links %}
 				{% if link.steam %}
 					<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
 				{% elif link.youtube %}
@@ -31,13 +33,17 @@
 				{% elif link.other %}
 					<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
 				{% endif %}
-			{% else %}
-				<details>
-					<summary>Listen In</summary>
-					<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ link.soundcloud }}&inverse=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" loading="lazy"></iframe>
-				</details>
-			{% endif %}
-		{% endfor %}
+			{% endfor %}
+		{% else %}
+			<details>
+				<summary>Listen In</summary>
+				{% for link in project.data.links %}
+					{% if link.soundcloud %}
+						<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ link.soundcloud }}&inverse=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false" loading="lazy"></iframe>
+					{% endif %}
+				{% endfor %}
+			</details>
+		{% endif %}
   {% endif %}
 <!--
 
