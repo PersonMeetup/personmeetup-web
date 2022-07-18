@@ -227,7 +227,10 @@ main article {
     margin-right: auto;
 }
 main article img {
+    display: block;
     border: 2px #333333 solid;
+		margin-left: auto;
+    margin-right: auto;
 }
 main article .gallery {
     display: flex;
