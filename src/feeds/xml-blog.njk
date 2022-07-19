@@ -1,0 +1,27 @@
+---
+permalink: /feeds/blog.xml
+eleventyExcludeFromCollections: true
+---
+{% extends "xmlfeed.njk" %}
+
+{% block title %}Blog{% endblock %}
+{% block self %}blog.xml{% endblock %}
+{% block page %}blog/{% endblock %}
+{% block id %}blog/{% endblock %}
+
+{% block subtitle %}Latest Blogposts{% endblock %}
+
+{% block update %}{{ collections.blog | rssLastUpdatedDate }}{% endblock %}
+
+{% block entries %}	
+	{% for post in collections.blog | reverse %}
+	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+	<entry>
+		<title>{{ post.data.title }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ post.date | rssDate }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+	</entry>
+	{% endfor %}
+{% endblock %}

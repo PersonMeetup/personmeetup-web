@@ -1,0 +1,27 @@
+---
+permalink: /feeds/portfolio.xml
+eleventyExcludeFromCollections: true
+---
+{% extends "xmlfeed.njk" %}
+
+{% block title %}Portfolio{% endblock %}
+{% block self %}portfolio.xml{% endblock %}
+{% block page %}portfolio/{% endblock %}
+{% block id %}portfolio/{% endblock %}
+
+{% block subtitle %}Latest Projects{% endblock %}
+
+{% block update %}{{ collections.portfolio | rssLastUpdatedDate }}{% endblock %}
+
+{% block entries %}	
+	{% for project in collections.portfolio | reverse %}
+	{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
+	<entry>
+		<title>{{ project.data.title }}</title>
+		<link href="{{ absoluteProjectUrl }}"/>
+		<updated>{{ project.date | rssDate }}</updated>
+		<id>{{ absoluteProjectUrl }}</id>
+		<content type="html">{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) }}</content>
+	</entry>
+	{% endfor %}
+{% endblock %}
