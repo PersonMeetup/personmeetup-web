@@ -27,7 +27,7 @@ eleventyExcludeFromCollections: true
 			<link href="{{ absoluteProjectUrl }}"/>
 			<updated>{{ project.date | rssDate }}</updated>
 			<id>{{ absoluteProjectUrl }}</id>
-			<summary>{{ post.data.description }}</summary>
+			<summary>{{ project.data.description }}</summary>
 			<content type="html">
 				<img src="{{ project.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ project.data.title }}"/>
 				{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) }}

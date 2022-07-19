@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
 		<link href="{{ absoluteItemUrl }}"/>
 		<updated>{{ item.date | rssDate }}</updated>
 		<id>{{ absoluteItemUrl }}</id>
-		<summary>{{ post.data.description }}</summary>
+		<summary>{{ item.data.description }}</summary>
 		<content type="html">
 			{% if item.data.type %}
 				<img src="{{ item.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ item.data.title }}"/>
