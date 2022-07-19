@@ -9,14 +9,15 @@ eleventyExcludeFromCollections: true
 {% block subtitle %}Latest Projects{% endblock %}
 
 {% block entries %}
-	{% for post in collections.blog | reverse %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset-%}
+	{% for project in collections.portfolio | reverse %}
+	{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
 	{
-		"id": "{{ absolutePostUrl }}",
-		"url": "{{ absolutePostUrl }}",
-		"title": "{{ post.data.title }}",
-		"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
-		"date_published": "{{ post.date | rssDate }}"
+		"id": "{{ absoluteProjectUrl }}",
+		"url": "{{ absoluteProjectUrl }}",
+		"title": "{{ project.data.title }}",
+		"content_html": {% if project.templateContent %}{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) | dump | safe }}{% else %}""{% endif %},
+		"summary": "{{ post.data.description }}",
+		"date_published": "{{ project.date | rssDate }}"
 	}
 	{% if not loop.last %}
 	,

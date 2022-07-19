@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/css/feed.css"?>
+<?xml-stylesheet type="text/xsl" href="feed.xsl" media="screen"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>{% block title %}Blog{% endblock %} - {{ site.title }}</title>
-	<subtitle>{% block subtitle %}{{ site.description }}{% endblock %}</subtitle>
+	<description>{% block subtitle %}{{ site.description }}{% endblock %}</description>
 	{% set absoluteUrl %}{{ page.filePathStem | url | absoluteUrl(site.url) }}{% endset %}
 	<link href="{{ site.url }}/feeds/{% block self %}blog.xml{% endblock %}" rel="self"/>
 	<link href="{{ site.url }}/{% block page %}blog/{% endblock %}"/>

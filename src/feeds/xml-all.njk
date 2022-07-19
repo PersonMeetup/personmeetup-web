@@ -15,13 +15,26 @@ eleventyExcludeFromCollections: true
 
 {% block entries %}	
 	{% for item in collections.archive | reverse %}
+		{% set icon %}
+			{% if item.data.type == 'Games' %}🎮
+			{% elif item.data.type == 'Video' %}📺
+			{% elif item.data.type == 'Music' %}📻
+			{% elif item.data.type == 'Web Design' %}🔗
+			{% else %}📃{% endif %}
+		{% endset %}
 	{% set absoluteItemUrl %}{{ item.url | url | absoluteUrl(site.url) }}{% endset %}
 	<entry>
-		<title>{{ item.data.title }}</title>
+		<title>{{ icon }} {{ item.data.title }}</title>
 		<link href="{{ absoluteItemUrl }}"/>
 		<updated>{{ item.date | rssDate }}</updated>
 		<id>{{ absoluteItemUrl }}</id>
-		<content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absoluteItemUrl) }}</content>
+		<summary>{{ post.data.description }}</summary>
+		<content type="html">
+			{% if item.data.type %}
+				<img src="{{ item.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ item.data.title }}"/>
+			{% endif %}
+			{{ item.templateContent | htmlToAbsoluteUrls(absoluteItemUrl) }}
+		</content>
 	</entry>
 	{% endfor %}
 {% endblock %}

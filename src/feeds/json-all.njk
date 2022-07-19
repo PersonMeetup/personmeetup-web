@@ -9,14 +9,15 @@ eleventyExcludeFromCollections: true
 {% block subtitle %}Latest Site Updates{% endblock %}
 
 {% block entries %}
-	{% for post in collections.blog | reverse %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset-%}
+	{% for item in collections.blog | reverse %}
+	{% set absoluteItemUrl %}{{ item.url | url | absoluteUrl(site.url) }}{% endset-%}
 	{
-		"id": "{{ absolutePostUrl }}",
-		"url": "{{ absolutePostUrl }}",
-		"title": "{{ post.data.title }}",
-		"content_html": {% if post.templateContent %}{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) | dump | safe }}{% else %}""{% endif %},
-		"date_published": "{{ post.date | rssDate }}"
+		"id": "{{ absoluteItemUrl }}",
+		"url": "{{ absoluteItemUrl }}",
+		"title": "{{ item.data.title }}",
+		"content_html": {% if item.templateContent %}{{ item.templateContent | htmlToAbsoluteUrls(absoluteItemUrl) | dump | safe }}{% else %}""{% endif %},
+		"summary": "{{ post.data.description }}",
+		"date_published": "{{ item.date | rssDate }}"
 	}
 	{% if not loop.last %}
 	,

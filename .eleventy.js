@@ -17,7 +17,36 @@ const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+// https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/
 const eleventyImg = require("@11ty/eleventy-img");
+const path = require('path');
+
+const imageShortcode = async (
+  relativeSrc, 
+  alt,
+  widths = [null, 400, 800],
+  formats = ['jpeg', 'webp'],
+  sizes = '100vw'
+) => {
+  const { dir: imgDir } = path.parse(relativeSrc);
+  const fullSrc = path.join('src', relativeSrc);
+
+  const imageMetadata = await eleventyImg(fullSrc, {
+    widths,
+    formats,
+    outputDir: path.join('dist', imgDir),
+    urlPath: imgDir
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async"
+  };
+
+  return eleventyImg.generateHTML(imageMetadata, imageAttributes);
+};
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
 module.exports = function(eleventyConfig) {
@@ -31,6 +60,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPairedShortcode("markdown", function(content) {
     return markdownIt.render(content);
   });
+
+  eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
@@ -82,6 +113,9 @@ module.exports = function(eleventyConfig) {
 
   // Copy robots.txt to output
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+	// Copy feed.xsl to output
+	eleventyConfig.addPassthroughCopy("src/feeds/feed.xsl");
 
   // Customize Markdown library and settings:
   eleventyConfig.setLibrary("md", markdownIt);

@@ -15,13 +15,23 @@ eleventyExcludeFromCollections: true
 
 {% block entries %}	
 	{% for project in collections.portfolio | reverse %}
-	{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
-	<entry>
-		<title>{{ project.data.title }}</title>
-		<link href="{{ absoluteProjectUrl }}"/>
-		<updated>{{ project.date | rssDate }}</updated>
-		<id>{{ absoluteProjectUrl }}</id>
-		<content type="html">{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) }}</content>
-	</entry>
+		{% set icon %}
+			{% if project.data.type == 'Games' %}🎮{% endif %}
+			{% if project.data.type == 'Video' %}📺{% endif %}
+			{% if project.data.type == 'Music' %}📻{% endif %}
+			{% if project.data.type == 'Web Design' %}🔗{% endif %}
+		{% endset %}
+		{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
+		<entry>
+			<title>{{ icon }} {{ project.data.title }}</title>
+			<link href="{{ absoluteProjectUrl }}"/>
+			<updated>{{ project.date | rssDate }}</updated>
+			<id>{{ absoluteProjectUrl }}</id>
+			<summary>{{ post.data.description }}</summary>
+			<content type="html">
+				<img src="{{ project.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ project.data.title }}"/>
+				{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) }}
+			</content>
+		</entry>
 	{% endfor %}
 {% endblock %}
