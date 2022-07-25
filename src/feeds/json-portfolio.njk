@@ -1,0 +1,26 @@
+---
+permalink: /feeds/portfolio.json
+eleventyExcludeFromCollections: true
+---
+{% extends "jsonfeed.njk" %}
+
+{% block self %}portfolio.json{% endblock %}
+
+{% block subtitle %}Latest Projects{% endblock %}
+
+{% block entries %}
+	{% for project in collections.portfolio | reverse %}
+	{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
+	{
+		"id": "{{ absoluteProjectUrl }}",
+		"url": "{{ absoluteProjectUrl }}",
+		"title": "{{ project.data.title }}",
+		"content_html": {% if project.templateContent %}{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) | dump | safe }}{% else %}""{% endif %},
+		"summary": "{{ post.data.description }}",
+		"date_published": "{{ project.date | rssDate }}"
+	}
+	{% if not loop.last %}
+	,
+	{% endif %}
+	{% endfor %}
+{% endblock %}

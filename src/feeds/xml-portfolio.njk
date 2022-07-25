@@ -1,0 +1,37 @@
+---
+permalink: /feeds/portfolio.xml
+eleventyExcludeFromCollections: true
+---
+{% extends "xmlfeed.njk" %}
+
+{% block title %}Portfolio{% endblock %}
+{% block self %}portfolio.xml{% endblock %}
+{% block page %}portfolio/{% endblock %}
+{% block id %}portfolio/{% endblock %}
+
+{% block subtitle %}Latest Projects{% endblock %}
+
+{% block update %}{{ collections.portfolio | rssLastUpdatedDate }}{% endblock %}
+
+{% block entries %}	
+	{% for project in collections.portfolio | reverse %}
+		{% set icon %}
+			{% if project.data.type == 'Games' %}🎮{% endif %}
+			{% if project.data.type == 'Video' %}📺{% endif %}
+			{% if project.data.type == 'Music' %}📻{% endif %}
+			{% if project.data.type == 'Web Design' %}🔗{% endif %}
+		{% endset %}
+		{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
+		<entry>
+			<title>{{ icon }} {{ project.data.title }}</title>
+			<link href="{{ absoluteProjectUrl }}"/>
+			<updated>{{ project.date | rssDate }}</updated>
+			<id>{{ absoluteProjectUrl }}</id>
+			<summary>{{ project.data.description }}</summary>
+			<content type="html">
+				<img src="{{ project.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ project.data.title }}"/>
+				{{ project.templateContent | htmlToAbsoluteUrls(absoluteProjectUrl) }}
+			</content>
+		</entry>
+	{% endfor %}
+{% endblock %}

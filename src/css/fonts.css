@@ -6,14 +6,18 @@ body {
 p.caption {
     font-size: 16px;
 }
+p.majorCaption {
+    font-size: 16px;
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+p.description {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: .5em;
+}
 p, hr, ol {
     margin-bottom: 1em;
-}
-h1.special {
-    font-size: 40px;
-}
-.special {
-    text-align: center;
 }
 .specialPortfolio {
     text-align: center;
@@ -22,9 +26,10 @@ h1.special {
 }
 h1 {
     font-family: 'Source Sans Pro';
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 900;
     margin-bottom: .25em;
+	text-align: center;
 }
 h2 {
     font-family: 'Source Sans Pro';

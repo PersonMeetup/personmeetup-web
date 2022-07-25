@@ -10,16 +10,6 @@ module.exports = function () {
     language: "en",
     description: "I like to create stuff",
     image: "/img/opengraph.png",
-    feed: {
-        subtitle: "I like to create stuff",
-        filename: "feed.xml",
-        path: "/feed.xml",
-        id: "https://personmeetup.ca"
-      },
-    jsonfeed: {
-        path: "/feed.json",
-        url: "https://personmeetup.ca/feed.json"
-      },
     author: {
         name: "Leslie Swan",
         email: "contact@personmeetup.ca",
