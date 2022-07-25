@@ -1,5 +1,6 @@
 ---
 title: Tracted
+description: Just a standard testing [chamber]. Nothing special.
 date: 2018-11-30
 img: "/img/portfolio/tracted.jpg"
 type: Games

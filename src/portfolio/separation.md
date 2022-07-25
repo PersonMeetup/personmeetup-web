@@ -1,5 +1,6 @@
 ---
 title: Separation
+description: [Insert Test Chamber Advisory Message Here]
 date: 2019-04-25
 img: "/img/portfolio/separation.png"
 type: Games

@@ -1,5 +1,6 @@
 ---
 title: What do people think about VR?
+description: "Spurred on by the announcement of Half-Life: Alyx, I asked what the current thoughts on VR were at the time."
 date: 2020-03-21
 img: "/img/portfolio/thoughts-about-vr.png"
 type: Video

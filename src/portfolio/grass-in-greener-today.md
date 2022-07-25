@@ -1,5 +1,6 @@
 ---
 title: Grass is Greener Today
+description: One of the first tracks I produced as I was learning about DAW's, published because it sounded good!
 date: 2021-04-03
 img: "/img/portfolio/generic-single.jpg"
 type: Music

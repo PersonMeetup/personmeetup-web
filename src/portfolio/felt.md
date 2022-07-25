@@ -1,5 +1,6 @@
 ---
 title: Felt
+description: I was playing around with a piano patch I got recently and stumbled onto some chords that sounded nice.
 date: 2021-01-29
 img: "/img/portfolio/generic-single.jpg"
 type: Music

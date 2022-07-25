@@ -1,5 +1,6 @@
 ---
 title: Addiction
+description: Test results seemed to suffer when subjects were looking at or within the confines of a maintenance area.
 date: 2019-11-15
 img: "/img/portfolio/addiction.jpg"
 type: Games

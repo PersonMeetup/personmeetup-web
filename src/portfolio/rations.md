@@ -1,5 +1,6 @@
 ---
 title: Rations
+description: Wandering for food in an apocalyptic landscape, a man comes across a self-proclaimed king who taunts them as he tells stories about the beginning of the end.
 date: 2021-04-22
 img: "/img/portfolio/rations.jpg"
 type: Video
