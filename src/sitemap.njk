@@ -13,4 +13,10 @@ meta: True
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.data.title }}</a> &bull; {{ post.date | readableDate }}</li>
     {%- endfor %}
   </ul>
+	<h2>Projects</h2>
+  <ul>
+    {% for project in collections.portfolio | reverse %}
+    <li><a href="{{ site.url }}{{ project.url }}">{{ project.data.title }}</a> &bull; {{ project.date | readableDate }}</li>
+    {%- endfor %}
+  </ul>
 </div>

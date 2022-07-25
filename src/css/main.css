@@ -217,6 +217,45 @@ main .projectLinks img {
 	border: none;
 }
 
+/* Feeds */
+
+main .feeds {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 280px;
+	gap: 10px;
+	margin-bottom: 50px;
+}
+main .feedItem {
+	min-width: 280px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	border: 3px #bbbbbb dashed;
+	text-align: center;
+}
+main .feedItem img {
+	width: 40px
+}
+
+main .feedDetails {
+	border: 3px #bbbbbb dashed;
+	padding: 0 .5em;
+	margin-bottom: 40px;
+}
+main .feedSummary {
+	font-weight: bold;
+	text-align: center;
+	padding: .5em;
+}
+main .feedDetails[open] .feedSummary {
+	border-bottom: 2px #bbbbbb solid;
+	margin-bottom: .5em;
+}
+
 
 
 /*=== BLOG POSTS ===*/
