@@ -18,17 +18,17 @@ Before I get into the thick of things, I should preface that this article will i
 
 Starting off, let's elaborate on that "add onto or change your site" comment I first made. Without Markdown or Static-Site Generators this has to be done manually, which can raise a few problems depending on the site. For the duration of the article, we'll be referencing this site right here: 
 
-![](/img/blog/streamlining-web-development/base-index.png)
+![](base-index.png)
 
 Right now, all it has is a few posts and an index page that links them all together. Each post is structured the same within their HTML, and all pages use one CSS file thats linked in the `<head>` tag. It's the HTML equivalent of white bread. But what happens when we want to add a new post?
 
-![](/img/blog/streamlining-web-development/base-post.png)
+![](base-post.png)
 
 We would need to both edit the index to link to our new post, and create the post either from our site's template (assuming we made one) or from scratch. It's nothing too bad, especially if you set it up once and never touch the page again. For most people this will work fine and there's no need to worry about it, but if you're regularly creating new posts for your site it might be fairly monotonous.
 
 The real problems kick in if there's an element used across your site that you need to update. In this example it's a typo in the post template for the site, but this could be anything from a incorrect `<meta>` tag in the head to a bulk update of links. 
 
-![](/img/blog/streamlining-web-development/base-post-problem.png "I meant to put it as 'bagk', not 'bagg'")
+![](base-post-problem.png "I meant to put it as 'bagk', not 'bagg'")
 
 Adding salt to the wound, this is the worst case scenario; needing to manually edit every post on the site to apply a template change. Scaling this up, the inability to do bulk changes is problematic if you want to overhaul the entire structure of the website as it locks you into your initial HTML[^1]. Much like white bread, regular HTML isn't something you should be having if you're really pushing to be healthier. Enter Markdown and Static-Site Generators, which are more like whole wheat bread. With them we're able to make site sweeping changes to our HTML without having to manually change every page, and adding posts to our site becomes hassle free.
 
@@ -52,7 +52,7 @@ they wont leave
 
 The simplest way to use Markdown is to export it as HTML. For those interested in microblogging that continued reading, I recommend taking a look into this. You can use a service like [Dillinger](https://dillinger.io/) to export your Markdown text into HTML, as well as preview of what your text will look like formatted. Other options include dedicated writing apps like [iA Writer](https://ia.net/writer), which offer the same functionality. Once you exported your Markdown into HTML, you're done! Copy the code into another HTML file or expand it further with CSS. From this point it's up to you! For reference, our exported HTML code looks like so:
 
-![](/img/blog/streamlining-web-development/markdown-simple.png)
+![](markdown-simple.png)
 
 ### The Overly-Complicated Way: Live Parsing
 
@@ -102,7 +102,7 @@ window.onload = function() {
 }
 ```
 
-![](/img/blog/streamlining-web-development/markdown-complex.png)
+![](markdown-complex.png)
 
 And there we go! More than double the work for the same result! Except not quite, because we do have greater flexibility with this method. While we still need to manually create and alter HTML files, they serve as an interchangeable template that we're free to change as long as we're consistent about how we use them. Assuming everything is working correctly, all we need to do to change a post's contents is to update the associated Markdown file.
 
@@ -140,7 +140,7 @@ npm install --save-dev @11ty/eleventy
 
 What this does is create two new commands for us to use; one we can use when automatically deploying the site later on (`npm run build`) and another for instantly seeing the changes we've made during development (`npm start`). From this point we can run `npm start`, open up `localhost:8080` in our browser and see how our site looks like served with eleventy!
 
-![](/img/blog/streamlining-web-development/eleventy-init.png)
+![](eleventy-init.png)
 
 Yeah, that's not looking too pretty. Making matters worse, all our links to internal pages are broken, too. But don't worry, we'll cover why this all happened. For now, appreciate that your website is now compiling under Eleventy!
 
@@ -150,7 +150,7 @@ There's a lot to customizing Eleventy depending on what you're wanting to do. Ou
 
 If you look in the project folder, you'll notice a new folder named `_site`. This is what Eleventy outputs once it compiles your site. Right now we haven't given it anything to compile, so it's literally just coping our HTML files.
 
-![](/img/blog/streamlining-web-development/eleventy-error.png)
+![](eleventy-error.png)
 
 Not only that, each HTML file gets it's own folder with an index page. This is a special trick that creates extension-less URL's, which is seen as [best practice](https://www.w3.org/Provider/Style/URI). With that all in mind, how do we configure Eleventy to our projects needs?
 
@@ -203,7 +203,7 @@ return {
 
 This tells Eleventy what files types are in use so they can be compiled and copied into the `_site` folder. Like mentioned previously, Eleventy by default includes HTML and Markdown files. What we've done is tell Eleventy to also include `css`, `png`, and `jpg` files. These files aren't compiled in any way, but instead copied over into the `_site` folder. With that, we now have our styling working again!
 
-![](/img/blog/streamlining-web-development/eleventy-fix.png)
+![](eleventy-fix.png)
 
 Of course, if you have other file types in use on your site, you can include them in the `templateFormats` list as well.
 
@@ -248,7 +248,7 @@ That's it! What we want to do now is cleanup our index page so that it only has 
 
 | Before | After |
 | --- | ---
-| ![](/img/blog/streamlining-web-development/eleventy-prelayout.png) | ![](/img/blog/streamlining-web-development/eleventy-layout.png) |
+| ![](eleventy-prelayout.png) | ![](eleventy-layout.png) |
 
 One thing we're missing though is our button for post navigation, but that's easy to fix with another template. In the `_includes` folder, create a new HTML file called `post.html`. Start it off with the same YAML we've been using for our other pages, because why rewrite our base template when we can reuse it? Copy in our button's tags, follow it with a `{% raw %}{{ content }}{% endraw %}` in the line below and we're done! For reference, this is how my code looks:
 
@@ -260,7 +260,7 @@ layout: base.html
 {% raw %}{{ content }}{% endraw %}
 ```
 
-![](/img/blog/streamlining-web-development/eleventy-postlayout.png)
+![](eleventy-postlayout.png)
 
 [^4]: I'm putting a "citation needed" here since this isn't an area I've explored deeply. If you know more about templating languages in this regard, please let me know in the comments!
 
@@ -294,7 +294,7 @@ Let's break this down.
 
 Checking on our index page, it appears to be working perfectly!
 
-![](/img/blog/streamlining-web-development/eleventy-final.png)
+![](eleventy-final.png)
 
 ## Okay, Now You Can Pass the JAM (Conclusion)
 
