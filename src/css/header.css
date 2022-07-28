@@ -1,41 +1,42 @@
 header nav {
-    padding: 35px 0;
+	padding: 35px 0;
 }
 header nav ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    align-items: center; justify-content: center;
-    column-gap: 20px;
-    text-align: center;
+	list-style-type: none;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+	text-align: center;
 }
 header nav ul li {
-    display: block;
+	display: block;
 }
 header nav a {
-    color: #1a1a1a;
-    text-decoration: none;
+	color: #1a1a1a;
+	text-decoration: none;
 }
 header li:not(.person) {
-    border-bottom: 2px solid #fff;
-    transition: border-bottom 150ms;
+	border-bottom: 2px solid #fff;
+	transition: border-bottom 150ms;
 }
 header li:hover:not(.person) {
-    border-bottom: 2px solid #1a1a1a;
+	border-bottom: 2px solid #1a1a1a;
 }
 header div.person {
-    font-weight: 700;
-    font-size: 24px;
-    padding: 8px;
-    transition: background-color 200ms;
-    border-radius: 8px;
+	font-weight: 700;
+	font-size: 24px;
+	padding: 8px;
+	transition: background-color 200ms;
+	border-radius: 8px;
 }
 header div.person:hover {
-    background-color: #63c5fd;
+	background-color: #63c5fd;
 }
 
 @media screen and (max-width: 440px) {
-    header nav ul {
-        column-gap: 4px;
-    }
+	header nav ul {
+		column-gap: 4px;
+	}
 }

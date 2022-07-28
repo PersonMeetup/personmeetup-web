@@ -1,28 +1,28 @@
 footer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding-bottom: 2ch;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	padding-bottom: 2ch;
 }
 footer ul {
-    list-style: none;
+	list-style: none;
 }
 footer li {
-    margin-bottom: .2em;
+	margin-bottom: 0.2em;
 }
 footer aside {
-    padding-right: 40px;
+	padding-right: 40px;
 }
 
 footer a {
-    color: #444444;
-    text-decoration: underline;
+	color: #444444;
+	text-decoration: underline;
 }
 footer a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 @media screen and (max-width: 880px) {
-    footer .mobileHide {
-        display: none;
-    }
+	footer .mobileHide {
+		display: none;
+	}
 }

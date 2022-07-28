@@ -1,29 +1,30 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+	box-sizing: border-box;
+	margin: 0;
 }
-body, html {
-    min-height: 100vh;
-    max-width: 140ch;
-    margin-left: auto;
-    margin-right: auto;
+body,
+html {
+	min-height: 100vh;
+	max-width: 140ch;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 body {
-    background: center / 195% url("/img/background.jpg");
+	background: center / 195% url("/img/background.jpg");
 }
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .social {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 }
 .socialSml img {
-    height: 16px;
+	height: 16px;
 }
 .socialMid img {
-    height: 31px;
+	height: 31px;
 }

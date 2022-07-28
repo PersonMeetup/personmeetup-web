@@ -6,6 +6,7 @@ eleventyNavigation:
   order: 6
 meta: True
 ---
+
 This site utilizes a LOT of open-source projects. This page serves to give them credit!
 
 - [eleventy](https://github.com/11ty/eleventy/)
@@ -21,4 +22,4 @@ You can also find the GitHub for this site [here](https://github.com/PersonMeetu
 
 ## Open Fonts
 
-This site uses [*Source Sans Pro*](https://fonts.google.com/specimen/Source+Sans+Pro) and [*League Script*](https://fonts.google.com/specimen/League+Script) from the Google Fonts Library under the [Open Font Licence](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). It also uses Haley Wakamatsu's [*Determination*](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font) font.
+This site uses [_Source Sans Pro_](https://fonts.google.com/specimen/Source+Sans+Pro) and [_League Script_](https://fonts.google.com/specimen/League+Script) from the Google Fonts Library under the [Open Font Licence](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL). It also uses Haley Wakamatsu's [_Determination_](https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font) font.

@@ -1,12 +1,13 @@
 ---
-title: 'B-Day'
+title: "B-Day"
 description: Today is my birthday, and with it I want to think about what's ahead.
 date: 2022-06-06T23:07:46.460380
 tags:
   - Meta
 layout: layouts/post.njk
 ---
-It's my 20th birthday today! While it was more-so an average day in terms of how it went, the amount of birthday wishes I received was astonishing. From people I regularly hang out with to friends I haven't spoken to in a while to complete randoms, it was nice being appreciated by so many people. I can't understate how grateful I am to everybody who said happy birthday, really. With all that said, I want to take a moment before today ends to reflect on the last decade of my life and look forward to my hopes for the next one. 
+
+It's my 20th birthday today! While it was more-so an average day in terms of how it went, the amount of birthday wishes I received was astonishing. From people I regularly hang out with to friends I haven't spoken to in a while to complete randoms, it was nice being appreciated by so many people. I can't understate how grateful I am to everybody who said happy birthday, really. With all that said, I want to take a moment before today ends to reflect on the last decade of my life and look forward to my hopes for the next one.
 
 ## Mental Health
 
