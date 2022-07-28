@@ -20,6 +20,6 @@ permalink: /blog/tags/{{ tag | slugify }}/
 {% set class = "blogNavItem" %}
 <section>
 {% for post in postslist | reverse %}
-  {% include "postslist.njk" %}
+	{% include "postslist.njk" %}
 {% endfor %}
 </section>

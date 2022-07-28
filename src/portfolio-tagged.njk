@@ -22,25 +22,25 @@ permalink: /portfolio/{{ type | slugify }}/
 {% set projectslist = collections.portfolio %}
 
 {% if type == "Video" %}
-  {% set class = "projectNavVideo" %}
-  <script src="/js/lite-yt-embed.js"></script>
-  {% for project in projectslist | reverse %}
-    {% if filter == project.data.type %}
-      {% include "projectslist.njk" %}
-    {% endif %}
-  {% endfor %}
+	{% set class = "projectNavVideo" %}
+	<script src="/js/lite-yt-embed.js"></script>
+	{% for project in projectslist | reverse %}
+		{% if filter == project.data.type %}
+			{% include "projectslist.njk" %}
+		{% endif %}
+	{% endfor %}
 {% elif type == "Music" %}
-  {% set class = "projectNavMusic" %}
-  {% for project in projectslist | reverse %}
-    {% if filter == project.data.type %}
-      {% include "projectslist.njk" %}
-    {% endif %}
-  {% endfor %}
+	{% set class = "projectNavMusic" %}
+	{% for project in projectslist | reverse %}
+		{% if filter == project.data.type %}
+			{% include "projectslist.njk" %}
+		{% endif %}
+	{% endfor %}
 {% else %}
-  {% set class = "projectNavGeneral" %}
-  {% for project in projectslist | reverse %}
-    {% if filter == project.data.type %}
-      {% include "projectslist.njk" %}
-    {% endif %}
-  {% endfor %}
+	{% set class = "projectNavGeneral" %}
+	{% for project in projectslist | reverse %}
+		{% if filter == project.data.type %}
+			{% include "projectslist.njk" %}
+		{% endif %}
+	{% endfor %}
 {% endif %}

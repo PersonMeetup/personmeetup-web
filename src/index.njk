@@ -5,34 +5,34 @@ eleventyNavigation:
   order: 1
 ---
 <nav class="index" aria-label="Portfolio">
-  <a href="/portfolio/games/" class="indexItem indexItemPrimary indexItemGames"><h2>GAMES</h2></a>
-  <a href="/portfolio/music/" class="indexItem indexItemPrimary indexItemMusic"><h2>MUSIC</h2></a>
-  <a href="/portfolio/video/" class="indexItem indexItemPrimary indexItemVideo"><h2>VIDEO</h2></a>
-  <a href="https://github.com/PersonMeetup" class="indexItem indexItemSecondary indexItemSec1"><h2>PROGRAMMING</h2></a>
-  <a href="/portfolio/competitive/" class="indexItem indexItemSecondary indexItemSec2"><h2>COMPETITIVE</h2></a>
-  <a href="/portfolio/web-design/" class="indexItem indexItemSecondary indexItemSec3"><h2>WEB DESIGN</h2></a>
+	<a href="/portfolio/games/" class="indexItem indexItemPrimary indexItemGames"><h2>GAMES</h2></a>
+	<a href="/portfolio/music/" class="indexItem indexItemPrimary indexItemMusic"><h2>MUSIC</h2></a>
+	<a href="/portfolio/video/" class="indexItem indexItemPrimary indexItemVideo"><h2>VIDEO</h2></a>
+	<a href="https://github.com/PersonMeetup" class="indexItem indexItemSecondary indexItemSec1"><h2>PROGRAMMING</h2></a>
+	<a href="/portfolio/competitive/" class="indexItem indexItemSecondary indexItemSec2"><h2>COMPETITIVE</h2></a>
+	<a href="/portfolio/web-design/" class="indexItem indexItemSecondary indexItemSec3"><h2>WEB DESIGN</h2></a>
 </nav>
 
 
 <figure class="about" id="about">
-  <img src="/img/about.png" alt="Person Image">
-  <figcaption>{% markdown %}{% include "about.md" %}{% endmarkdown %}</figcaption>
+	<img src="/img/about.png" alt="Person Image">
+	<figcaption>{% markdown %}{% include "about.md" %}{% endmarkdown %}</figcaption>
 </figure>
 
 <nav class="latest" aria-label="Latest">
-  {% set class = "latestItem" %}
-  <section>
-    <h2>Latest Project</h2>
-    {% set projectslist = collections.portfolio | head(-1) %}
-    {% for project in projectslist | reverse %}
-      {% include "projectslist.njk" %}
-    {% endfor %}
-  </section>
-  <section>
-    <h2>Latest Blogpost</h2>
-    {% set postslist = collections.blog | head(-1) %}
-    {% for post in postslist | reverse %}
-      {% include "postslist.njk" %}
-    {% endfor %}
-  </section>
+	{% set class = "latestItem" %}
+	<section>
+		<h2>Latest Project</h2>
+		{% set projectslist = collections.portfolio | head(-1) %}
+		{% for project in projectslist | reverse %}
+			{% include "projectslist.njk" %}
+		{% endfor %}
+	</section>
+	<section>
+		<h2>Latest Blogpost</h2>
+		{% set postslist = collections.blog | head(-1) %}
+		{% for post in postslist | reverse %}
+			{% include "postslist.njk" %}
+		{% endfor %}
+	</section>
 </nav>

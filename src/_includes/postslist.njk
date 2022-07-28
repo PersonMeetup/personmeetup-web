@@ -1,13 +1,13 @@
 <div class="{{ class }}">
-  {% if class == "latestItem" %}
-    <div>
-      <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-      <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
-      <p>{{ post.data.description }}</p>
-    </div>
-  {% else %}
-    <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-    <p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>{% if post.data.lastmod %}, Edited <time class="postlist-date" datetime="{{ post.data.lastmod | htmlDateString }}">{{ post.data.lastmod | readableDate }}</time> {% endif %} | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
-    <p>{{ post.data.description }}</p>
-  {% endif %}
+	{% if class == "latestItem" %}
+		<div>
+			<h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+			<p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+			<p>{{ post.data.description }}</p>
+		</div>
+	{% else %}
+		<h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+		<p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>{% if post.data.lastmod %}, Edited <time class="postlist-date" datetime="{{ post.data.lastmod | htmlDateString }}">{{ post.data.lastmod | readableDate }}</time> {% endif %} | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+		<p>{{ post.data.description }}</p>
+	{% endif %}
 </div>

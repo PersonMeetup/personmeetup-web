@@ -2,30 +2,29 @@
 layout: layouts/base.njk
 ---
 <article>
-
-    <h1>{{ title }}</h1>
-    {% if not(meta) %}
+	<h1>{{ title }}</h1>
+	{% if not(meta) %}
 	<p class="description">{{ description }}</p>
-    <p class="majorCaption"><time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
-    {% endif %}
+	<p class="majorCaption"><time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blogTag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+	{% endif %}
 
-    {{ content | safe }}
+	{{ content | safe }}
 
-    {% if not(meta) %}
-    <script src="https://giscus.app/client.js"
-            data-repo="personmeetup/personmeetup-web"
-            data-repo-id="R_kgDOG7XQQw"
-            data-category="Comments"
-            data-category-id="DIC_kwDOG7XQQ84CN5y1"
-            data-mapping="og:title"
-            data-reactions-enabled="1"
-            data-loading="lazy"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="light"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
-    {% endif %}
+	{% if not(meta) %}
+	<script src="https://giscus.app/client.js"
+					data-repo="personmeetup/personmeetup-web"
+					data-repo-id="R_kgDOG7XQQw"
+					data-category="Comments"
+					data-category-id="DIC_kwDOG7XQQ84CN5y1"
+					data-mapping="og:title"
+					data-reactions-enabled="1"
+					data-loading="lazy"
+					data-emit-metadata="0"
+					data-input-position="top"
+					data-theme="light"
+					data-lang="en"
+					crossorigin="anonymous"
+					async>
+	</script>
+	{% endif %}
 </article>
