@@ -315,6 +315,8 @@ main a:hover {
 	text-decoration: none;
 }
 
+
+
 main .construction {
 	background-color: #ffdd44;
 	border: 3px dashed #333333;
@@ -324,6 +326,29 @@ main .construction {
 	flex-flow: column;
 	align-items: center;
 }
+
+main .info {
+	background-color: #88c4e7;
+	border: 3px solid #17a5f7;
+	border-top: none;
+	margin: 0 32px 32px;
+}
+main .info figure {
+	background-color: #17a5f7;
+	display: flex;
+	gap: .5rem;
+	padding: 8px;
+}
+main .info figure img {
+	border: none;
+	margin: 0;
+}
+main .info p {
+	padding: 16px;
+	margin: 0;
+}
+
+
 
 @media screen and (max-width: 1120px) {
 }
