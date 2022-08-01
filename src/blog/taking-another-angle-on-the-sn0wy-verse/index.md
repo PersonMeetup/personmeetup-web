@@ -1,6 +1,6 @@
 ---
 title: Taking Another Angle on the Sn0wy-Verse
-description: Rethinking how the Imagisphere is referred to in "Sn0wy".
+description: Rethinking how the Imagisphere is referred to in *Sn0wy*.
 date: 2022-07-04T13:38:01.291701
 tags:
   - Sn0wy
