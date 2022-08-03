@@ -211,6 +211,13 @@ main .projectLinks {
 	margin-right: auto;
 }
 
+main .projectLinksPlatforms {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	justify-content: center;
+}
+
 main .projectLinks img {
 	height: 50px;
 	border: none;

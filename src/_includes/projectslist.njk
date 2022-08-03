@@ -2,11 +2,9 @@
 	{% if class == "projectNavVideo" %}
 		{% for link in project.data.links %}
 			{% if link.youtube %}
-				<lite-youtube videoid="{{ link.youtube }}" style="background-image: url('https://i.ytimg.com/vi/{{ link.youtube }}/hqdefault.jpg');">
-					<button type="button" class="lty-playbtn">
-						<span class="lyt-visually-hidden">Play Video: {{ project.data.title }}</span>
-					</button>
-				</lite-youtube>
+				{% set videoTitle = project.data.title %}
+				{% set videoId = link.youtube %}
+				{% include 'youtube.njk' %}
 			{% endif %}
 		{% endfor %}
 	{% else %}
@@ -23,17 +21,19 @@
 		<p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
 
 		{% if class != "projectNavMusic" %}
-			{% for link in project.data.links %}
-				{% if link.steam %}
-					<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
-				{% elif link.youtube %}
-					<a href="https://www.youtube.com/watch?v={{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
-				{% elif link.soundcloud %}
-					<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
-				{% elif link.other %}
-					<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
-				{% endif %}
-			{% endfor %}
+			<div class="projectLinksPlatforms">
+				{% for link in project.data.links %}
+					{% if link.steam %}
+						<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
+					{% elif link.youtube %}
+						<a href="https://www.youtube.com/watch?v={{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
+					{% elif link.soundcloud %}
+						<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
+					{% elif link.other %}
+						<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
+					{% endif %}
+				{% endfor %}
+			</div>
 		{% else %}
 			<details>
 				<summary>Listen In</summary>
