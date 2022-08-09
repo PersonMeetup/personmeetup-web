@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Open Source
 eleventyNavigation:
   key: Open Source
-  order: 6
+  order: 7
 meta: True
 ---
 

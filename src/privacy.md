@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Privacy Policy
 eleventyNavigation:
   key: Privacy Policy
-  order: 5
+  order: 6
 meta: True
 ---
 
