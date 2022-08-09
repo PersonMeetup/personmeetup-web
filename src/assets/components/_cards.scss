@@ -1,0 +1,17 @@
+@use "../abstracts";
+
+.construction {
+	background-color: var(--clr-construction-300);
+	border: 0.275rem dashed var(--clr-neutral-400);
+	padding: 1rem;
+	max-width: 42.5rem;
+	margin-inline: auto;
+
+	img {
+		margin-inline: auto;
+	}
+}
+
+.info {
+	background-color: var(--clr-information-300);
+}

@@ -17,11 +17,7 @@
 	<meta name="twitter:creator" content="@PersonMeetup">
 	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-	<link rel="stylesheet" href="/css/boilerplate.css">
-	<link rel="stylesheet" href="/css/header.css">
-	<link rel="stylesheet" href="/css/main.css">
-	<link rel="stylesheet" href="/css/footer.css">
-	<link rel="stylesheet" href="/css/fonts.css">
+	<link rel="stylesheet" href="/assets/main.css">
 	<link rel="stylesheet" href="/css/lite-yt-embed.css">
 	<link rel="stylesheet" href="/css/prism.css" >
 
@@ -36,35 +32,38 @@
 	<meta name="generator" content="{{ site.generator }}">
 </head>
 <body>
-	<header>
-		<nav aria-label="Primary">
-			<ul>
-				<li><a href="/portfolio/">Portfolio</a></li>
-				<li><a href="/blog/">Blog</a></li>
-				<li class="person"><a href="/"><div class="person">Person<br>Meetup</div></a></li></a>
-				<li><a href="/#about">About</a></li>
-				<li><a href="/contact/">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		{% include "construction.njk" %}
-		{{ content | safe }}
-	</main>
-	<footer>
-		<nav aria-label="Secondary">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/portfolio/">Portfolio</a></li>
-			<li><a href="/blog/">Blog</a></li>
-			<li><a href="/contact/">Contact</a></li>
-			<li><a href="/sitemap/">Sitemap</a></li>
-			<li><a href="/privacy/">Privacy Policy</a></li>
-		</ul>
-		</nav>
-		<aside aria-label="Credits">
-			{% markdown %}{% include "credits.md" %}{% endmarkdown %}
-		</aside>
-	</footer>
+	<div class="foreground">
+		<header>
+			<nav aria-label="Primary">
+				{% set navPages = collections.all | eleventyNavigation | head(4) %}
+				<ul>
+				{% for entry in navPages %}
+					<li>
+						<a href="{{ entry.url }}">{{ entry.title }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</nav>
+		</header>
+		<main>
+			{% include "construction.njk" %}
+			{{ content | safe }}
+		</main>
+		<footer>
+			<nav aria-label="Secondary">
+				{% set navPages = collections.all | eleventyNavigation | head(6) %}
+				<ul>
+				{% for entry in navPages %}
+					<li>
+						<a href="{{ entry.url }}">{{ entry.title }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			</nav>
+			<aside aria-label="Credits">
+				{% markdown %}{% include "credits.md" %}{% endmarkdown %}
+			</aside>
+		</footer>
+	</div>
 </body>
 </html>
