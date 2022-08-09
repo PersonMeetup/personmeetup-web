@@ -8,7 +8,7 @@ types:
   - Games
   - Music
   - Video
-  - Web Design
+  - Miscellaneous
 layout: layouts/browse-portfolio.njk
 eleventyComputed:
   title: "{{ type }}"
@@ -21,26 +21,9 @@ permalink: /portfolio/{{ type | slugify }}/
 {% set filter = type %}
 {% set projectslist = collections.portfolio %}
 
-{% if type == "Video" %}
-	{% set class = "projectNavVideo" %}
-	<script src="/js/lite-yt-embed.js"></script>
-	{% for project in projectslist | reverse %}
-		{% if filter == project.data.type %}
-			{% include "projectslist.njk" %}
-		{% endif %}
-	{% endfor %}
-{% elif type == "Music" %}
-	{% set class = "projectNavMusic" %}
-	{% for project in projectslist | reverse %}
-		{% if filter == project.data.type %}
-			{% include "projectslist.njk" %}
-		{% endif %}
-	{% endfor %}
-{% else %}
-	{% set class = "projectNavGeneral" %}
-	{% for project in projectslist | reverse %}
-		{% if filter == project.data.type %}
-			{% include "projectslist.njk" %}
-		{% endif %}
-	{% endfor %}
-{% endif %}
+{% set class = "project-item" %}
+{% for project in projectslist | reverse %}
+	{% if filter == project.data.type %}
+		{% include "projectslist.njk" %}
+	{% endif %}
+{% endfor %}

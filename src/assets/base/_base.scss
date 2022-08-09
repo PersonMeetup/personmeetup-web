@@ -35,9 +35,14 @@ header {
 
 			li {
 				display: block;
+				border-bottom: 2px solid #fff;
+				transition: border-bottom 150ms;
 			}
 			li:first-child {
 				margin-right: auto;
+			}
+			li:hover {
+				border-bottom: 2px solid var(--clr-neutral-500);
 			}
 		}
 		a {
@@ -45,17 +50,10 @@ header {
 			text-decoration: none;
 		}
 	}
-	nav a {
-		color: var(--clr-neutral-500);
-		text-decoration: none;
-	}
-	li {
-		border-bottom: 2px solid #fff;
-		transition: border-bottom 150ms;
-	}
-	li:hover {
-		border-bottom: 2px solid var(--clr-neutral-500);
-	}
+}
+
+main {
+	margin-bottom: 4rem;
 }
 
 footer {
