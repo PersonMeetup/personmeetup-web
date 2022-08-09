@@ -5,10 +5,7 @@ date: 2019-01-01
 img: "/img/portfolio/farlands.jpg"
 type: Games
 links:
-  - steam: 1611223762
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1611223762
 layout: layouts/project.njk
 ---
 

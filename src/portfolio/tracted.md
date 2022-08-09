@@ -5,10 +5,7 @@ date: 2018-11-30
 img: "/img/portfolio/tracted.jpg"
 type: Games
 links:
-  - steam: 1578161423
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1578161423
 layout: layouts/project.njk
 ---
 

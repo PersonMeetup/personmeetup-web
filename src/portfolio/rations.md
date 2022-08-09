@@ -5,10 +5,7 @@ date: 2021-04-22
 img: "/img/portfolio/rations.jpg"
 type: Video
 links:
-  - steam: null
-  - youtube: BLQ3_954sRs
-  - soundcloud: null
-  - other: null
+  - youtube: https://www.youtube.com/watch?v=BLQ3_954sRs
 layout: layouts/project.njk
 ---
 

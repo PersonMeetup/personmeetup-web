@@ -5,10 +5,7 @@ date: 2017-07-05
 img: "/img/portfolio/laser-construction.jpg"
 type: Games
 links:
-  - steam: 964675754
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=964675754
 layout: layouts/project.njk
 ---
 
