@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 3
 ---
 {% set postslist = collections.blog %}
-{% set class = "blogNavItem" %}
+{% set class = "post-item" %}
 <section>
 {% for post in postslist | reverse %}
 	{% include "postslist.njk" %}
