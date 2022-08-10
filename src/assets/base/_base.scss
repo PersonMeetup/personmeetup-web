@@ -17,11 +17,13 @@ body {
 	background-size: 75rem;
 	margin-inline: auto;
 	max-width: 80rem;
+	min-height: 100vh;
 }
 
 header {
 	nav {
 		padding: 1rem 0;
+		margin-inline: 1rem;
 		font-family: var(--ff-accent);
 
 		ul {
@@ -37,12 +39,13 @@ header {
 				display: block;
 				border-bottom: 2px solid #fff;
 				transition: border-bottom 150ms;
-			}
-			li:first-child {
-				margin-right: auto;
-			}
-			li:hover {
-				border-bottom: 2px solid var(--clr-neutral-500);
+
+				&:first-child {
+					margin-right: auto;
+				}
+				&:hover {
+					border-bottom: 2px solid var(--clr-neutral-500);
+				}
 			}
 		}
 		a {

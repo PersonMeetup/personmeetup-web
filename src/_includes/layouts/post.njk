@@ -6,7 +6,7 @@ layout: layouts/base.njk
 	<h1 class="text-center">{{ title }}</h1>
 	{% if not(meta) %}
 	<p class="description text-center">{{ description }}</p>
-	<p class="caption text-center"><time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="tag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+	<p class="caption text-center"><time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time> | {% for tag in tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
 	{% endif %}
 </div>
 
@@ -14,23 +14,6 @@ layout: layouts/base.njk
 	{{ content | safe }}
 
 	{% if not(meta) %}
-	<details class="comments">
-		<summary>Open/Close Comments</summary>
-		<script src="https://giscus.app/client.js"
-						data-repo="personmeetup/personmeetup-web"
-						data-repo-id="R_kgDOG7XQQw"
-						data-category="Comments"
-						data-category-id="DIC_kwDOG7XQQ84CN5y1"
-						data-mapping="og:title"
-						data-reactions-enabled="1"
-						data-loading="lazy"
-						data-emit-metadata="0"
-						data-input-position="top"
-						data-theme="light"
-						data-lang="en"
-						crossorigin="anonymous"
-						async>
-		</script>
-	</details>
+	{% include "comments.njk" %}
 	{% endif %}
 </article>

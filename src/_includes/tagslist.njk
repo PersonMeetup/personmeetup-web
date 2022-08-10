@@ -3,7 +3,7 @@
 	<ul>
 	{% for tag in collections.tagList %}
 		{% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
-		<li><a class="tag" href="{{ tagUrl | url }}">{{ tag }}</a></li>
+		<li><a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a></li>
 	{% endfor %}
 	</ul>
 </aside>

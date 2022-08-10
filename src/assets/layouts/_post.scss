@@ -1,5 +1,12 @@
+$width: 70ch;
+
 .billboard {
 	margin-bottom: 3rem;
+
+	img {
+		max-width: $width;
+		margin-inline: auto;
+	}
 }
 
 .description {
@@ -7,7 +14,7 @@
 }
 
 article {
-	max-width: 80ch;
+	max-width: $width;
 	margin-inline: auto;
 
 	p,

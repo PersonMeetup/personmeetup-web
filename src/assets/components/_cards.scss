@@ -1,12 +1,13 @@
 @use "../abstracts";
+$card-margin: 2rem;
 
 .construction {
 	background-color: var(--clr-construction-300);
 	border: 0.275rem dashed var(--clr-neutral-400);
 	padding: 1rem;
-	max-width: 42.5rem;
+	max-width: 52.6rem;
 	margin-inline: auto;
-	margin-bottom: 2rem;
+	margin-bottom: $card-margin;
 
 	img {
 		margin-inline: auto;
@@ -14,5 +15,26 @@
 }
 
 .info {
-	background-color: var(--clr-information-300);
+	background-color: var(--clr-information-200);
+	border: 0.275rem solid var(--clr-information-300);
+	max-width: 42.5rem;
+	margin-inline: auto;
+	margin-bottom: $card-margin;
+
+	figure {
+		background-color: var(--clr-information-300);
+		display: flex;
+		gap: 0.4rem;
+		padding: 0.5rem;
+
+		img {
+			border: none;
+			margin: 0;
+		}
+	}
+
+	p {
+		padding: 1rem;
+		margin: 0;
+	}
 }
