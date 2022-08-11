@@ -37,8 +37,8 @@
 				{% set navPages = collections.all | eleventyNavigation | head(4) %}
 				<ul>
 				{% for entry in navPages %}
-					<li>
-						<a href="{{ entry.url }}">{{ entry.title }}</a>
+					<li {% if entry.url == page.url %} class="active" {% endif %}>
+						<a href="{{ entry.url }}">{% if entry.title == "Home" %}Person Meetup{% else %}{{ entry.title }}{% endif %}</a>
 					</li>
 				{% endfor %}
 				</ul>

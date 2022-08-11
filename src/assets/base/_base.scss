@@ -34,6 +34,10 @@ body {
 	transform: translateY(0);
 }
 
+.active {
+	border-bottom: 2px solid var(--clr-primary-300);
+}
+
 header {
 	nav {
 		padding: 1rem 0;
@@ -58,7 +62,7 @@ header {
 					margin-right: auto;
 				}
 				&:hover {
-					border-bottom: 2px solid var(--clr-neutral-500);
+					border-bottom: 2px solid var(--clr-primary-400);
 				}
 			}
 		}

@@ -15,7 +15,7 @@ $card-margin: 2rem;
 }
 
 .info {
-	background-color: var(--clr-information-200);
+	background-color: var(--clr-information-100);
 	border: 0.275rem solid var(--clr-information-300);
 	max-width: 42.5rem;
 	margin-inline: auto;
@@ -23,6 +23,8 @@ $card-margin: 2rem;
 
 	figure {
 		background-color: var(--clr-information-300);
+		color: #fff;
+		font-family: var(--ff-accent);
 		display: flex;
 		gap: 0.4rem;
 		padding: 0.5rem;

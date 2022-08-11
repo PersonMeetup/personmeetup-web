@@ -10,7 +10,10 @@ meta: True
 This site utilizes a LOT of open-source projects. This page serves to give them credit!
 
 - [eleventy](https://github.com/11ty/eleventy/)
+- [eleventy-sass](https://github.com/kentaroi/eleventy-sass)
 - [markdown-it](https://github.com/markdown-it/markdown-it)
+- [markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
+- [markdown-it-table-of-contents](https://github.com/cmaas/markdown-it-table-of-contents)
 - [neocities](https://github.com/neocities/neocities)
 - [deploy-to-neocities](https://github.com/bcomnes/deploy-to-neocities)
 - [google-webfonts-helper](https://github.com/majodev/google-webfonts-helper)
