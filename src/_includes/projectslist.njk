@@ -1,5 +1,5 @@
 <div class="{{ class }}">
-	<div class="project-image"><a href="{{ project.url | url }}"><img src="{{ project.data.img }}" alt="{{ project.data.title }} Thumbnail"></a></div>
+	<div class="project-image"><a href="{{ project.url | url }}"><img src="{{ project.data.img }}" alt="Thumbnail for {{ project.data.title }}"></a></div>
 	<div class="project-details">
 		<h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
 		<p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
@@ -9,13 +9,13 @@
 		<div class="social project-links">
 			{% for link in project.data.links %}
 				{% if link.steam %}
-					<a href="{{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="View on Steam"></a>
 				{% elif link.youtube %}
-					<a href="{{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="View on YouTube"></a>
 				{% elif link.soundcloud %}
-					<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="View on Soundcloud"></a>
 				{% elif link.other %}
-					<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="View on the Web"></a>
 				{% endif %}
 			{% endfor %}
 		</div>
