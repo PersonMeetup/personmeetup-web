@@ -7,19 +7,19 @@ eleventyNavigation:
 meta: True
 ---
 <div class="container-narrower sitemapDiv">
-	<p><a href="/sitemap.xml">Looking for the XML sitemap?</a></p>
+	<p class="text-center"><a href="/sitemap.xml">Looking for the XML sitemap?</a></p>
 	<h2>Main pages</h2>
 	{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
 	<h2>Posts</h2>
 	<ul>
 		{% for post in collections.blog | reverse %}
 		<li><a href="{{ site.url }}{{ post.url }}">{{ post.data.title }}</a> &bull; {{ post.date | readableDate }}</li>
-		{%- endfor %}
+		{% endfor %}
 	</ul>
 	<h2>Projects</h2>
 	<ul>
 		{% for project in collections.portfolio | reverse %}
 		<li><a href="{{ site.url }}{{ project.url }}">{{ project.data.title }}</a> &bull; {{ project.date | readableDate }}</li>
-		{%- endfor %}
+		{% endfor %}
 	</ul>
 </div>
