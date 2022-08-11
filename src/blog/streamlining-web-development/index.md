@@ -29,7 +29,7 @@ We would need to both edit the index to link to our new post, and create the pos
 
 The real problems kick in if there's an element used across your site that you need to update. In this example it's a typo in the post template for the site, but this could be anything from a incorrect `<meta>` tag in the head to a bulk update of links.
 
-![](base-post-problem.png "I meant to put it as 'bagk', not 'bagg'")
+![](base-postproblem.png "I meant to put it as 'bagk', not 'bagg'")
 
 Adding salt to the wound, this is the worst case scenario; needing to manually edit every post on the site to apply a template change. Scaling this up, the inability to do bulk changes is problematic if you want to overhaul the entire structure of the website as it locks you into your initial HTML[^1]. Much like white bread, regular HTML isn't something you should be having if you're really pushing to be healthier. Enter Markdown and Static-Site Generators, which are more like whole wheat bread. With them we're able to make site sweeping changes to our HTML without having to manually change every page, and adding posts to our site becomes hassle free.
 
