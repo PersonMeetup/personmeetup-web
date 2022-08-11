@@ -1,0 +1,21 @@
+// Reminder: Links page should also be cleaned up (Put into it's own folder)
+.comp-classtime {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0%, 7.1875rem));
+	gap: 0.4rem;
+	margin: 1rem 0;
+	justify-content: center;
+
+	> * {
+		background-color: var(--clr-tertiary-300);
+		border: 0.125em dashed var(--clr-tertiary-500);
+		padding: 0.3em;
+		text-align: center;
+		font-family: var(--ff-accent);
+		color: #fff;
+
+		dt {
+			font-weight: 700;
+		}
+	}
+}
