@@ -113,7 +113,7 @@ module.exports = function (eleventyConfig) {
 
 	// Copy media folders to the output
 	eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,jpeg,png,gif}");
-	eleventyConfig.addPassthroughCopy("src/img");
+	eleventyConfig.addPassthroughCopy("src/assets");
 	eleventyConfig.addPassthroughCopy("src/links");
 	eleventyConfig.addPassthroughCopy("src/fonts");
 	eleventyConfig.addPassthroughCopy("src/js");
