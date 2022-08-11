@@ -17,13 +17,6 @@ This site is hosted on _Neocities_.
 
 https://neocities.org/privacy
 
-## Soundcloud
-
-This site embeds _Soundcloud_ tracks in some pages.
-
-https://soundcloud.com/pages/cookies
-https://soundcloud.com/pages/privacy
-
 ## YouTube
 
 This site uses [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed) to provide YouTube embeds in some pages. A special thank you to Sia Karamalegos for their article "[Faster YouTube embeds in Eleventy](https://sia.codes/posts/lite-youtube-embed-eleventy/)," and to Bryce Wray for mentioning them in [his Privacy Policy](https://www.brycewray.com/privacy/).
