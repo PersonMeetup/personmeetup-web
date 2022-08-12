@@ -21,7 +21,7 @@ jobs:
       - name: Install deps and build
         run: |
           npm i
-          DEBUG=*EleventySass* npm run build
+          DEBUG=*EleventySass* npx @11ty/eleventy
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
       # When the dist_dir is ready, deploy it to neocities
