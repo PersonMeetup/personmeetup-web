@@ -56,7 +56,19 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNav);
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
-	eleventyConfig.addPlugin(eleventySass);
+
+	eleventyConfig.addPlugin(eleventySass, {
+		compileOptions: {
+			permalink: function (contents, inputPath) {
+				return (data) =>
+					data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+			},
+		},
+		sass: {
+			style: "compressed",
+			sourceMap: false,
+		},
+	});
 
 	// Parse markdown referenced within nunjucks
 	eleventyConfig.addPairedShortcode("markdown", function (content) {
