@@ -57,12 +57,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
 
-	eleventyConfig.addPlugin(eleventySass, {
-		sass: {
-			style: "compressed",
-			sourceMap: false,
-		},
-	});
+	eleventyConfig.addPlugin(eleventySass);
 
 	// Parse markdown referenced within nunjucks
 	eleventyConfig.addPairedShortcode("markdown", function (content) {
