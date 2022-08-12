@@ -5,10 +5,7 @@ date: 2021-05-21
 img: "/img/portfolio/generic-single.jpg"
 type: Music
 links:
-  - steam: null
-  - youtube: null
   - soundcloud: https://soundcloud.com/personmeetup/who-are-you
-  - other: null
 layout: layouts/project.njk
 ---
 

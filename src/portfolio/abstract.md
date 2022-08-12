@@ -5,10 +5,7 @@ date: 2020-04-17
 img: "/img/portfolio/abstract.png"
 type: Games
 links:
-  - steam: 2063636056
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2063636056
 layout: layouts/project.njk
 ---
 

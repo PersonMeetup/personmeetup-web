@@ -1,0 +1,29 @@
+/* https://www.youtube.com/watch?v=gP8yFWCTr7Q */
+@use "../abstracts" as *;
+
+:root {
+	@each $color, $shades in $colors {
+		@each $shade, $value in $shades {
+			--clr-#{$color}-#{$shade}: #{$value};
+		}
+	}
+
+	@each $screen-size, $font-size in $type-scale {
+		@if $screen-size == small {
+			@each $size, $value in $font-size {
+				--fs-#{$size}: #{$value};
+			}
+		} @else {
+			@include mq(small) {
+				@each $size, $value in $font-size {
+					--fs-#{$size}: #{$value};
+				}
+			}
+		}
+	}
+
+	--ff-primary: "System", sans-serif;
+	--ff-accent: "Source Sans Pro", sans-serif;
+
+	--bgd-img: url(/assets/background-aug2022.png);
+}

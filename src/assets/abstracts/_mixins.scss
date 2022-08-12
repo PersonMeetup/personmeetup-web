@@ -1,0 +1,23 @@
+@use "breakpoints" as *;
+
+@mixin mq($key) {
+	$size: map-get($breakpoints, $key);
+
+	@media only screen and (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin button($width: auto) {
+	font-family: var(--ff-accent);
+	text-align: center;
+	background-color: var(--clr-neutral-300);
+	padding: 0.6em;
+	width: $width;
+	margin-inline: auto;
+	color: #fff;
+
+	&:hover {
+		background-color: var(--clr-neutral-200);
+	}
+}

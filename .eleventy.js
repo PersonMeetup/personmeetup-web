@@ -16,6 +16,7 @@ const markdownIt = require("markdown-it")({
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventySass = require("eleventy-sass");
 
 // https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/
 const eleventyImg = require("@11ty/eleventy-img");
@@ -55,6 +56,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNav);
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
+	eleventyConfig.addPlugin(eleventySass);
 
 	// Parse markdown referenced within nunjucks
 	eleventyConfig.addPairedShortcode("markdown", function (content) {
@@ -111,8 +113,8 @@ module.exports = function (eleventyConfig) {
 
 	// Copy media folders to the output
 	eleventyConfig.addPassthroughCopy("src/blog/**/*.{jpg,jpeg,png,gif}");
-	eleventyConfig.addPassthroughCopy("src/img");
-	eleventyConfig.addPassthroughCopy("src/css");
+	eleventyConfig.addPassthroughCopy("src/assets");
+	eleventyConfig.addPassthroughCopy("src/links");
 	eleventyConfig.addPassthroughCopy("src/fonts");
 	eleventyConfig.addPassthroughCopy("src/js");
 	eleventyConfig.addPassthroughCopy({ "src/favicon": "/" });

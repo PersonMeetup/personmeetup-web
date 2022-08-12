@@ -5,10 +5,7 @@ date: 2022-02-02
 img: "/img/portfolio/generic-single.jpg"
 type: Music
 links:
-  - steam: null
-  - youtube: null
   - soundcloud: https://soundcloud.com/personmeetup/last-request
-  - other: null
 layout: layouts/project.njk
 ---
 

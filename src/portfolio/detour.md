@@ -5,10 +5,7 @@ date: 2018-09-01
 img: "/img/portfolio/detour.jpg"
 type: Games
 links:
-  - steam: 1499605287
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1499605287
 layout: layouts/project.njk
 ---
 

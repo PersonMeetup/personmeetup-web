@@ -5,10 +5,7 @@ date: 2021-04-03
 img: "/img/portfolio/generic-single.jpg"
 type: Music
 links:
-  - steam: null
-  - youtube: null
   - soundcloud: https://soundcloud.com/personmeetup/grass-is-greener-today
-  - other: null
 layout: layouts/project.njk
 ---
 

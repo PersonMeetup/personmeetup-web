@@ -5,10 +5,7 @@ date: 2021-01-29
 img: "/img/portfolio/generic-single.jpg"
 type: Music
 links:
-  - steam: null
-  - youtube: null
   - soundcloud: https://soundcloud.com/personmeetup/felt
-  - other: null
 layout: layouts/project.njk
 ---
 

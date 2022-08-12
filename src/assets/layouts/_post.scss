@@ -1,0 +1,31 @@
+$width: 70ch;
+
+.billboard {
+	margin-bottom: 3rem;
+
+	img {
+		max-width: $width;
+		margin-inline: auto;
+	}
+}
+
+.description {
+	font-size: var(--fs-600);
+}
+
+article {
+	max-width: $width;
+	margin-inline: auto;
+
+	p,
+	hr,
+	ol {
+		margin-bottom: 1em;
+	}
+	h1 {
+		margin-bottom: 0.25em;
+	}
+	h2 {
+		margin-bottom: 0.15em;
+	}
+}

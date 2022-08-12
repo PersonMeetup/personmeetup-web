@@ -5,10 +5,7 @@ date: 2020-03-21
 img: "/img/portfolio/thoughts-about-vr.png"
 type: Video
 links:
-  - steam: null
-  - youtube: QjKefgd_pzU
-  - soundcloud: null
-  - other: null
+  - youtube: https://www.youtube.com/watch?v=QjKefgd_pzU
 layout: layouts/project.njk
 ---
 

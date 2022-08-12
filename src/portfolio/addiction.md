@@ -5,10 +5,7 @@ date: 2019-11-15
 img: "/img/portfolio/addiction.jpg"
 type: Games
 links:
-  - steam: 1913266991
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1913266991
 layout: layouts/project.njk
 ---
 

@@ -5,10 +5,7 @@ date: 2021-06-27
 img: "/img/portfolio/office.png"
 type: Games
 links:
-  - steam: 2531941695
-  - youtube: null
-  - soundcloud: null
-  - other: null
+  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2531941695
 layout: layouts/project.njk
 ---
 

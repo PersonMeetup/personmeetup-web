@@ -1,45 +1,31 @@
 ---
 layout: layouts/base.njk
 ---
-<article>
-	<!--Embed project at the top. If impossible, link image (Maybe?)-->
+<div class="billboard">
 	<img src="{{ img }}" alt="Thumbnail for {{ title }}">
-	<h1>{{ title }}</h1>
-	
-	<p class="majorCaption">Released <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></p>
+	<h1 class="text-center">{{ title }}</h1>
+	<p class="caption text-center">Released <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></p>
+</div>
 
+<article>
 	{{ content | safe }}
 
-	<div class="projectLinks">
-		<h2>Availible On:</h2>
-		<div class="projectLinksPlatforms">
+	<div class="project-platforms">
+		<h2 class="text-center">Availible On:</h2>
+		<div class="social project-links">
 			{% for link in links %}
 				{% if link.steam %}
-					<a href="https://steamcommunity.com/sharedfiles/filedetails/?id={{ link.steam }}"><img class="svg" src="/img/steam.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.steam }}"><img class="svg" src="/assets/steam.svg" alt="{{ project.title }}"></a>
 				{% elif link.youtube %}
-					<a href="https://www.youtube.com/watch?v={{ link.youtube }}"><img class="svg" src="/img/youtube.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.youtube }}"><img class="svg" src="/assets/youtube.svg" alt="{{ project.title }}"></a>
 				{% elif link.soundcloud %}
-					<a href="{{ link.soundcloud }}"><img class="svg" src="/img/soundcloud.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.soundcloud }}"><img class="svg" src="/assets/soundcloud.svg" alt="{{ project.title }}"></a>
 				{% elif link.other %}
-					<a href="{{ link.other }}"><img class="svg" src="/img/rss.svg" alt="{{ project.title }}"></a>
+					<a href="{{ link.other }}"><img class="svg" src="/assets/rss.svg" alt="{{ project.title }}"></a>
 				{% endif %}
 			{% endfor %}
 		</div>
 	</div>
 
-	<script src="https://giscus.app/client.js"
-			data-repo="personmeetup/personmeetup-web"
-			data-repo-id="R_kgDOG7XQQw"
-			data-category="Comments"
-			data-category-id="DIC_kwDOG7XQQ84CN5y1"
-			data-mapping="og:title"
-			data-reactions-enabled="1"
-			data-loading="lazy"
-			data-emit-metadata="0"
-			data-input-position="top"
-			data-theme="light"
-			data-lang="en"
-			crossorigin="anonymous"
-			async>
-	</script>
+	{% include "comments.njk" %}
 </article>

@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Privacy Policy
 eleventyNavigation:
   key: Privacy Policy
-  order: 5
+  order: 6
 meta: True
 ---
 
@@ -16,13 +16,6 @@ The following is a list of services used, how they're mitigated if possible, and
 This site is hosted on _Neocities_.
 
 https://neocities.org/privacy
-
-## Soundcloud
-
-This site embeds _Soundcloud_ tracks in some pages.
-
-https://soundcloud.com/pages/cookies
-https://soundcloud.com/pages/privacy
 
 ## YouTube
 

@@ -1,0 +1,132 @@
+header,
+main,
+footer {
+	margin-inline: auto;
+	width: min(90%, 70rem);
+}
+
+body {
+	background-image: var(--bgd-img);
+	background-position: center;
+}
+
+.foreground {
+	background-image: url(/assets/foreground.png);
+	background-position: center;
+	background-repeat: repeat-y;
+	background-size: 75rem;
+	margin-inline: auto;
+	max-width: 80rem;
+	min-height: 100vh;
+}
+
+.nav-skip {
+	position: absolute;
+	transform: translateY(-120%);
+	color: #fff;
+	background-color: var(--clr-primary-500);
+	border: 0.3rem solid var(--clr-secondary-300);
+	border-radius: 0.2rem;
+	padding: 0.5em;
+	transition: transform 250ms cubic-bezier(0.15, 0.3, 0.2, 1);
+}
+.nav-skip:focus {
+	transform: translateY(0);
+}
+
+.active {
+	border-bottom: 2px solid var(--clr-primary-300);
+}
+
+header {
+	nav {
+		padding: 1rem 0;
+		margin-inline: 1rem;
+		font-family: var(--ff-accent);
+
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: right;
+			column-gap: 1rem;
+			text-align: center;
+
+			li {
+				display: block;
+				border-bottom: 2px solid #fff;
+				transition: border-bottom 150ms;
+
+				&:first-child {
+					margin-right: auto;
+				}
+				&:hover {
+					border-bottom: 2px solid var(--clr-primary-400);
+				}
+			}
+		}
+		a {
+			color: var(--clr-neutral-500);
+			text-decoration: none;
+		}
+	}
+}
+
+main {
+	margin-bottom: 4rem;
+}
+
+a {
+	color: var(--clr-secondary-400);
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+footer {
+	font-size: var(--fs-300);
+	font-family: var(--ff-accent);
+
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	padding-bottom: 2ch;
+
+	ul {
+		margin: 0;
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	aside > * {
+		margin-bottom: 0.5em;
+	}
+
+	img {
+		height: 31px;
+	}
+
+	a {
+		color: var(--clr-neutral-300);
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.2em;
+}
+
+.squished {
+	display: none;
+}
+@media only screen and (min-width: 28.126em) {
+	.squished {
+		display: inline;
+	}
+}

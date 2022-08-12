@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+$object-gap: 0.2em;
+$object-padding: 0.275em;
+
+.post-item {
+	border: 0.125em dashed var(--clr-neutral-200);
+	padding: $object-padding;
+	margin-bottom: $object-gap;
+}
+
+.blog-nav {
+	display: grid;
+}
+
+.blog-tagnav {
+	padding: $object-padding;
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: $object-gap;
+	}
+}
+
+@include mq(medium) {
+	.blog-nav {
+		grid-template-columns: 5fr 2fr;
+		column-gap: $object-gap;
+	}
+}

@@ -1,9 +1,9 @@
-<aside class="blogNavItem">
-	<h3 class="special">Tags</h3>
+<aside class="post-item blog-tagnav">
+	<h2 class="text-center">Tags</h2>
 	<ul>
 	{% for tag in collections.tagList %}
 		{% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
-		<li><a href="{{ tagUrl | url }}">{{ tag }}</a></li>
+		<li><a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a></li>
 	{% endfor %}
 	</ul>
 </aside>

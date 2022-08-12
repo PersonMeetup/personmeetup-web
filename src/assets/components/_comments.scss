@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.comments {
+	summary {
+		@include button(12em);
+		list-style: none;
+		cursor: pointer;
+	}
+	&[open] summary {
+		margin-bottom: 1em;
+	}
+}

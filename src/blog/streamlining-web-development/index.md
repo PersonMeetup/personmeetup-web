@@ -9,11 +9,11 @@ lastmod:
 layout: layouts/post.njk
 ---
 
-[[toc]]
-
 Web development is an interesting beast, with no "wrong" way to approach it. There are standards and general guidelines, but one look at [Neocities](https://neocities.org/activity) makes it clear they're not mandatory. In fact, if you're wanting your page to be more stylish and expressive, those standards might get in your way. All this is to say you can create your site however you want! With that said, it's worth keeping in mind how you'll add onto or change your site in the future. For that I recommend employing the use of Markdown and Static-Site Generators. They're great tools that make working on your site easier, and while they are more complicated compared to regular HTML, I've personally found the amount of time they save to be worth in the end.
 
 Before I get into the thick of things, I should preface that this article will involve programming and getting your hands dirty with the command line. It's avoidable for Markdown but inevitable for Static-Site Generators, given how they work. If you're going to continue reading I'll assume that you're comfortable with a little bit of programming, which I'll keep as minimal as I can. I'm also assuming you have a lot of content to go over in your site, and will immediately concede the ground that if you're doing [microblogging](https://neonaut.neocities.org/brain/rejecting-ssg.html) using a generator might be overblown.
+
+[[toc]]
 
 ## Plain Ol' White Bread
 
@@ -29,7 +29,7 @@ We would need to both edit the index to link to our new post, and create the pos
 
 The real problems kick in if there's an element used across your site that you need to update. In this example it's a typo in the post template for the site, but this could be anything from a incorrect `<meta>` tag in the head to a bulk update of links.
 
-![](base-post-problem.png "I meant to put it as 'bagk', not 'bagg'")
+![](base-postproblem.png "I meant to put it as 'bagk', not 'bagg'")
 
 Adding salt to the wound, this is the worst case scenario; needing to manually edit every post on the site to apply a template change. Scaling this up, the inability to do bulk changes is problematic if you want to overhaul the entire structure of the website as it locks you into your initial HTML[^1]. Much like white bread, regular HTML isn't something you should be having if you're really pushing to be healthier. Enter Markdown and Static-Site Generators, which are more like whole wheat bread. With them we're able to make site sweeping changes to our HTML without having to manually change every page, and adding posts to our site becomes hassle free.
 
