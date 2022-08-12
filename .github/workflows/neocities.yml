@@ -6,6 +6,10 @@ on:
     branches:
       - master
 
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -17,11 +21,11 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: lts/*
       - name: Install deps and build
         run: |
           npm i
-          npx @11ty/eleventy
+          npm run build
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
       # When the dist_dir is ready, deploy it to neocities
