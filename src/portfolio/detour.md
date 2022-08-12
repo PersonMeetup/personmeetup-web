@@ -2,7 +2,7 @@
 title: Detour
 description: Dang sparking door, now I got to do some dumb tests with even more doors.
 date: 2018-09-01
-img: "/img/portfolio/detour.jpg"
+img: "/assets/portfolio/detour.jpg"
 type: Games
 links:
   - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1499605287

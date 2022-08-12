@@ -2,12 +2,9 @@
 title: Person Meetup (The Site)
 description: The central hub for everything I create!
 date: 2022-03-01T13:37:25Z
-img: "/img/portfolio/generic-single.jpg"
+img: "/assets/portfolio/generic-single.jpg"
 type: Miscellaneous
 links:
-  - steam: null
-  - youtube: null
-  - soundcloud: null
   - other: https://personmeetup.ca/
 layout: layouts/project.njk
 ---

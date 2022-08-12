@@ -2,7 +2,7 @@
 title: Last Request
 description: '"Do one last thing for me if you never do anything else; DESTROY HIM!!!"'
 date: 2022-02-02
-img: "/img/portfolio/generic-single.jpg"
+img: "/assets/portfolio/generic-single.jpg"
 type: Music
 links:
   - soundcloud: https://soundcloud.com/personmeetup/last-request

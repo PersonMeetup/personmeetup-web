@@ -2,7 +2,7 @@
 title: Laser Construction
 description: Just because it's under construction, doesn't mean we can't make science!
 date: 2017-07-05
-img: "/img/portfolio/laser-construction.jpg"
+img: "/assets/portfolio/laser-construction.jpg"
 type: Games
 links:
   - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=964675754
