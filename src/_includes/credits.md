@@ -4,6 +4,7 @@ Favicon created by [Ray Henderson](https://www.deviantart.com/bloodyarchimedes).
 	<li><a href="/feeds/"><img src="/assets/rss.svg" title="Feeds" alt="Feeds"></a></li>
 	<li><a href="https://www.youtube.com/c/PersonMeetupp"><img src="/assets/youtube.svg" title="YouTube" alt="YouTube"></a></li>
 	<li><a href="https://twitter.com/PersonMeetup"><img src="/assets/twitter.svg" title="Twitter" alt="Twitter"></a></li>
+	<li><a rel="me" href="https://mstdn.ca/@personmeetup"><img src="/assets/mastodon.svg" title="Mastodon" alt="Mastodon"></a></li>
 	<li><a href="https://soundcloud.com/personmeetup"><img src="/assets/soundcloud.svg" title="Soundcloud" alt="Soundcloud"></a></li>
 	<li><a href="https://steamcommunity.com/id/personmeetup/myworkshopfiles/"><img src="/assets/steam.svg" title="Steam" alt="Steam"></a></li>
 	<li><a href="https://ko-fi.com/personmeetup"><img src="/assets/kofi.svg" title="Kofi" alt="Kofi"></a></li>

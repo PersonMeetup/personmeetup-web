@@ -9,7 +9,7 @@ module.exports = function () {
 		url: "https://personmeetup.ca",
 		language: "en",
 		description: "I like to create stuff",
-		image: "/img/opengraph.png",
+		image: "/assets/opengraph.png",
 		author: {
 			name: "Leslie Swan",
 			email: "contact@personmeetup.ca",
