@@ -62,6 +62,15 @@
 				{% markdown %}{% include "credits.md" %}{% endmarkdown %}
 			</aside>
 		</footer>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="0" width="0">
+			<defs>
+				<filter id="sketchBorder">
+					<feTurbulence type="turbulence" baseFrequency="0.4" numOctaves="2" result="turbulence"/>
+					<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" result="sketch"/>
+					<feGaussianBlur in="sketch" stdDeviation="0.65"/>
+				</filter>
+			</defs>
+		</svg>
 	</div>
 </body>
 </html>
