@@ -9,7 +9,7 @@ meta: True
 
 I could say that this site doesn't collect any user data (**which it doesn't, at all**), but we both know it's more complicated than that. If the **extrernally hosted services** you're using aren't GDPR compliant, neither are you. For the services this site does use, the general rule of thumb I've taken has been "**prioritize user privacy within reason**." That means if there's an approach to protect a users privacy while still providing the desired content, I'll take it.
 
-The following is a list of services used, how they're mitigated if possible, and their respective privacy policies. Keep in mind that _Google Fonts_ has not been included in the list because [directly linking to its API has been avoided](https://google-webfonts-helper.herokuapp.com/fonts).
+The following is a list of services used, how they're mitigated if possible, and their respective privacy policies. Keep in mind that while this site does use some fonts from the _Google Fonts_ library, that service's privacy policy is not included because [directly linking to its API has been avoided](https://google-webfonts-helper.herokuapp.com/fonts).
 
 ## Neocities
 
