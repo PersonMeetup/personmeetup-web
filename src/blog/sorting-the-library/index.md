@@ -25,7 +25,7 @@ Much of my inspiration for how to organize my library of bookmarks was taken fro
 
 The first way I tailored things was in how I defined my classes. I started off by jotting down the subjects and fields that were of most interest to me. After that, I tried to fit those subjects into broad fields that would group them all together. Those fields would become the classes of which everything falls under. There's still more refinement to be done - I'm adding classes when I find a group of bookmarks that would work better in their own field - but overall I'm happy with where my classes are at right now. For reference, here's what I currently have defined as my classes.
 
-```
+```md
 Bookmarks
 ├── General Works
 ├── Art & Design
@@ -38,7 +38,7 @@ Bookmarks
 
 Note the `General Works` class; this catergory takes care of all the general articles that would be hard to fit elsewhere, such as news articles, philosophical discussions, opinion pieces and general essays. These would be referred to as devisions under the Dewey Decimal System.
 
-```
+```md
 General Works
 ├── Essay
 ├── Opinion
@@ -51,7 +51,7 @@ General Works
 
 From there, sections devide things further. It's worth mentioning that you can specify things further beyond sections (something which is a part of the actual system), but the core idea remains the same. This is all based off the idea of structural hierarchy; what is true of the whole is true for its parts. As an example, let's take a look at the folder structure within the `Art & Design` class.
 
-```
+```md
 Art & Design
 ├── Graphic Design
 ├── Sound Design
