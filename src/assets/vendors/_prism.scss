@@ -46,7 +46,7 @@ pre[class*="language-"] {
 :not(pre) > code {
 	padding: 0.05rem 0.2rem 0.05rem;
 	border-radius: 0.2em;
-	white-space: normal;
+	white-space: nowrap;
 }
 
 .token.comment,
