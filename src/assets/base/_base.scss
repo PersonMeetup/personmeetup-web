@@ -11,13 +11,25 @@ body {
 }
 
 .foreground {
-	background-image: url(/assets/foreground.png);
-	background-position: center;
-	background-repeat: repeat-y;
-	background-size: 75rem;
+	background: #fff;
 	margin-inline: auto;
 	max-width: 80rem;
 	min-height: 100vh;
+
+	&::before {
+		content: "";
+		position: fixed;
+		border:6px var(--clr-neutral-300);
+		border-style:none solid;
+		filter:url(#sketchBorder);
+		top: -2px;
+		left: -8px;
+		right: -4px;
+		width: 1284px;
+		margin: 0 auto;
+		height: 100vh;
+		pointer-events: none
+	}
 }
 
 .nav-skip {
