@@ -1,4 +1,4 @@
-Favicon created by [Ray Henderson](https://www.deviantart.com/bloodyarchimedes). This site uses [open-source](/open-source/) projects, and has its code available on [GitHub](https://github.com/PersonMeetup/personmeetup-web).
+Favicon created by [Ray Henderson](https://www.deviantart.com/bloodyarchimedes). This site uses [open-source](/open-source) projects, and has its code available on [GitHub](https://github.com/PersonMeetup/personmeetup-web).
 
 <ul class="social" role="list" aria-label="Social links">
 	<li><a href="/feeds/"><img src="/assets/rss.svg" title="Feeds" alt="Feeds"></a></li>

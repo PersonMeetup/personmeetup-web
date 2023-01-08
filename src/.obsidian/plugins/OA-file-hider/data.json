@@ -1,0 +1,17 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "js",
+    "links",
+    "fonts",
+    "feeds",
+    "favicon",
+    "_includes",
+    "_data",
+    "assets/abstracts",
+    "assets/base",
+    "assets/components",
+    "assets/layouts",
+    "assets/vendors"
+  ]
+}

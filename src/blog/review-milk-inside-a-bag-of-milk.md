@@ -4,7 +4,7 @@ description: 'Shortened to "Milk inside a bag of milk" for all our sakes.'
 date: 2022-06-01T21:55:17.807415
 lastmod: 2022-06-02T07:42:43.892609
 tags:
-  - Game Design
+  - Game-Design
   - Review
 layout: layouts/post.njk
 ---

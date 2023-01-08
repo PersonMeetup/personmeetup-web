@@ -1,0 +1,12 @@
+{
+  "spellcheckLanguages": [
+    "en-CA"
+  ],
+  "spellcheck": true,
+  "tabSize": 2,
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "./",
+  "userIgnoreFilters": [
+    "toc"
+  ]
+}
