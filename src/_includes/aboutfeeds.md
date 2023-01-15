@@ -1,0 +1,3 @@
+Web Feeds are an XML document that allows users to follow updates on content they consume on the web. While they can be consumed as a web page via browser extensions or developer support, they can also be used with a "newsreader" app to aggregate content from multiple sources at once. [About Feeds](https://aboutfeeds.com/) contains more information about how they work if you're interested.
+
+Each feed is also available in the [JSON Feed](https://www.jsonfeed.org/) format, which function similarly to their XML counterparts. The primary difference is the data format, which can be more easily utilized by developers. Simply swap out the `.xml` at the end of a feed's URL to `.json` to access them.

@@ -8,33 +8,21 @@ meta: True
 	<p>Interested in knowing whenever I release something new? Consider bookmarking one of my Web Feeds! They're a great way to get caught up on what I do without having to subscribe to a newsletter. </p>
 	<details class="feed-details">
 		<summary class="feed-summary">Learn More</summary>
-		<div class="feed-explanation">
-			<p>Web Feeds are an XML document that allows users to follow updates on content they consume on the web. While they can be consumed as a web page just fine, they can also be used with a "newsreader" app to aggregate content from multiple sources at once. <a href="https://aboutfeeds.com/">About Feeds</a> contains more information about how they work if you're interested.</p>
-			<p>Each feed is also availible in the <a href="https://www.jsonfeed.org/">JSON Feed</a> format, which function similarly to their XML counterparts. The primary difference is the data format, which can be more easily utilized by developers.</p>
-		</div>
+		<div class="feed-explanation">{% markdown %}{% include "aboutfeeds.md" %}{% endmarkdown %}</div>
 	</details>
 </article>
 
 <div class="feeds">
 	<div class="feed-item">
-		<h2 class="text-center">Latest Projects</h2>
-		<p class="text-center">Creations that are fresh from the oven, with some occasional developer commentary on top.</p>
-		<div class="social project-links">
-			<a href="/feeds/portfolio.xml"><img src="/assets/rss.svg" title="Web Feed for Latest Projects" alt="Web Feed for Latest Projects"></a> <a href="/feeds/portfolio.json"><img src="/assets/jsonfeed.svg" title="JSON Feed for Latest Projects" alt="JSON Feed for Latest Projects"></a>
-		</div>
+		<h2 class="text-center"><a href="/feeds/portfolio.xml">Latest Projects</a></h2>
+		<p class="text-center">Creations fresh from the oven, with some occasional developer commentary on top.</p>
 	</div>
 	<div class="feed-item">
-		<h2 class="text-center">Latest Blogposts</h2>
+		<h2 class="text-center"><a href="/feeds/blog.xml">Latest Blogposts</a></h2>
 		<p class="text-center">Various thoughts, opinions, and discussions, coming hot off the presses.</p>
-		<div class="social project-links">
-			<a href="/feeds/blog.xml"><img src="/assets/rss.svg" title="Web Feed for Latest Blogposts" alt="Web Feed for Latest Blogposts"></a> <a href="/feeds/blog.json"><img src="/assets/jsonfeed.svg" title="JSON Feed for Latest Blogposts" alt="JSON Feed for Latest Blogposts"></a>
-		</div>
 	</div>
 	<div class="feed-item">
-		<h2 class="text-center">Latest Updates</h2>
+		<h2 class="text-center"><a href="/feeds/all.xml">Latest Updates</a></h2>
 		<p class="text-center">The most verbose feed, giving updates on both new projects and blogposts.</p>
-		<div class="social project-links">
-			<a href="/feeds/all.xml"><img src="/assets/rss.svg" title="Web Feed for Latest Updates" alt="Web Feed for Latest Updates"></a> <a href="/feeds/all.json"><img src="/assets/jsonfeed.svg" title="JSON Feed for Latest Updates" alt="JSON Feed for Latest Updates"></a>
-		</div>
 	</div>
 </div>
