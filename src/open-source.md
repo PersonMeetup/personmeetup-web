@@ -20,6 +20,7 @@ This site utilizes a LOT of open-source projects. This page serves to give them 
 - [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed)
 - [giscus](https://github.com/giscus/giscus)
 - [SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
+- [octicons](https://github.com/primer/octicons)
 
 You can also find the GitHub for this site [here](https://github.com/PersonMeetup/personmeetup-web).
 

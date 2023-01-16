@@ -9,13 +9,13 @@
 		<div class="social project-links">
 			{% for link in project.data.links %}
 				{% if link.steam %}
-					<a href="{{ link.steam }}"><img class="svg" src="/assets/steam.svg" alt="View on Steam"></a>
+					<a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
 				{% elif link.youtube %}
-					<a href="{{ link.youtube }}"><img class="svg" src="/assets/youtube.svg" alt="View on YouTube"></a>
+					<a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
 				{% elif link.soundcloud %}
-					<a href="{{ link.soundcloud }}"><img class="svg" src="/assets/soundcloud.svg" alt="View on Soundcloud"></a>
+					<a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
 				{% elif link.other %}
-					<a href="{{ link.other }}"><img class="svg" src="/assets/rss.svg" alt="View on the Web"></a>
+					<a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
 				{% endif %}
 			{% endfor %}
 		</div>

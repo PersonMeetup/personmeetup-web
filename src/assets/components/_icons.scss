@@ -1,0 +1,75 @@
+@use "../abstracts";
+
+svg {
+	#rssTransmitter,
+	#youtube,
+	#twitter,
+	#mastodon,
+	#soundcloud,
+	#kofiCup {
+		fill: var(--clr-neutral-300);
+		transition: all 200ms ease;
+	}
+
+	#rssTransmission {
+		stroke: var(--clr-neutral-300);
+		transition: all 200ms ease;
+	}
+
+	#kofiHeart {
+		fill: #fff;
+		transform-origin: center;
+		transform-box: fill-box;
+		transition: fill 150ms ease;
+	}
+}
+
+svg:hover {
+	#rssTransmitter {
+		fill: #f80;
+	}
+	#rssTransmission {
+		stroke: #f80;
+	}
+	#youtube {
+		fill: #ed1d24;
+	}
+	#twitter {
+		fill: #1da1f2;
+	}
+	#mastodon {
+		fill: #3088d4;
+	}
+	#soundcloud {
+		fill: #f50;
+	}
+	#kofiCup {
+		fill: var(--clr-neutral-100);
+	}
+	#kofiHeart {
+		animation: heartPulse 3s ease forwards infinite;
+		fill: #f1464d;
+		transition-delay: 200ms;
+	}
+
+	@keyframes heartPulse {
+		5% {
+			transform: scale(0.8);
+		}
+		20% {
+			transform: scale(1.25);
+		}
+		60%,
+		100% {
+			transform: scale(1);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	svg:hover {
+		#kofiHeart {
+			animation: none;
+		}
+	}
+}

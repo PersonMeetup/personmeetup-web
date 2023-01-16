@@ -19,16 +19,16 @@ body {
 	&::before {
 		content: "";
 		position: fixed;
-		border:6px var(--clr-neutral-300);
-		border-style:none solid;
-		filter:url(#sketchBorder);
+		border: 6px var(--clr-neutral-300);
+		border-style: none solid;
+		filter: url(#sketchBorder);
 		top: -2px;
 		left: -8px;
 		right: -4px;
 		width: 1284px;
 		margin: 0 auto;
 		height: 100vh;
-		pointer-events: none
+		pointer-events: none;
 	}
 }
 
@@ -115,7 +115,7 @@ footer {
 		margin-bottom: 0.5em;
 	}
 
-	img {
+	svg {
 		height: 31px;
 	}
 
