@@ -12,6 +12,7 @@
     "assets/base",
     "assets/components",
     "assets/layouts",
-    "assets/vendors"
+    "assets/vendors",
+    "not-found.md"
   ]
 }
