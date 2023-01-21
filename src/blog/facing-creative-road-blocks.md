@@ -7,7 +7,6 @@ date: 2022-04-25T04:40:00+00:00
 lastmod:
 layout: layouts/post.njk
 ---
-
 At the start of March I launched this site with the idea to expand it further with blog posts going over coding concepts I found interesting, reviewing video games, looking back at finished projects, and other ideas that may come to mind. Nearly 2 months later and, aside from various tweaks to the HTML templates, this site is dead. Activity wise, that is. Don't get me wrong, I do want to keep working on this site. I think it's a great application for the web-design skills I've developed in the past two years, and it gives me another outlet to express myself and my interests. But for some reason, I find it hard to write for the site.
 
 Thinking about this reminded me of my interest in video editing, mainly because it feels stuck in the same situation. I have plenty of video ideas I could work on and even encouragement from my friends to do it, but I find it hard to get started on a editing project. Obviously the best solution would be to start working on something and go from there, but I find there are a few obstacles that make that a harder challenge than is realized.
