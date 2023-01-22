@@ -17,7 +17,7 @@ After doing some searching around, I decided to follow the style Jason Evangelho
 
 [^1]: Calling them "entertainment feeds" seems a bit dismissive, especially when people like JJ McCullough, EmpLemon, Captain Disillusion, and David Hilowitz are in that category as well. The basic idea behind separating them was mostly a need to stop mindlessly browsing YouTube as much, which is what many of the feeds in this category are sourced from.
 
-![An example of my feed organization, showing separate news and entertainment accounts in Thunderbird](assets/blog/cleaning-the-mailboxes/rss-organization.png)
+![An example of my feed organization, showing separate news and entertainment accounts in Thunderbird](/assets/blog/cleaning-the-mailboxes/rss-organization.png)
 
 ## E-Mail
 
