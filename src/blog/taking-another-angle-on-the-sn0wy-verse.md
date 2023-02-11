@@ -3,7 +3,6 @@ title: Taking Another Angle on the Sn0wy-Verse
 description: Rethinking how the Imagisphere is referred to in *Sn0wy*.
 date: 2022-07-04T13:38:01.291701
 tags:
-  - Sn0wy
   - Mythos
 layout: layouts/post.njk
 ---
@@ -16,7 +15,7 @@ You could also consider this my attempt to redeem myself, because I do realize t
 
 As unorthodox as it seems, talking about _LittleBigPlanet_ is worthwhile when discussing the Imagisphere within _Sn0wy_. It's interpretation of the Imagisphere utilizes many of the same core concepts that _LittleBigPlanet_ establishes, with the big three being its ties to imagination, creator curators, and badges. The first point should be obvious as _LittleBigPlanet's_ boot screens describe how our idle thoughts join up with others to create the planets and moons around the Imagisphere or, as Wallace put it, "[The Imagisphere is a dimension made up of nothing but thoughts and ideas from millions of human beings.](https://youtu.be/kF_oPS7Hv5k?t=559)"
 
-Wallace also describes how people "create these worlds in their minds that become planets in [...] the Imagisphere," which happens to fulfill the definition of a creator curator within _LittleBigPlanet_. They're the ones who build and maintain the various planets and moons that make up the Imagisphere, and while the label is mainly used to describe the characters within the game's story the [_LittleBigPlanet_ wiki](https://littlebigplanet.fandom.com/wiki/Creator_Curator) describes the player as being one of these curators.
+Wallace also describes how people "create these worlds in their minds that become planets in \[...] the Imagisphere," which happens to fulfill the definition of a creator curator within _LittleBigPlanet_. They're the ones who build and maintain the various planets and moons that make up the Imagisphere, and while the label is mainly used to describe the characters within the game's story the [_LittleBigPlanet_ wiki](https://littlebigplanet.fandom.com/wiki/Creator_Curator) describes the player as being one of these curators.
 
 Finally, there's the minute detail of badges. These function as level selectors in _LittleBigPlanet_, dragging the player from the game's hub area to the world within the badge. Similarly, the Black Diamond Door seen within _Sn0wy_ bridges the gap between two different worlds and are even able to take on a more circular shape. Overall, there's actual reason to consider _Sn0wy_ and _LittleBigPlanet_ together, as they're quite closely connected in how they use the Imagisphere. And I didn't even mention the [_LittleBigPlanet_ episode](https://www.youtube.com/watch?v=TTa08dh3uac) that permanently altered Tw1g's appearance.
 
@@ -26,7 +25,7 @@ While it's use of the Imagisphere is near identical to _LittleBigPlanet_, _Sn0wy
 
 ![Cocodott's "Sn0wy Dimension Travel Diagram."](/assets/blog/taking-another-angle-on-the-sn0wy-verse/sn0wy-dimension-model.jpg)
 
-As well put together as the diagram is, it's clear to see it's a bit convoluted. Within the image, there's questions regarding how Wallace is able to access the Therapy Room and if Tw1g is able to access the same areas as Wallace since their change in the _LittleBigPlanet_ episode. Beyond the image, the episode "[VAPORWAVE & ESCAPISM](https://www.youtube.com/watch?v=FtYbr7RPDXw)" calls into question how accurate Wallace's understanding of the Imagisphere is with Sn0wy accidentally sending him and Clementine into another world. Discussion on the topic of multiple dimensions is itself a challenge to mentally visualize. Not to mention Noir's comment to Wallace that "[his] theory is a bit shaky in certain areas."
+As well put together as the diagram is, it's clear to see it's a bit convoluted. Within the image, there's questions regarding how Wallace is able to access the Therapy Room and if Tw1g is able to access the same areas as Wallace since their change in the _LittleBigPlanet_ episode. Beyond the image, the episode "[VAPORWAVE & ESCAPISM](https://www.youtube.com/watch?v=FtYbr7RPDXw)" calls into question how accurate Wallace's understanding of the Imagisphere is with Sn0wy accidentally sending him and Clementine into another world. Discussion on the topic of multiple dimensions is itself a challenge to mentally visualize. Not to mention Noir's comment to Wallace that "\[his] theory is a bit shaky in certain areas."
 
 To address these problems and to help with explanation, think of dimensions as layers. On the top layer you have someone like Wallace, a creator. Anything they create is in a second layer beneath them. This second layer has full flexibility to do whatever it wants; explore their world, visit the worlds of [other creators](https://youtu.be/kF_oPS7Hv5k?t=414), or potentially make their own layers. The only thing they can't do is go up to the same layer their creator is from. That said, nothing is stopping a creator from going down a layer to exist with their creations.
 
