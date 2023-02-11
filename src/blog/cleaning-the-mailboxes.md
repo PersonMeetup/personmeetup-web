@@ -3,7 +3,7 @@ title: Cleaning the Mailboxes
 description: I've been working on improving my digital organization as of late, something which I've felt has been lacking for quite some time.
 date: 2022-10-13T15:13:17.121428
 tags:
-  - Meta
+  - Organization
   - Technology
 layout: layouts/post.njk
 ---
