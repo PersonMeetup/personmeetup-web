@@ -78,20 +78,19 @@ module.exports = function (eleventyConfig) {
 		return array.slice(0, n);
 	});
 
-	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-		if (typeof dateObj === "string") {
-			return DateTime.fromISO(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
-		}
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
-	});
-	eleventyConfig.addFilter("readableDate", (dateObj) => {
-		if (typeof dateObj === "string") {
-			return DateTime.fromISO(dateObj, { zone: "utc" }).toFormat("dd LLL yyyy");
-		}
-		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-			"dd LLL yyyy"
+	// Datetime Filters from https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
+
+	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
+		console.log(dateObj);
+		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
+			format || "dd LLLL yyyy"
 		);
+	});
+
+	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
 	});
 
 	function filterTagList(tags) {
