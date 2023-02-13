@@ -1,7 +1,6 @@
 ---
 title: Sorting the Library
 description: Continuing my digital organization, I tackle how my bookmarks are organized.
-date: 2022-12-21
 tags:
   - Organization
   - Technology

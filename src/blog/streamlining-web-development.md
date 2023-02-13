@@ -4,8 +4,6 @@ description: Today I'll teach you how to bake a loaf of whole wheat bread withou
 tags:
   - Web-Design
   - Programming
-date: 2022-03-14T11:37:47
-lastmod:
 layout: layouts/post.njk
 ---
 
@@ -253,8 +251,8 @@ layout: base.html
 
 That's it! What we want to do now is cleanup our index page so that it only has our body content in it. We can also include the same YAML in our Markdown file to give it proper styling.
 
-| Before                      | After                    |
-| --------------------------- | ------------------------ |
+| Before                                                                | After                                                              |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | ![](/assets/blog/streamlining-web-development/eleventy-prelayout.png) | ![](/assets/blog/streamlining-web-development/eleventy-layout.png) |
 
 One thing we're missing though is our button for post navigation, but that's easy to fix with another template. In the `_includes` folder, create a new HTML file called `post.html`. Start it off with the same YAML we've been using for our other pages, because why rewrite our base template when we can reuse it? Copy in our button's tags, follow it with a `{% raw %}{{ content }}{% endraw %}` in the line below and we're done! For reference, this is how my code looks:

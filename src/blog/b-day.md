@@ -1,7 +1,6 @@
 ---
 title: "B-Day"
 description: Today is my birthday, and with it I want to think about what's ahead.
-date: 2022-06-06T23:07:46.460380
 tags:
   - Perspective
 layout: layouts/post.njk

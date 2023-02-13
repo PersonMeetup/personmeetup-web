@@ -1,7 +1,6 @@
 ---
 title: How Does One Write?
 description: Writing a blogpost is not as easy as writing what you're interested in; at least to me.
-date: 2023-02-10T22:07:48.260000
 tags:
   - Perspective
   - Writing
