@@ -25,30 +25,24 @@ svg {
 }
 
 svg:hover {
-	#rssTransmitter {
-		fill: #f80;
+	#rssTransmitter,
+	#youtube,
+	#twitter,
+	#mastodon,
+	#soundcloud,
+	#kofiHeart {
+		fill: var(--clr-secondary-400);
 	}
+
 	#rssTransmission {
-		stroke: #f80;
+		stroke: var(--clr-secondary-400);
 	}
-	#youtube {
-		fill: #ed1d24;
-	}
-	#twitter {
-		fill: #1da1f2;
-	}
-	#mastodon {
-		fill: #3088d4;
-	}
-	#soundcloud {
-		fill: #f50;
-	}
+
 	#kofiCup {
 		fill: var(--clr-neutral-100);
 	}
 	#kofiHeart {
-		animation: heartPulse 3s ease forwards infinite;
-		fill: #f1464d;
+		animation: heartPulse 3s ease forwards;
 		transition-delay: 200ms;
 	}
 
@@ -62,14 +56,6 @@ svg:hover {
 		60%,
 		100% {
 			transform: scale(1);
-		}
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	svg:hover {
-		#kofiHeart {
-			animation: none;
 		}
 	}
 }

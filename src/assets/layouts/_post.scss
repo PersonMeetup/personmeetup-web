@@ -19,7 +19,8 @@ article {
 
 	p,
 	hr,
-	ol {
+	ol,
+	blockquote {
 		margin-bottom: 1em;
 	}
 	h1 {
@@ -29,12 +30,42 @@ article {
 		margin-bottom: 0.15em;
 	}
 
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		a {
+			color: black;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+
+				&::before {
+					content: "#";
+					color: var(--clr-primary-400);
+					position: relative;
+					left: -0.8em;
+					float: left;
+					width: 0;
+					height: 0;
+				}
+			}
+		}
+	}
+
 	blockquote {
-		padding: 0 0.25em;
-		margin: 0 1em;
-		border-left: var(--clr-tertiary-200) solid 0.15em;
+		padding-left: 1em;
+		border-left: var(--clr-secondary-300) solid 0.2em;
 		font-size: var(--fs-500);
 		font-family: var(--ff-accent);
+		color: var(--clr-neutral-500);
+		font-style: italic;
+
+		p {
+			margin: 0;
+		}
 	}
 
 	.footnotes {

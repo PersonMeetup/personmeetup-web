@@ -90,7 +90,7 @@ main {
 }
 
 a {
-	color: var(--clr-secondary-400);
+	color: var(--clr-secondary-500);
 
 	&:hover {
 		text-decoration: none;
@@ -132,6 +132,10 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.2em;
+}
+
+.visually-hidden {
+	display: none;
 }
 
 .squished {

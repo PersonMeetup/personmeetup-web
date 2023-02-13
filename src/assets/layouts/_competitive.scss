@@ -7,12 +7,11 @@
 	justify-content: center;
 
 	> * {
-		background-color: var(--clr-tertiary-300);
-		border: 0.125em dashed var(--clr-tertiary-500);
+		background-color: var(--clr-secondary-100);
+		border: 0.125em dashed var(--clr-secondary-500);
 		padding: 0.3em;
 		text-align: center;
 		font-family: var(--ff-accent);
-		color: #fff;
 
 		dt {
 			font-weight: 700;
