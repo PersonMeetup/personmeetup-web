@@ -2,6 +2,10 @@
 layout: layouts/base.njk
 ---
 	<h1 class="text-center">{{ title }}</h1>
+
+	{% set infoMessage = "Sorry about the scattered posts! Something seems to have broken once I switched all my articles to Eleventy's `git Created` date value. I'll see about fixing it as soon as I can!"%}
+	{% include "construction.njk" %}
+
 	<div class="blog-nav">
 		{{ content | safe }}
 
