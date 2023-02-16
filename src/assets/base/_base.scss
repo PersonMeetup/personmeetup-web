@@ -1,34 +1,10 @@
+@use "../abstracts/" as *;
+
 header,
 main,
 footer {
 	margin-inline: auto;
 	width: min(90%, 70rem);
-}
-
-.background {
-	backdrop-filter: url(#paperBgd);
-}
-
-.foreground {
-	background: #fff;
-	margin-inline: auto;
-	max-width: 80rem;
-	min-height: 100vh;
-
-	&::before {
-		content: "";
-		position: fixed;
-		border: 6px var(--clr-neutral-300);
-		border-style: none solid;
-		filter: url(#sketchBorder);
-		top: -2px;
-		left: -8px;
-		right: -4px;
-		width: 1284px;
-		margin: 0 auto;
-		height: 100%;
-		pointer-events: none;
-	}
 }
 
 .nav-skip {
@@ -51,7 +27,6 @@ li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
 
 header {
 	nav {
-		padding: 1rem 0;
 		margin-inline: 1rem;
 		font-family: var(--ff-accent);
 
@@ -87,7 +62,7 @@ header {
 		}
 	}
 	svg {
-		height: 96px;
+		height: 4em;
 	}
 }
 
@@ -122,7 +97,7 @@ footer {
 	}
 
 	svg {
-		height: 31px;
+		height: 2em;
 	}
 
 	a {
@@ -147,7 +122,44 @@ footer {
 .squished {
 	display: none;
 }
-@media only screen and (min-width: 28.126em) {
+
+@include mq(medium) {
+	.background {
+		backdrop-filter: url(#paperBgd);
+	}
+	
+	.foreground {
+		background: #fff;
+		margin-inline: auto;
+		max-width: 80rem;
+		min-height: 100vh;
+	
+		&::before {
+			content: "";
+			position: fixed;
+			border: 6px var(--clr-neutral-300);
+			border-style: none solid;
+			filter: url(#sketchBorder);
+			top: -2px;
+			left: -8px;
+			right: -4px;
+			width: 1284px;
+			margin: 0 auto;
+			height: 100%;
+			pointer-events: none;
+		}
+	}
+
+	header {
+		nav {
+			padding: 1rem 0;
+		}
+
+		svg {
+			height: 6em;
+		}
+	}
+
 	.squished {
 		display: inline;
 	}
