@@ -7,7 +7,17 @@
 		</div>
 	{% else %}
 		<h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
-		<p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>{% if post.data.lastmod !== post.date %}, Edited <time class="postlist-date" datetime="{{ post.data.lastmod | htmlDateString }}">{{ post.data.lastmod | readableDate }}</time> {% endif %} | {% for tag in post.data.tags | filterTagList %}{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
+		<p class="caption">
+			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+			{% if post.data.lastmod | htmlDateString !== post.date | htmlDateString %}
+				(Edited <time class="postlist-date" datetime="{{ post.data.lastmod | htmlDateString }}">{{ post.data.lastmod | readableDate }}</time>)
+			{% endif %}
+			 | 
+			{% for tag in post.data.tags | filterTagList %}
+				{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}
+				<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> 
+			{% endfor %}
+		</p>
 		{% markdown %}{{ post.data.description }}{% endmarkdown %}
 	{% endif %}
 </div>
