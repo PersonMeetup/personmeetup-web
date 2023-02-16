@@ -5,9 +5,8 @@ footer {
 	width: min(90%, 70rem);
 }
 
-body {
-	background-image: var(--bgd-img);
-	background-position: center;
+.background {
+	backdrop-filter: url(#paperBgd);
 }
 
 .foreground {
@@ -27,7 +26,7 @@ body {
 		right: -4px;
 		width: 1284px;
 		margin: 0 auto;
-		height: 100vh;
+		height: 100%;
 		pointer-events: none;
 	}
 }
@@ -46,8 +45,8 @@ body {
 	transform: translateY(0);
 }
 
-.active {
-	border-bottom: 2px solid var(--clr-primary-300);
+li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
+	border-bottom: 2px solid var(--clr-secondary-200);
 }
 
 header {
@@ -67,14 +66,18 @@ header {
 
 			li {
 				display: block;
-				border-bottom: 2px solid #fff;
-				transition: border-bottom 150ms;
 
 				&:first-child {
 					margin-right: auto;
 				}
-				&:hover {
-					border-bottom: 2px solid var(--clr-primary-400);
+
+				&:not(:has([aria-label="Person Meetup"])) {
+					border-bottom: 2px solid #fff0;
+					transition: border-bottom 150ms;
+
+					&:hover {
+						border-bottom: 2px solid var(--clr-primary-400);
+					}
 				}
 			}
 		}
@@ -82,6 +85,9 @@ header {
 			color: var(--clr-neutral-500);
 			text-decoration: none;
 		}
+	}
+	svg {
+		height: 96px;
 	}
 }
 
