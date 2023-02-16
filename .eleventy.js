@@ -81,7 +81,6 @@ module.exports = function (eleventyConfig) {
 	// Datetime Filters from https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
 
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		console.log(dateObj);
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
 		return DateTime.fromJSDate(dateObj, { zone: zone || "mst" }).toFormat(
 			format || "dd LLLL yyyy"
