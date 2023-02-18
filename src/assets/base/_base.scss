@@ -22,7 +22,7 @@ footer {
 }
 
 li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
-	border-bottom: 2px solid var(--clr-secondary-200);
+	border-bottom: 2px solid var(--clr-primary-200);
 }
 
 header {
