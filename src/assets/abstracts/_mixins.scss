@@ -11,13 +11,15 @@
 @mixin button($width: auto) {
 	font-family: var(--ff-accent);
 	text-align: center;
-	background-color: var(--clr-neutral-300);
+	background-color: var(--clr-primary-500);
 	padding: 0.6em;
+	border: none;
 	width: $width;
 	margin-inline: auto;
 	color: #fff;
+	transition: background-color ease 150ms;
 
 	&:hover {
-		background-color: var(--clr-neutral-200);
+		background-color: var(--clr-secondary-500);
 	}
 }
