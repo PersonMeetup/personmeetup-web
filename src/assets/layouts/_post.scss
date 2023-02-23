@@ -36,7 +36,7 @@ article {
 	h5,
 	h6 {
 		a {
-			color: black;
+			color: var(--clr-primary-500);
 			text-decoration: none;
 
 			&:hover {
