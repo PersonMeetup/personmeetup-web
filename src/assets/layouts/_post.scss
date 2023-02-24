@@ -53,6 +53,10 @@ article {
 				}
 			}
 		}
+
+		.footnotes-sep {
+			border: solid 0.1em var(--clr-secondary-200);
+		}
 	}
 
 	blockquote {
@@ -70,5 +74,6 @@ article {
 
 	.footnotes {
 		font-size: var(--fs-300);
+		margin-bottom: 4em;
 	}
 }

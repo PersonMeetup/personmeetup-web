@@ -132,6 +132,7 @@ footer {
 @include mq(medium) {
 	.background {
 		backdrop-filter: url(#paperBgd);
+		overflow-x: hidden;
 	}
 
 	.foreground {
