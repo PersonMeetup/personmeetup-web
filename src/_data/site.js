@@ -8,7 +8,8 @@ module.exports = function () {
 		title: "Person Meetup",
 		url: "https://personmeetup.ca",
 		language: "en",
-		description: "I like to create stuff",
+		description:
+			"Leslie “Person Meetup” Swan is a multidisciplinary Canadian designer with a focus in New-Media.",
 		image: "/assets/opengraph.png",
 		author: {
 			name: "Leslie Swan",
