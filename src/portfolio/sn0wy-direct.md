@@ -2,7 +2,7 @@
 title: Sn0wy Direct
 description: A Discord live show hosted by Cocodotts with co-host Person Meetup and special guest Kalil.
 date: 2022-08-02
-img: "/assets/portfolio/sn0wydirect.png"
+img: "src/assets/portfolio/sn0wydirect.png"
 type: Video
 links:
   - youtube: https://www.youtube.com/playlist?list=PLpDSn8R_Xvci0yHufIcusiiCXMDvHI1sA

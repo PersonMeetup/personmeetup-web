@@ -2,7 +2,7 @@
 title: Farlands
 description: In an attempt to escape from Wheatley, you happen to come across another vault door. Seems like it's the only way out...
 date: 2019-01-01
-img: "/assets/portfolio/farlands.jpg"
+img: "src/assets/portfolio/farlands.jpg"
 type: Games
 links:
   - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1611223762

@@ -2,7 +2,7 @@
 title: Abstract
 description: Founded while Zepheniah was still alive, this facility now has radio and missile launching capabilities in the present day.
 date: 2020-04-17
-img: "/assets/portfolio/abstract.png"
+img: "src/assets/portfolio/abstract.png"
 type: Games
 links:
   - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2063636056

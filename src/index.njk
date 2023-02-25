@@ -14,7 +14,7 @@ eleventyNavigation:
 </ul>
 
 <section class="about">
-	<div><img src="/assets/about.png" alt="Images of Person"></div>
+	<div>{% image "src/assets/about.png", "Images of Person", "512px", ["webp", "jpeg"] %}</div>
 	<div>{% markdown %}{% include "about.md" %}{% endmarkdown %}</div>
 </section>
 
@@ -24,7 +24,17 @@ eleventyNavigation:
 		<h2 class="text-center">Latest Project</h2>
 		{% set projectslist = collections.portfolio | head(-1) %}
 		{% for project in projectslist | reverse %}
-			{% include "projectslist.njk" %}
+			<div class="{{ class }}">
+				<div class="project-image">
+					<a href="{{ project.url | url }}">
+						{% image project.data.img, project.data.title, "512px" %}
+					</a>
+				</div>
+				<div class="project-details">
+					<h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
+					<p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+				</div>
+			</div>
 		{% endfor %}
 	</section>
 	<section>

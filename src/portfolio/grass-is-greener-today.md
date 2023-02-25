@@ -2,7 +2,7 @@
 title: Grass is Greener Today
 description: One of the first tracks I produced as I was learning about DAW's, published because it sounded good!
 date: 2021-04-03
-img: "/assets/portfolio/generic-single.jpg"
+img: "src/assets/portfolio/generic-single.jpg"
 type: Music
 links:
   - soundcloud: https://soundcloud.com/personmeetup/grass-is-greener-today

@@ -2,7 +2,7 @@
 title: Separation
 description: "[Insert Test Chamber Advisory Message Here]"
 date: 2019-04-25
-img: "/assets/portfolio/separation.png"
+img: "src/assets/portfolio/separation.png"
 type: Games
 links:
   - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1722683658

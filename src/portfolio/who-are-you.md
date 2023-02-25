@@ -2,7 +2,7 @@
 title: Who Are You
 description: A cut track from Rations, given a second life.
 date: 2021-05-21
-img: "/assets/portfolio/generic-single.jpg"
+img: "src/assets/portfolio/generic-single.jpg"
 type: Music
 links:
   - soundcloud: https://soundcloud.com/personmeetup/who-are-you

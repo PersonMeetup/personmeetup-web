@@ -6,7 +6,29 @@ eleventyNavigation:
   order: 2
 ---
 {% set projectslist = collections.portfolio %}
-{% set class = "project-item" %}
 {% for project in projectslist | reverse %}
-	{% include "projectslist.njk" %}
+	<div class="project-item">
+    <div class="project-image">
+      <a href="{{ project.url | url }}">
+        {% image project.data.img, project.data.title %}
+      </a>
+    </div>
+    <div class="project-details">
+      <h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
+      <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
+    </div>
+    <div class="social project-links">
+      {% for link in project.data.links %}
+        {% if link.steam %}
+          <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
+        {% elif link.youtube %}
+          <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
+        {% elif link.soundcloud %}
+          <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
+        {% elif link.other %}
+          <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 {% endfor %}
