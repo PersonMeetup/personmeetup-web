@@ -23,12 +23,11 @@ jobs:
         with:
           node-version: 14
       - name: Install deps and build
-				env:
-          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
-					DEBUG: Eleventy*
         run: |
           npm i
-          npm run build
+          DEBUG=Eleventy* npm run build
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
       # When the dist_dir is ready, deploy it to neocities
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v1
