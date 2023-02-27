@@ -125,7 +125,7 @@ footer {
 	display: none;
 }
 
-.squished {
+a[href="/links/"] {
 	display: none;
 }
 
@@ -167,7 +167,7 @@ footer {
 		}
 	}
 
-	.squished {
+	a[href="/links/"] {
 		display: inline;
 	}
 }
