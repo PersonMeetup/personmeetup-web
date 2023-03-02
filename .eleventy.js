@@ -62,6 +62,54 @@ const markdownIt = require("markdown-it")({
 			}
 		},
 	});
+
+/**
+ * Markdown-It/Elevently Image Override
+ 
+ * Shoutouts to Tomi Chen for figuring this out:
+ * https://tomichen.com/blog/posts/20220416-responsive-images-in-markdown-with-eleventy-image/
+ */
+markdownIt.renderer.rules.image = function (tokens, idx, options, env, self) {
+	function figure(html, caption) {
+		return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
+	}
+
+	const token = tokens[idx];
+	let imgSrc = token.attrGet("src");
+	const imgAlt = token.content;
+	const imgTitle = token.attrGet("title");
+
+	const htmlOpts = {
+		alt: imgAlt,
+		loading: "lazy",
+		decoding: "async",
+	};
+
+	const widths = [650];
+	const imgOpts = {
+		widths: widths
+			.concat(widths.map((w) => w * 2)) // generate 2x sizes
+			.filter((v, i, s) => s.indexOf(v) === i), // dedupe
+		formats: ["avif", "jpeg"],
+		outputDir: "dist/assets",
+		urlPath: "/assets",
+	};
+
+	eleventyImg(imgSrc, imgOpts);
+	const metadata = eleventyImg.statsSync(imgSrc, imgOpts);
+
+	const generated = eleventyImg.generateHTML(metadata, {
+		sizes: "(max-width: 650px) 100vw, 650px",
+		...htmlOpts,
+	});
+
+	if (imgTitle) {
+		return figure(generated, imgTitle);
+	}
+
+	return generated;
+};
+
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -69,6 +117,7 @@ const eleventySass = require("eleventy-sass");
 
 const eleventyImg = require("@11ty/eleventy-img");
 
+// Refactor to merge code with markdownIt Image Override?
 async function imageShortcode(
 	src,
 	alt,
@@ -110,33 +159,7 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
-	eleventyConfig.addExtension("md", {
-		read: true,
-		compile(markdown) {
-			return async function render(data) {
-				const html = await markdownIt.render(markdown);
-				const $ = cheerio.load(html);
-
-				if (data.tags?.includes("blog")) {
-					await Promise.all([
-						// Loop over all the images in our document
-						$("img")
-							.toArray()
-							.map(async (img) => {
-								// Grab the image attributes
-								const { src = "", alt = "", sizes = "100vw" } = img.attribs;
-								// Convert to an optimized image
-								const optimizedImage = await imageShortcode(src, alt, sizes);
-								// Replace our images with an optimized one
-								$(img).replaceWith(optimizedImage);
-							}),
-					]);
-				}
-
-				return $.html();
-			};
-		},
-	});
+	eleventyConfig.setLibrary("md", markdownIt);
 
 	// Get the first `n` elements of a collection.
 	eleventyConfig.addFilter("head", (array, n) => {

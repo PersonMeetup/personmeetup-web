@@ -1,11 +1,13 @@
+@use "../abstracts/" as *;
+
 $width: 70ch;
 
 .billboard {
 	margin-bottom: 3rem;
 
 	img {
-		max-width: $width;
-		max-height: 25em;
+		height: 40ch;
+		width: auto;
 		margin-inline: auto;
 		margin-bottom: 2em;
 	}
