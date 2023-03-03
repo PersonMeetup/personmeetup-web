@@ -63,12 +63,29 @@ const markdownIt = require("markdown-it")({
 		},
 	});
 
+const eleventyNav = require("@11ty/eleventy-navigation");
+const eleventyRSS = require("@11ty/eleventy-plugin-rss");
+const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
+const eleventySass = require("eleventy-sass");
+const eleventyImg = require("@11ty/eleventy-img");
+
 /**
  * Markdown-It/Elevently Image Override
  
  * Shoutouts to Tomi Chen for figuring this out:
  * https://tomichen.com/blog/posts/20220416-responsive-images-in-markdown-with-eleventy-image/
  */
+
+const widths = [320, 512, 710];
+const eleventyImgOpts = {
+	widths: widths
+		.concat(widths.map((w) => w * 2)) // generate 2x sizes
+		.filter((v, i, s) => s.indexOf(v) === i), // dedupe
+	formats: ["avif", "jpeg"],
+	outputDir: "dist/assets",
+	urlPath: "/assets",
+};
+
 markdownIt.renderer.rules.image = function (tokens, idx, options, env, self) {
 	function figure(html, caption) {
 		return `<figure>${html}<figcaption>${caption}</figcaption></figure>`;
@@ -85,21 +102,11 @@ markdownIt.renderer.rules.image = function (tokens, idx, options, env, self) {
 		decoding: "async",
 	};
 
-	const widths = [650];
-	const imgOpts = {
-		widths: widths
-			.concat(widths.map((w) => w * 2)) // generate 2x sizes
-			.filter((v, i, s) => s.indexOf(v) === i), // dedupe
-		formats: ["avif", "jpeg"],
-		outputDir: "dist/assets",
-		urlPath: "/assets",
-	};
-
-	eleventyImg(imgSrc, imgOpts);
-	const metadata = eleventyImg.statsSync(imgSrc, imgOpts);
+	eleventyImg(imgSrc, eleventyImgOpts);
+	const metadata = eleventyImg.statsSync(imgSrc, eleventyImgOpts);
 
 	const generated = eleventyImg.generateHTML(metadata, {
-		sizes: "(max-width: 650px) 100vw, 650px",
+		sizes: "(max-width: 710px) 100vw, 710px",
 		...htmlOpts,
 	});
 
@@ -110,35 +117,22 @@ markdownIt.renderer.rules.image = function (tokens, idx, options, env, self) {
 	return generated;
 };
 
-const eleventyNav = require("@11ty/eleventy-navigation");
-const eleventyRSS = require("@11ty/eleventy-plugin-rss");
-const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
-const eleventySass = require("eleventy-sass");
-
-const eleventyImg = require("@11ty/eleventy-img");
-
 // Refactor to merge code with markdownIt Image Override?
 async function imageShortcode(
 	src,
 	alt,
-	sizes = "100vw",
-	formats = ["avif", "jpeg"]
+	sizes = "(max-width: 710px) 100vw, 710px",
+	loading = "lazy"
 ) {
-	let metadata = await eleventyImg(src, {
-		widths: [512, 1280, 1920],
-		formats,
-		outputDir: "dist/assets",
-		urlPath: "/assets",
-	});
+	let metadata = await eleventyImg(src, eleventyImgOpts);
 
 	let imageAttributes = {
 		alt,
 		sizes,
-		loading: "lazy",
+		loading,
 		decoding: "async",
 	};
 
-	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
 	return eleventyImg.generateHTML(metadata, imageAttributes);
 }
 

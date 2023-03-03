@@ -26,7 +26,7 @@ permalink: /portfolio/{{ type | slugify }}/
 			<div class="project-item">
         <div class="project-image">
           <a href="{{ project.url | url }}">
-            {% image project.data.img, project.data.title %}
+            {% image project.data.img, project.data.title, "320px" %}
           </a>
         </div>
         <div class="project-details">

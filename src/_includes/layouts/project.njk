@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 <div class="billboard">
-	{% image img, title %}
+	{% image img, title, "100vw, (max-width: 800px) 50vw", "eager" %}
 	<h1 class="text-center">{{ title }}</h1>
 	<p class="caption text-center">Released <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time></p>
 </div>
