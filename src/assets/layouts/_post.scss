@@ -16,6 +16,7 @@ $width: 70ch;
 
 .description {
 	font-size: var(--fs-600);
+	font-weight: 375;
 	margin-bottom: 0.2em;
 }
 
@@ -74,7 +75,8 @@ article {
 		padding-left: 1em;
 		border-left: var(--clr-secondary-300) solid 0.2em;
 		font-size: var(--fs-500);
-		font-family: var(--ff-accent);
+		font-weight: 300;
+		font-stretch: 95%;
 		color: var(--clr-neutral-500);
 		font-style: italic;
 

@@ -24,7 +24,8 @@ $card-margin: 2rem;
 	figure {
 		background-color: var(--clr-primary-500);
 		color: #fff;
-		font-family: var(--ff-accent);
+		font-weight: 400;
+		font-stretch: 90%;
 		display: flex;
 		gap: 0.4rem;
 		padding: 0.5rem;

@@ -32,7 +32,8 @@ li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
 header {
 	nav {
 		margin-inline: 1rem;
-		font-family: var(--ff-accent);
+		font-weight: 400;
+		font-stretch: 90%;
 		padding: 1rem 0;
 
 		ul {
@@ -86,7 +87,6 @@ a {
 
 footer {
 	font-size: var(--fs-300);
-	font-family: var(--ff-accent);
 
 	display: grid;
 	grid-template-columns: 1fr 2fr;
