@@ -18,7 +18,7 @@
 .index-text {
 	font-weight: 700;
 	font-stretch: 75%;
-	font-size: var(--fs-500);
+	font-size: var(--fs-600);
 	color: #fff;
 	transition: font-size 200ms;
 }
@@ -45,7 +45,7 @@
 		filter: grayscale(0);
 
 		.index-text {
-			font-size: var(--fs-600);
+			font-size: var(--fs-800);
 		}
 	}
 }
@@ -59,13 +59,13 @@
 .index-video {
 	background-image: url(/assets/index/index-video.jpg);
 }
-.index-programming {
+.index-writing {
 	background-image: url(/assets/index/index-programming.jpg);
 }
-.index-competitive {
+.index-web-design {
 	background-image: url(/assets/index/index-competitive.jpg);
 }
-.index-miscellaneous {
+.index-overflow {
 	background-image: url(/assets/index/index-miscellaneous.jpg);
 }
 
