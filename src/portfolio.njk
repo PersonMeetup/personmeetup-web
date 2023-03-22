@@ -5,6 +5,8 @@ eleventyNavigation:
   key: Portfolio
   order: 2
 ---
+{% currate "portfolio" %}
+<div class="project-nav">
 {% set projectslist = collections.portfolio %}
 {% for project in projectslist | reverse %}
 	<div class="project-item">
@@ -32,3 +34,4 @@ eleventyNavigation:
     </div>
   </div>
 {% endfor %}
+</div>

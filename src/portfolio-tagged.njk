@@ -1,14 +1,10 @@
 ---
 pagination:
-  data: types
+  data: typeList
   size: 1
   alias: type
   addAllPagesToCollections: true
-types:
-  - Games
-  - Music
-  - Video
-  - Miscellaneous
+	generatePageOnEmptyData: true
 layout: layouts/browse-portfolio.njk
 eleventyComputed:
   title: "{{ type }}"
@@ -20,7 +16,8 @@ permalink: /portfolio/{{ type | slugify }}/
 ---
 {% set filter = type %}
 {% set projectslist = collections.portfolio %}
-
+{% currate type %}
+<div class="project-nav">
 {% for project in projectslist | reverse %}
 	{% if filter == project.data.type %}
 			<div class="project-item">
@@ -49,3 +46,4 @@ permalink: /portfolio/{{ type | slugify }}/
       </div>
 	{% endif %}
 {% endfor %}
+</div>
