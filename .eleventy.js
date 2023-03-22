@@ -1,6 +1,8 @@
 const { DateTime } = require("luxon");
-const cheerio = require("cheerio");
 var hljs = require("highlight.js");
+const path = require("path");
+const { readdir } = require("fs/promises");
+const fs = require("fs");
 
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItContainer = require("markdown-it-container");
@@ -151,7 +153,23 @@ module.exports = function (eleventyConfig) {
 		return markdownIt.render(content);
 	});
 
-	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+	eleventyConfig.addAsyncShortcode("image", imageShortcode);
+
+	eleventyConfig.addAsyncShortcode("currate", async function (target) {
+		target = target.toLowerCase();
+		const files = await readdir("./src/_includes/currate");
+		// If file found in _includes/currate, import into document
+		for (const file of files) {
+			if (file.startsWith(target)) {
+				const targetData = fs.readFileSync(
+					`./src/_includes/currate/${target}.md`,
+					"utf8"
+				);
+				return markdownIt.render(targetData);
+			}
+		}
+		return "";
+	});
 
 	eleventyConfig.setLibrary("md", markdownIt);
 
@@ -198,17 +216,17 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Copy media folders to the output
-	eleventyConfig.addPassthroughCopy("src/assets/index");
-	eleventyConfig.addPassthroughCopy("src/links");
-	eleventyConfig.addPassthroughCopy("src/fonts");
-	eleventyConfig.addPassthroughCopy("src/js");
-	eleventyConfig.addPassthroughCopy({ "src/favicon": "/" });
+	eleventyConfig.addPassthroughCopy("./src/assets/index");
+	eleventyConfig.addPassthroughCopy("./src/links");
+	eleventyConfig.addPassthroughCopy("./src/fonts");
+	eleventyConfig.addPassthroughCopy("./src/js");
+	eleventyConfig.addPassthroughCopy({ "./src/favicon": "/" });
 
 	// Copy robots.txt to output
-	eleventyConfig.addPassthroughCopy("src/robots.txt");
+	eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
 	// Copy feed.xsl to output
-	eleventyConfig.addPassthroughCopy("src/feeds/feed.xsl");
+	eleventyConfig.addPassthroughCopy("./src/feeds/feed.xsl");
 
 	return {
 		markdownTemplateEngine: "njk",
