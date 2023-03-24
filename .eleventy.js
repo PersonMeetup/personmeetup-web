@@ -165,9 +165,9 @@ module.exports = function (eleventyConfig) {
 					`./src/_includes/currate/${target}.md`,
 					"utf8"
 				);
-				return `<details open="true"><summary>Toggle Curration</summary><div>${markdownIt.render(
+				return `<article><details class="context" open="true"><summary class="context-button">Toggle Curration</summary><div class="context-details">${markdownIt.render(
 					targetData
-				)}</div></details>`;
+				)}</div></details></article>`;
 			}
 		}
 		return "";
