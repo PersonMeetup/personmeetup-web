@@ -1,9 +1,13 @@
-<aside class="post-item blog-tagnav">
-	<h2 class="text-center">Tags</h2>
-	<ul>
-	{% for tag in collections.tagList %}
-		{% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
-		<li><a class="blog-tag" {% if tagUrl == page.url %} aria-current="page" {% endif %} href="{{ tagUrl | url }}">{{ tag }}</a></li>
-	{% endfor %}
-	</ul>
+<aside class="blog-tagnav">
+	<div class="sticky">
+		<div class="post-item">
+			<h2 class="text-center">Tags</h2>
+			<ul>
+			{% for tag in collections.tagList %}
+				{% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
+				<li><a class="blog-tag" {% if tagUrl == page.url %} aria-current="page" {% endif %} href="{{ tagUrl | url }}">{{ tag }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
 </aside>

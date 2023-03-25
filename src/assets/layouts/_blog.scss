@@ -11,10 +11,18 @@ $object-padding: 0.275em;
 
 .blog-nav {
 	display: grid;
+
+	section {
+		padding-top: $object-padding;
+	}
 }
 
 .blog-tagnav {
-	padding: $object-padding;
+	.sticky {
+		position: sticky;
+		top: 0;
+		padding-top: $object-padding;
+	}
 
 	ul {
 		list-style-type: none;

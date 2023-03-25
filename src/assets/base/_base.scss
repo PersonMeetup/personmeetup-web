@@ -132,7 +132,6 @@ a[href="/links/"] {
 @include mq(medium) {
 	.background {
 		backdrop-filter: url(#paperBgd);
-		overflow-x: hidden;
 	}
 
 	.foreground {
@@ -145,6 +144,7 @@ a[href="/links/"] {
 			content: "";
 			position: fixed;
 			border: 6px var(--clr-neutral-300);
+			overflow-x: hidden;
 			border-style: none solid;
 			filter: url(#sketchBorder);
 			top: -2px;
