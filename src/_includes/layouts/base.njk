@@ -40,7 +40,7 @@
 					{% set navPages = collections.all | eleventyNavigation | head(4) %}
 					<ul>
 					{% for entry in navPages %}
-						<li {% if entry.url == page.url %} aria-current="page" {% endif %}>
+						<li {% if entry.url in page.url %} aria-current="page" {% endif %}>
 							<a href="{{ entry.url }}">{% if entry.title == "Home" %}{% include "icons/logo.njk" %}{% else %}{{ entry.title }}{% endif %}</a>
 						</li>
 					{% endfor %}
