@@ -148,9 +148,9 @@ a[href="/links/"] {
 			border-style: none solid;
 			filter: url(#sketchBorder);
 			top: -2px;
-			left: -8px;
-			right: -4px;
-			width: 1284px;
+			left: -4px;
+			right: -0px;
+			width: min(1285px, 100%);
 			margin: 0 auto;
 			height: 100%;
 			pointer-events: none;
