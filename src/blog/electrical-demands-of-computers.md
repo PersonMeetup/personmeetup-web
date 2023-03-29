@@ -6,9 +6,9 @@ tags:
 layout: layouts/post.njk
 ---
 
-::: info
+{% info %}
 This is an extended version of the article published in the University of Lethbridge Climate Justice Working Group's _Earth Day 2022_ Zine.
-:::
+{% endinfo %}
 
 Computers have become an essential part of our lives. We use them to work, communicate, learn and play. With them we were able to get through the restrictions put in place during the pandemic. Outside the consumer sphere, the industrial, scientific and enterprise uses of computers are astonishing. The field of robotics has exploded as innovations in computing and artificial intelligence make robots more efficient and accurate than humans at certain tasks. Enterprises utilize huge data-centers to provide services across the globe. Projects like Folding@home allow consumers to provide their computer's processing power to a network of computers all working to run protein simulations.
 

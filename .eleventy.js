@@ -5,7 +5,6 @@ const { readdir } = require("fs/promises");
 const fs = require("fs");
 
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItContainer = require("markdown-it-container");
 const markdownIt = require("markdown-it")({
 	html: true,
 	breaks: true,
@@ -35,34 +34,6 @@ const markdownIt = require("markdown-it")({
 	})
 	.use(require("markdown-it-table-of-contents"), {
 		includeLevel: [2, 3, 4, 5, 6],
-	})
-	.use(markdownItContainer, "info", {
-		render: function (tokens, idx) {
-			if (tokens[idx].nesting === 1) {
-				// opening tag
-				return `<div class="info">
-						<figure>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
-								<path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/>
-							</svg>
-							<figcaption>Information</figcaption>
-						</figure>`;
-			} else {
-				// closing tag
-				return "</div>\n";
-			}
-		},
-	})
-	.use(markdownItContainer, "construction", {
-		render: function (tokens, idx) {
-			if (tokens[idx].nesting === 1) {
-				// opening tag
-				return '<div class="construction"><img src="src/assets/wip.gif" alt="UNDER CONSTRUCTION">';
-			} else {
-				// closing tag
-				return "</div>\n";
-			}
-		},
 	});
 
 const eleventyNav = require("@11ty/eleventy-navigation");
@@ -151,6 +122,23 @@ module.exports = function (eleventyConfig) {
 	// Parse markdown referenced within nunjucks
 	eleventyConfig.addPairedShortcode("markdown", function (content) {
 		return markdownIt.render(content);
+	});
+
+	eleventyConfig.addPairedShortcode("info", function (content) {
+		return `<div class="info">
+							<figure>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+									<path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/>
+								</svg>
+								<figcaption>Information</figcaption>
+							</figure>
+							${markdownIt.render(content)}</div>\n`;
+	});
+
+	eleventyConfig.addPairedShortcode("constructiton", function (content) {
+		return `<div class="construction">
+							<img src="src/assets/wip.gif" alt="UNDER CONSTRUCTION">
+							${markdownIt.render(content)}</div>\n`;
 	});
 
 	eleventyConfig.addAsyncShortcode("image", imageShortcode);

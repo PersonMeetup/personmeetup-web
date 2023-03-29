@@ -37,9 +37,9 @@ Functionally the script is complete, but there are still some quality of life th
 
 `python-dateutil` extends the functionality of the built-in `datetime` module significantly, but we're going to use for its `.tz` submodule. This submodule includes a handful of timezone related tools, all of which operate around the `datetime.tzinfo` object type. This type can be passed to `datetime.now()` for it to include timezone information alongside the current time. We'll use the `.tz` submodule's `.gettz()` function to handle any timezone data for us.
 
-::: info
+{% info %}
 While the code so far has shown `.gettz()` being given a string that corresponds to a designated IANA [tz database key](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), it's worth noting that the function doesn't need an input in order to work. Left at its default values, `.gettz()` will use the timezone information of the local time instead.
-:::
+{% endinfo %}
 
 ```python
 from datetime import datetime
