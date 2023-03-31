@@ -145,20 +145,24 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addAsyncShortcode("currate", async function (target) {
 		target = target.toLowerCase();
-		const files = await readdir("./src/_includes/currate");
-		// If file found in _includes/currate, import into document
-		for (const file of files) {
-			if (file.startsWith(target)) {
-				const targetData = fs.readFileSync(
-					`./src/_includes/currate/${target}.md`,
-					"utf8"
-				);
-				return `<article><details class="context" open="true"><summary class="context-button">Toggle Curration</summary><div class="context-details">${markdownIt.render(
-					targetData
-				)}</div></details></article>`;
+		try {
+			const files = await readdir("./src/_includes/currate");
+			// If file found in _includes/currate, import into document
+			for (const file of files) {
+				if (file.startsWith(target)) {
+					const targetData = fs.readFileSync(
+						`./src/_includes/currate/${target}.md`,
+						"utf8"
+					);
+					return `<article><details class="context" open="true"><summary class="context-button">Toggle Curration</summary><div class="context-details">${markdownIt.render(
+						targetData
+					)}</div></details></article>`;
+				}
 			}
+			return "";
+		} catch (err) {
+			return "";
 		}
-		return "";
 	});
 
 	eleventyConfig.setLibrary("md", markdownIt);
