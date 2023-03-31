@@ -1,86 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-	<meta name="description" content="{{ description or site.description }}">
-
-	<meta property="og:title" content="{{ title or site.title }}">
-	<meta property="og:description" content="{{ description or site.description }}">
-	<meta property="og:image" content="{{ site.url }}{{ site.image | url }}">
-	<meta property="og:locale" content="en_CA">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-	<meta name="twitter:site" content="@PersonMeetup">
-	<meta name="twitter:creator" content="@PersonMeetup">
-	<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-
-	<link rel="stylesheet" href="/assets/main.css">
-	<link rel="preload" href="/fonts/RadioCanada.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="/fonts/RadioCanada-Italic.woff2" as="font" type="font/woff2" crossorigin>
-
-	<meta name="theme-color" content="#ffffff">
-	<link rel="icon" href="/favicon.svg">
-	<link rel="mask-icon" href="/mask-icon.svg">
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-	<link rel="manifest" href="/site.webmanifest">
-
-	<link rel="alternate" href="{{ site.feed.path | url }}" type="application/atom+xml" title="{{ site.title }}">
-	<link rel="alternate" href="{{ site.jsonfeed.path | url }}" type="application/atom+json" title="{{ site.title }}">
-	<meta name="generator" content="{{ site.generator }}">
-</head>
-<body>
-	<div class="background">
-		<div class="foreground">
-			<header>
-				<a class="nav-skip" href="#main-content">Skip to content</a>
-				<nav aria-label="Primary">
-					{% set navPages = collections.all | eleventyNavigation | head(4) %}
-					<ul>
-					{% for entry in navPages %}
-						<li {% if entry.url in page.url %} aria-current="page" {% endif %}>
-							<a href="{{ entry.url }}">{% if entry.title == "Home" %}{% include "icons/logo.njk" %}{% else %}{{ entry.title }}{% endif %}</a>
-						</li>
-					{% endfor %}
-					</ul>
-				</nav>
-			</header>
-			<main id="main-content">
-				{{ content | safe }}
-			</main>
-			<footer>
-				<nav aria-label="Secondary">
-					{% set navPages = collections.all | eleventyNavigation | head(6) %}
-					<ul>
-					{% for entry in navPages %}
-						<li>
-							<a href="{{ entry.url }}">{{ entry.title }}</a>
-						</li>
-					{% endfor %}
-					</ul>
-				</nav>
-				<aside aria-label="Credits">
-					{% markdown %}{% include "credits.md" %}{% endmarkdown %}
-				</aside>
-			</footer>
-			<svg xmlns="http://www.w3.org/2000/svg" height="0" aria-hidden="true">
-				<defs>
-					<filter id="sketchBorder">
-						<feTurbulence type="turbulence" baseFrequency="0.4" numOctaves="2" result="turbulence"/>
-						<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" result="sketch"/>
-						<feGaussianBlur in="sketch" stdDeviation="0.65"/>
-					</filter>
-					<filter id='paperBgd'>
-							<feTurbulence type="fractalNoise" baseFrequency='0.01' result='noise' numOctaves="4"/>
-							<feDiffuseLighting in='noise' lighting-color='white' surfaceScale='1'>
-								<feDistantLight azimuth='15' elevation='75'/>
-						</feDiffuseLighting>
-					</filter>
-				</defs>
-			</svg>
-		</div>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% if title %}
+        {{ title }} -
+      {% endif %}
+      {{ site.title }}
+    </title>
+    <meta name="description" content="{{ description or site.description }}">
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.image | url }}">
+    <meta property="og:locale" content="en_CA">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:site" content="@PersonMeetup">
+    <meta name="twitter:creator" content="@PersonMeetup">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="preload" href="/fonts/RadioCanada.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/RadioCanada-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="/favicon.svg">
+    <link rel="mask-icon" href="/mask-icon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="alternate" href="{{ site.feed.path | url }}" type="application/atom+xml" title="{{ site.title }}">
+    <link rel="alternate" href="{{ site.jsonfeed.path | url }}" type="application/atom+json" title="{{ site.title }}">
+    <meta name="generator" content="{{ site.generator }}">
+  </head>
+  <body>
+    <div class="background">
+      <div class="foreground">
+        <header>
+          <a class="nav-skip" href="#main-content">Skip to content</a>
+          <nav aria-label="Primary">
+            {% set navPages = collections.all | eleventyNavigation | head(4) %}
+            <ul>
+              {% for entry in navPages %}
+                <li {% if entry.url in page.url %} aria-current="page" {% endif %}>
+                  <a href="{{ entry.url }}">
+                    {% if entry.title == "Home" %}
+                      {% include "icons/logo.njk" %}
+                    {% else %}
+                      {{ entry.title }}
+                    {% endif %}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </header>
+        <main id="main-content">
+          {{ content | safe }}
+        </main>
+        <footer>
+          <nav aria-label="Secondary">
+            {% set navPages = collections.all | eleventyNavigation | head(6) %}
+            <ul>
+              {% for entry in navPages %}
+                <li>
+                  <a href="{{ entry.url }}">{{ entry.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          <aside aria-label="Credits">
+            {% markdown %}{% include "credits.md" %}{% endmarkdown %}
+          </aside>
+        </footer>
+        <svg xmlns="http://www.w3.org/2000/svg" height="0" aria-hidden="true">
+          <defs>
+            <filter id="sketchBorder">
+              <feTurbulence type="turbulence" basefrequency="0.4" numoctaves="2" result="turbulence"/>
+              <feDisplacementMap
+                in2="turbulence"
+                in="SourceGraphic"
+                scale="5"
+                xchannelselector="R"
+                ychannelselector="G"
+                result="sketch"/>
+              <feGaussianBlur in="sketch" stddeviation="0.65"/>
+            </filter>
+            <filter id='paperBgd'>
+              <feTurbulence type="fractalNoise" basefrequency='0.015' result='noise' numoctaves="4"/>
+              <feDiffuseLighting in='noise' lighting-color='white' surfacescale='1'>
+                <feDistantLight azimuth='15' elevation='60'/>
+              </feDiffuseLighting>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </body>
 </html>
