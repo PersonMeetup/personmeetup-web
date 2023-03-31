@@ -27,8 +27,9 @@
     <link rel="mask-icon" href="/mask-icon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="alternate" href="{{ site.feed.path | url }}" type="application/atom+xml" title="{{ site.title }}">
-    <link rel="alternate" href="{{ site.jsonfeed.path | url }}" type="application/atom+json" title="{{ site.title }}">
+    <link rel="alternate" href="/feeds/all.xml" type="application/atom+xml" title="All Updates - {{ site.title }}">
+    <link rel="alternate" href="/feeds/blog.xml" type="application/atom+xml" title="Latest Blogposts - {{ site.title }}">
+    <link rel="alternate" href="/feeds/portfolio.xml" type="application/atom+xml" title="Latest Projects -{{ site.title }}">
     <meta name="generator" content="{{ site.generator }}">
   </head>
   <body>
