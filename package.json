@@ -17,6 +17,7 @@
 		"@11ty/eleventy-navigation": "^0.3.5",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
+		"@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.2",
 		"@arothuis/markdown-it-biblatex": "^1.0.1",
 		"cheerio": "^1.0.0-rc.12",
 		"css-select": "^5.1.0",

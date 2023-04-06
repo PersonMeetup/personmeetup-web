@@ -48,7 +48,7 @@ const markdownIt = require("markdown-it")({
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
-const eleventySass = require("eleventy-sass");
+const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const eleventyImg = require("@11ty/eleventy-img");
 
 /**
