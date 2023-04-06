@@ -78,6 +78,11 @@ article {
 		margin: 0 auto;
 		height: auto;
 	}
+	figcaption {
+		margin-top: 0.5em;
+		text-align: center;
+		font-size: var(--fs-300);
+	}
 
 	blockquote {
 		padding-left: 1em;

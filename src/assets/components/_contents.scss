@@ -1,6 +1,28 @@
 .table-of-contents {
-	border: 0.125em solid var(--clr-primary-400);
-	background-color: var(--clr-primary-200);
+	border: 0.375em solid var(--clr-primary-400);
+	background-color: var(--clr-primary-500);
 	padding: 0.4em;
-	margin: 0 2rem;
+	margin: 2rem 8rem;
+	& * {
+		margin: 0;
+	}
+
+	& > ol {
+		margin: 1em 0;
+	}
+
+	ol {
+		counter-reset: list-item;
+	}
+	li {
+		display: block;
+		counter-increment: list-item;
+
+		a {
+			color: #fff;
+		}
+		&::before {
+			content: counters(list-item, ".") ": ";
+		}
+	}
 }
