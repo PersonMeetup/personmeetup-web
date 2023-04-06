@@ -82,21 +82,13 @@
 	justify-content: center;
 }
 
-.about {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.about img,
 .latest img {
 	height: auto;
 	width: auto;
 }
 
 @include mq(small) {
-	.latest,
-	.about {
+	.latest {
 		flex-direction: row;
 
 		> * {
