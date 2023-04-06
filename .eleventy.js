@@ -5,6 +5,7 @@ const { readdir } = require("fs/promises");
 const fs = require("fs");
 
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
 const markdownIt = require("markdown-it")({
 	html: true,
 	breaks: true,
@@ -28,12 +29,20 @@ const markdownIt = require("markdown-it")({
 	},
 })
 	.use(require("markdown-it-footnote"))
+	.use(require("markdown-it-sup"))
 	.use(require("markdown-it-mark"))
 	.use(markdownItAnchor, {
 		permalink: markdownItAnchor.permalink.headerLink(),
 	})
-	.use(require("markdown-it-table-of-contents"), {
-		includeLevel: [2, 3, 4, 5, 6],
+	.use(require("markdown-it-toc-done-right"))
+	.use(markdownItBiblatex, {
+		bibPath: "./src/_data/citations.bib",
+		stylePath: "./src/_data/modern-language-association.csl",
+		bibliographyMark: "[bibliography]",
+		bibliographyTitle:
+			'<h2 id="bibliography" tabindex="-1"><a class="header-anchor" href="#bibliography">Bibliography</a></h2>',
+		bibliographyContentsWrapper: "ul",
+		bibliographyEntryWrapper: "li",
 	});
 
 const eleventyNav = require("@11ty/eleventy-navigation");
