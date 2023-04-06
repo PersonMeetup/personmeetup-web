@@ -1,9 +1,7 @@
 @use "../abstracts/" as *;
 
-.index,
-.about,
 .latest {
-	margin-bottom: 2em;
+	margin: 8em 0 2em;
 }
 
 .index {
@@ -104,7 +102,7 @@
 	.index {
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 32rem 8rem;
-		margin: 2em auto;
+		margin: 3em auto;
 	}
 
 	.index-item:hover {
