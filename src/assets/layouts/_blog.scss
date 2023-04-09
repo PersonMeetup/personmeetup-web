@@ -33,15 +33,6 @@ $object-padding: 0.275em;
 	}
 }
 
-.tags-btt {
-	@include button(100%);
-	cursor: pointer;
-	a {
-		color: #fff;
-		text-decoration: none;
-	}
-}
-
 @include mq(medium) {
 	.blog-nav {
 		grid-template-columns: 5fr 2fr;

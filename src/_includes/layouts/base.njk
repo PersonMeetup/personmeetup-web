@@ -10,7 +10,7 @@
       {{ site.title }}
     </title>
     <meta name="description" content="{{ description or site.description }}">
-    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:title" content="{% if title %} {{ title }} - {% endif %}{{ site.title }}">
     <meta property="og:description" content="{{ description or site.description }}">
     <meta property="og:image" content="{{ site.url }}{{ site.image | url }}">
     <meta property="og:locale" content="en_CA">
@@ -29,7 +29,11 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" href="/feeds/all.xml" type="application/atom+xml" title="All Updates - {{ site.title }}">
     <link rel="alternate" href="/feeds/blog.xml" type="application/atom+xml" title="Latest Blogposts - {{ site.title }}">
-    <link rel="alternate" href="/feeds/portfolio.xml" type="application/atom+xml" title="Latest Projects -{{ site.title }}">
+    <link
+      rel="alternate"
+      href="/feeds/portfolio.xml"
+      type="application/atom+xml"
+      title="Latest Projects - {{ site.title }}">
     <meta name="generator" content="{{ site.generator }}">
   </head>
   <body>

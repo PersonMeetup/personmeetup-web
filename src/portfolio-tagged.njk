@@ -14,36 +14,47 @@ eleventyComputed:
     order: 1
 permalink: /portfolio/{{ type | slugify }}/
 ---
+
 {% set filter = type %}
 {% set projectslist = collections.portfolio %}
 {% currate type %}
-<div class="project-nav">
-{% for project in projectslist | reverse %}
-	{% if filter == project.data.type %}
-			<div class="project-item">
-        <div class="project-image">
-          <a href="{{ project.url | url }}">
-            {% image project.data.img, project.data.title, "320px" %}
-          </a>
+<div>
+  <button class="back-to-top">
+    <a href="#main-content">Back to Top</a>
+  </button>
+  <div class="project-nav">
+    {% for project in projectslist | reverse %}
+      {% if filter == project.data.type %}
+        <div class="project-item">
+          <div class="project-image">
+            <a href="{{ project.url | url }}">
+              {% image project.data.img, project.data.title, "320px" %}
+            </a>
+          </div>
+          <div class="project-details">
+            <h3>
+              <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+            </h3>
+            <p class="caption">
+              <time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time>
+            </p>
+          </div>
+          <div class="social project-links">
+            {% for link in project.data.links %}
+              {% if link.steam %}
+                <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
+              {% elif link.youtube %}
+                <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
+              {% elif link.soundcloud %}
+                <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
+              {% elif link.other %}
+                <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
-        <div class="project-details">
-          <h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
-          <p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
-        </div>
-        <div class="social project-links">
-          {% for link in project.data.links %}
-            {% if link.steam %}
-              <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
-            {% elif link.youtube %}
-              <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
-            {% elif link.soundcloud %}
-              <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
-            {% elif link.other %}
-              <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-	{% endif %}
-{% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
+<script src="/js/portfolio-embeds.js" type="module"></script>

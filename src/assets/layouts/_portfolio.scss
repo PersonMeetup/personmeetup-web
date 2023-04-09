@@ -1,3 +1,5 @@
+@use "../abstracts/" as *;
+
 .portfolio-nav {
 	padding: 0.5rem 0;
 	font-weight: 350;
@@ -40,10 +42,17 @@
 	gap: 0.26em;
 }
 
-.project-image img {
-	height: 180px;
-	margin-inline: auto;
-	width: auto;
+.project-image {
+	img {
+		height: 200px;
+		margin-inline: auto;
+		width: auto;
+	}
+	iframe {
+		height: 200px;
+		margin-inline: auto;
+		width: 100%;
+	}
 }
 
 .project-item {
