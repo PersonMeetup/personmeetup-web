@@ -3,6 +3,7 @@ title: "Computation Induced Exhaustion: The Impact of Computers"
 description: Despite how important computers are, they're a bit of a problem for our climate.
 tags:
   - Technology
+  - Academic-Writing
 layout: layouts/post.njk
 ---
 

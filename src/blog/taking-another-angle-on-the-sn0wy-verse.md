@@ -2,7 +2,7 @@
 title: Taking Another Angle on the Sn0wy-Verse
 description: Rethinking how the Imagisphere is referred to in *Sn0wy*.
 tags:
-  - Mythos
+  - Creative-Writing
 layout: layouts/post.njk
 ---
 
