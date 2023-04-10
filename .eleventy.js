@@ -1,5 +1,4 @@
 const { DateTime } = require("luxon");
-var hljs = require("highlight.js");
 const path = require("path");
 const { readdir } = require("fs/promises");
 const fs = require("fs");
@@ -11,23 +10,6 @@ const markdownIt = require("markdown-it")({
 	html: true,
 	breaks: true,
 	linkify: true,
-	highlight: function (str, lang) {
-		if (lang && hljs.getLanguage(lang)) {
-			try {
-				return (
-					`<pre class="language-${lang}"><code>` +
-					hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-					"</code></pre>"
-				);
-			} catch (__) {}
-		}
-
-		return (
-			`<pre class="language-${lang}"><code>` +
-			markdownIt.utils.escapeHtml(str) +
-			"</code></pre>"
-		);
-	},
 })
 	.use(require("markdown-it-footnote"))
 	.use(require("markdown-it-sup"))
