@@ -25,21 +25,6 @@ footer {
 	transform: translateY(0);
 }
 
-li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
-	--navActive: var(--clr-primary-200);
-}
-
-@property --navActive {
-	syntax: "<color>";
-	initial-value: #fff0;
-	inherits: false;
-}
-@property --navHover {
-	syntax: "<percentage>";
-	initial-value: 100%;
-	inherits: false;
-}
-
 header {
 	nav {
 		margin-inline: 1rem;
@@ -62,19 +47,6 @@ header {
 
 				&:first-child {
 					margin-right: auto;
-				}
-
-				&:not(:has([aria-label="Person Meetup"])) {
-					background: linear-gradient(
-						180deg,
-						var(--navActive) var(--navHover),
-						var(--clr-primary-300) 0%
-					);
-					transition: --navHover 150ms;
-
-					&:hover {
-						--navHover: 0%;
-					}
 				}
 			}
 		}
@@ -147,10 +119,6 @@ a[href="/links/"] {
 }
 
 @include mq(medium) {
-	.background {
-		backdrop-filter: url(#paperBgd);
-	}
-
 	.foreground {
 		background: #fff;
 		margin-inline: auto;

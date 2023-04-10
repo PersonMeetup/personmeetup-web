@@ -1,29 +1,33 @@
----
-layout: layouts/base.njk
----
-
-<div class="billboard">
-	<h1 class="text-center">{{ title }}</h1>
-	{% if not(meta) %}
-	<p class="description text-center">{{ description }}</p>
-	<p class="caption text-center">
-		<time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-		{% if lastmod | htmlDateString !== page.date | htmlDateString %}
-			(Edited <time class="postlist-date" datetime="{{ lastmod | htmlDateString }}">{{ lastmod | readableDate }}</time>)
-		{% endif %}
-		 | 
-		{% for tag in tags | filterTagList %}
-			{% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}
-			<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> 
-		{% endfor %}
-	</p>
-	{% endif %}
-</div>
-
-<article>
-	{{ content | safe }}
-
-	{% if not(meta) %}
-	{% include "comments.njk" %}
-	{% endif %}
-</article>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/post.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <div class="billboard">
+    <h1>{{ title }}</h1>
+    {% if not(meta) %}
+      <p class="description">{{ description }}</p>
+      <p class="caption">
+        <time class="postlist-date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        {% if lastmod | htmlDateString !== page.date | htmlDateString %}
+          (Edited
+          <time class="postlist-date" datetime="{{ lastmod | htmlDateString }}">{{ lastmod | readableDate }}</time>)
+        {% endif %}
+        |
+        {% for tag in tags | filterTagList %}
+          {% set tagUrl %}/blog/tags/{{ tag | slug }}/{% endset %}
+          <a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
+  </div>
+  <article>
+    {{ content | safe }}
+    {% if not(meta) %}
+      {% include "comments.njk" %}
+    {% endif %}
+  </article>
+{% endblock %}

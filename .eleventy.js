@@ -3,6 +3,7 @@ var hljs = require("highlight.js");
 const path = require("path");
 const { readdir } = require("fs/promises");
 const fs = require("fs");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
@@ -125,6 +126,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNav);
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
 
 	eleventyConfig.addPlugin(eleventySass);
 

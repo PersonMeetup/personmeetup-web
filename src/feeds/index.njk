@@ -1,28 +1,44 @@
 ---
-layout: layouts/base.njk
 title: Feeds
 meta: True
 ---
-<h1 class="text-center">Feeds</h1>
-<article>
-	<p>Interested in knowing whenever I release something new? Consider bookmarking one of my Web Feeds! They're a great way to get caught up on what I do without having to subscribe to a newsletter. </p>
-	<details class="context">
-		<summary class="context-button">Learn More</summary>
-		<div class="context-details">{% markdown %}{% include "aboutfeeds.md" %}{% endmarkdown %}</div>
-	</details>
-</article>
 
-<div class="feeds">
-	<div class="feed-item">
-		<h2 class="text-center"><a href="/feeds/portfolio.xml">Latest Projects</a></h2>
-		<p class="text-center">Creations fresh from the oven, with some occasional developer commentary on top.</p>
-	</div>
-	<div class="feed-item">
-		<h2 class="text-center"><a href="/feeds/blog.xml">Latest Blogposts</a></h2>
-		<p class="text-center">Various thoughts, opinions, and discussions, coming hot off the presses.</p>
-	</div>
-	<div class="feed-item">
-		<h2 class="text-center"><a href="/feeds/all.xml">Latest Updates</a></h2>
-		<p class="text-center">The most verbose feed, giving updates on both new projects and blogposts.</p>
-	</div>
-</div>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/feeds.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Feeds</h1>
+  <article>
+    <p>Interested in knowing whenever I release something new? Consider bookmarking one of my Web Feeds! They're a great way
+      to get caught up on what I do without having to subscribe to a newsletter.
+    </p>
+    <details class="context">
+      <summary class="context-button">Learn More</summary>
+      <div class="context-details">{% markdown %}{% include "aboutfeeds.md" %}{% endmarkdown %}</div>
+    </details>
+  </article>
+  <div class="feeds">
+    <div class="feed-item">
+      <h2 class="text-center">
+        <a href="/feeds/portfolio.xml">Latest Projects</a>
+      </h2>
+      <p class="text-center">Creations fresh from the oven, with some occasional developer commentary on top.</p>
+    </div>
+    <div class="feed-item">
+      <h2 class="text-center">
+        <a href="/feeds/blog.xml">Latest Blogposts</a>
+      </h2>
+      <p class="text-center">Various thoughts, opinions, and discussions, coming hot off the presses.</p>
+    </div>
+    <div class="feed-item">
+      <h2 class="text-center">
+        <a href="/feeds/all.xml">Latest Updates</a>
+      </h2>
+      <p class="text-center">The most verbose feed, giving updates on both new projects and blogposts.</p>
+    </div>
+  </div>
+{% endblock %}

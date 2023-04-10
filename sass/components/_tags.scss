@@ -1,0 +1,16 @@
+.blog-tag {
+	background: var(--clr-neutral-300);
+	transition: background 0.2s;
+	padding: 0 0.3rem 0.2rem;
+	border-radius: 0.2em;
+	white-space: normal;
+	text-decoration: none;
+	color: #fff;
+
+	&[aria-current="page"] {
+		background: var(--clr-secondary-500);
+	}
+	&:hover {
+		background: var(--clr-secondary-400);
+	}
+}

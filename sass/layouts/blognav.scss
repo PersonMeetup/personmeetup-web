@@ -1,4 +1,9 @@
+@charset 'utf-8';
 @use "../abstracts/" as *;
+@use "../components/back_to_top" as *;
+@use "../components/context" as *;
+@use "../components/article" as *;
+@use "../components/tags" as *;
 
 $object-gap: 0.2em;
 $object-padding: 0.275em;

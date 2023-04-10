@@ -1,5 +1,4 @@
 ---
-layout: layouts/post.njk
 permalink: /portfolio/competitive/
 title: Competitive
 eleventyNavigation:
@@ -7,66 +6,113 @@ eleventyNavigation:
   key: Competitive
 meta: true
 ---
-<section class="comp-playtime">
-	<p class="text-center">I've spent a lot of time playing Team Fortress 2.<br><strong>{{ tf2.total }} hours</strong> to be exact.</p>
-	<dl class="comp-classtime">
-		<div>
-			<dt>Scout</dt>
-			<dd>{{ tf2.Scout }}</dd>
-		</div>
-		<div>
-			<dt>Soldier</dt>
-			<dd>{{ tf2.Soldier }}</dd>
-		</div>
-		<div>
-			<dt>Pyro</dt>
-			<dd>{{ tf2.Pyro }}</dd>
-		</div>
-		<div>
-			<dt>Demoman</dt>
-			<dd>{{ tf2.Demoman }}</dd>
-		</div>
-		<div>
-			<dt>Heavy</dt>
-			<dd>{{ tf2.Heavy }}</dd>
-		</div>
-		<div>
-			<dt>Engineer</dt>
-			<dd>{{ tf2.Engineer }}</dd>
-		</div>
-		<div>
-			<dt>Medic</dt>
-			<dd>{{ tf2.Medic }}</dd>
-		</div>
-		<div>
-			<dt>Sniper</dt>
-			<dd>{{ tf2.Sniper }}</dd>
-		</div>
-		<div>
-			<dt>Spy</dt>
-			<dd>{{ tf2.Spy }}</dd>
-		</div>
-	</dl>
-</section>
-<section class="comp-seasons">
-	<h3>Seasons</h2>
-	<h4>UGC Highlander:</h3>
-	<ul>
-		<li>S19: NA Iron | <a href="http://www.ugcleague.com/team_page.cfm?clan_id=21969">The Omega Squaddies</a> | Engi Substitute | 4-4</li>
-		<li>S20: NA Steel | <a href="http://www.ugcleague.com/team_page.cfm?clan_id=21969">Hip To Be Square</a> | Scout/Medic/Engi Substitute | 4-4</li>
-		<li>S21: NA Steel | <a href="http://www.ugcleague.com/team_page.cfm?clan_id=24423">Pythagorean Meetup</a> | Engi Substitute | 4-4</li>
-		<li>S25: NA Steel | <a href="http://www.ugcleague.com/team_page.cfm?clan_id=13165">NBC's The Office</a> | Engi Main | 4-5</li>
-	</ul>
-	<h4>RGL Highlander:</h3>
-	<ul>
-		<li>S3: NA Open | <a href="http://hl.rgl.gg/Public/Team.aspx?t=4940">Napalm Sticks To Kids</a> | Engi Main | 5-3</li>
-		<li>S4: NA Intermediate | <a href="http://hl.rgl.gg/Public/Team.aspx?t=5604">Napalm Sticks To Kids</a> | Engi Main | 2-5</li>
-		<li>S5: NA Intermediate | <a href="http://hl.rgl.gg/Public/Team.aspx?t=6002">Napalm Sticks To Kids</a> | Engi Main | 2-5</li>
-		<li>S6: NA Main | <a href="https://rgl.gg/Public/Team.aspx?t=6665&r=24">(non) consensual vibing</a> | Engi Main | 5-5 (4th Place)</li>
-	</ul>
-	<br>
-	<p class="text-center">For more information, check my <a href="https://rgl.gg/Public/PlayerProfile.aspx?p=76561198121851448">RGL Profile</a></p>
-</section>
-<!--Config-->
-<br>
-<p class="text-center"><a href="/portfolio/overflow/">Back to Overflow</a></p>
+
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/competitive.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Competitive</h1>
+  <article>
+    <p>I've spent a lot of time playing
+      <em>Team Fortress 2</em>.
+      <br>
+        <strong>{{ tf2.total }} hours</strong>
+        to be exact.</p>
+      <p>I got into the game's competitive scene back when I had only played for 300 hours. After getting comfortable playing
+        pick up games on TF2Center, I'd soon join my first competitive team back in UGC Season 19. Since then, I've grown a lot
+        as both a player and a person. My time in competitive introduced me to people who've remained close friends to this day,
+        as well as help me further develop both my personality and identity. In fact, the name “Person Meetup” came though my
+        playtime in competitive; “Person” being my Steam name when I joined my first team, and “Meetup” coming from me regularly
+        ringing for a team called “Pythagorean Meetup.”
+      </p>
+      <p>My main classes in
+        <em>Team Fortress 2</em>
+        are Scout, Engineer, and Medic; Engineer being the primary class I play. I've pull off quite a few clutches, with one
+        even making it onto LuckyLukeTF2's
+        <a href="https://youtu.be/dtFde7bu82g?t=122">
+          Top 10 TF2 Plays series</a>. I've also had people refer to me a "Person Meatshot" in reference to the damage I've
+          managed to deal in combat. For more context, check my
+        <a href="https://rgl.gg/Public/PlayerProfile.aspx?p=76561198121851448">RGL Profile</a>.
+      </p>
+      <dl class="comp-classtime">
+        <div>
+          <dt>Scout</dt>
+          <dd>{{ tf2.Scout }}</dd>
+        </div>
+        <div>
+          <dt>Soldier</dt>
+          <dd>{{ tf2.Soldier }}</dd>
+        </div>
+        <div>
+          <dt>Pyro</dt>
+          <dd>{{ tf2.Pyro }}</dd>
+        </div>
+        <div>
+          <dt>Demoman</dt>
+          <dd>{{ tf2.Demoman }}</dd>
+        </div>
+        <div>
+          <dt>Heavy</dt>
+          <dd>{{ tf2.Heavy }}</dd>
+        </div>
+        <div>
+          <dt>Engineer</dt>
+          <dd>{{ tf2.Engineer }}</dd>
+        </div>
+        <div>
+          <dt>Medic</dt>
+          <dd>{{ tf2.Medic }}</dd>
+        </div>
+        <div>
+          <dt>Sniper</dt>
+          <dd>{{ tf2.Sniper }}</dd>
+        </div>
+        <div>
+          <dt>Spy</dt>
+          <dd>{{ tf2.Spy }}</dd>
+        </div>
+      </dl>
+      <h2>Seasons</h2>
+      <h3>UGC Highlander:</h3>
+      <ul>
+        <li>S19: NA Iron |
+          <a href="http://www.ugcleague.com/team_page.cfm?clan_id=21969">The Omega Squaddies</a>
+          | Engi Substitute | 4-4</li>
+        <li>S20: NA Steel |
+          <a href="http://www.ugcleague.com/team_page.cfm?clan_id=21969">Hip To Be Square</a>
+          | Scout/Medic/Engi Substitute | 4-4</li>
+        <li>S21: NA Steel |
+          <a href="http://www.ugcleague.com/team_page.cfm?clan_id=24423">Pythagorean Meetup</a>
+          | Engi Substitute | 4-4</li>
+        <li>S25: NA Steel |
+          <a href="http://www.ugcleague.com/team_page.cfm?clan_id=13165">NBC's The Office</a>
+          | Engi Main | 4-5</li>
+      </ul>
+      <h3>RGL Highlander:</h3>
+      <ul>
+        <li>S3: NA Open |
+          <a href="http://hl.rgl.gg/Public/Team.aspx?t=4940">Napalm Sticks To Kids</a>
+          | Engi Main | 5-3</li>
+        <li>S4: NA Intermediate |
+          <a href="http://hl.rgl.gg/Public/Team.aspx?t=5604">Napalm Sticks To Kids</a>
+          | Engi Main | 2-5</li>
+        <li>S5: NA Intermediate |
+          <a href="http://hl.rgl.gg/Public/Team.aspx?t=6002">Napalm Sticks To Kids</a>
+          | Engi Main | 2-5</li>
+        <li>S6: NA Main |
+          <a href="https://rgl.gg/Public/Team.aspx?t=6665&r=24">(non) consensual vibing</a>
+          | Engi Main | 5-5 (4th Place)</li>
+      </ul>
+      <h2>Beyond The Dustbowl</h2>
+      <p>Outside of
+        <em>Team Fortress 2</em>, I've managed to be apart of [VULCAN VICTORY HERE]</p>
+      <p>
+        <a href="/portfolio/overflow/">Back to Overflow</a>
+      </p>
+    </article>
+  {% endblock %}
+</p>

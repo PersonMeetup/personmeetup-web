@@ -1,4 +1,8 @@
+@charset 'utf-8';
 @use "../abstracts/" as *;
+@use "../components/back_to_top" as *;
+@use "../components/context" as *;
+@use "../components/article" as *;
 
 .portfolio-nav {
 	padding: 0.5rem 0;
@@ -40,6 +44,8 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 	gap: 0.26em;
+	width: 99.5%;
+	margin-inline: auto;
 }
 
 .project-image {

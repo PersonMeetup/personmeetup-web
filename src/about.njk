@@ -1,58 +1,70 @@
 ---
 title: About
-layout: layouts/base.njk
 eleventyNavigation:
   key: About
   order: 4
 meta: True
 ---
 
-<!-- Hero Image -->
-<h1 class="text-center">About</h1>
-<p class="description text-center">"Who is this Person anyway?"</p>
-<section class="bio">
-  <p>Leslie "Person Meetup" Swan is a multidisciplinary Canadian designer with a focus in New-Media. He is a self-taught
-    Game Designer, Programmer, Music Producer and Video Editor who continues to add more skills to his repertoire as his
-    determined work ethic pushes him into new fields. His enjoyment of learning new skillsets is rivaled only to his
-    enjoyment of creating works that make others smile.</p>
-  <p>Ever since he was young, Leslie has been experimenting with different mediums. Growing up he would spend hours
-    editing together videos of him and his friends. These videos would grow in complexity as he learned about keyframes,
-    chroma keying, and visual effects through experimentation. Once he entered high school, Leslie would join the percussion
-    section in his school's band class. Initially only interested in the drums, he would later come around to the pitched
-    percussion; eventually pushing to play pieces on the piano as well. During this time, Leslie would also teach himself to
-    use Source's Hammer World Editor to create custom levels for Portal 2. His work since 2017 would lead into him working
-    as a Level Designer on Catalyst, where he would also take on the role of Secondary Writer later on.</p>
-</section>
-<section class="about">
-  <div>{% image "src/assets/about.png", "Images of Person", "512px", "eager" %}</div>
-  <p>"When it comes to my work, I'm often inspired by those around me. Whether I'm making something for someone or with
-    others, I'm always aiming for what I make to get a positive reaction. I believe the most important aspect to any project
-    I work on is that it needs to come from a genuine place of enjoyment rather than one of obligation. If it’s genuine, I
-    won’t be afraid to experiment and contribute beyond what was initially expected of me. Even if I might not have the
-    skillset required, I’ll still take a shot at any problems that might’ve occurred as it gives me a chance to grow my
-    skillset. I believe that my best work comes from projects that challenge me creatively, technically, and emotionally."</p>
-</section>
-<section class="competencies">
-  <h2 class="text-center">Competencies</h2>
-  {% image "https://skillicons.dev/icons?i=ableton,arduino,c,cpp,css,docker,figma,git,html,java,js,latex,linux,md,nodejs,processing,py,raspberrypi,sass,svg,vscode&perline=7", "Placeholder"%}
-  <!-- Competencies -->
-</section>
-<h2 class="text-center">Get in Touch</h2>
-<section class="contact">
-  <details class="context">
-    <summary class="context-button">General</summary>
-    <div class="context-details">
-      <p>You can always
-        <a href="mailto:contact@personmeetup.ca">send me an email</a>
-        at contact@personmeetup.ca</p>
-    </div>
-  </details>
-  <details class="context">
-    <summary class="context-button">Business</summary>
-    <div class="context-details">
-      <p>For business inquiries,
-        <a href="mailto:business@personmeetup.ca">send me an email</a>
-        at business@personmeetup.ca</p>
-    </div>
-  </details>
-</section>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/about.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <!-- Hero Image -->
+  <h1>About</h1>
+  <p class="description text-center">"Who is this Person anyway?"</p>
+  <section class="bio">
+    <p>Leslie "Person Meetup" Swan is a multidisciplinary Canadian designer with a focus in New-Media. He is a self-taught
+      Game Designer, Programmer, Music Producer and Video Editor who continues to add more skills to his repertoire as his
+      determined work ethic pushes him into new fields. His enjoyment of learning new skillsets is rivaled only to his
+      enjoyment of creating works that make others smile.</p>
+    <p>Ever since he was young, Leslie has been experimenting with different mediums. Growing up he would spend hours
+      editing together videos of him and his friends. These videos would grow in complexity as he learned about keyframes,
+      chroma keying, and visual effects through experimentation. Once he entered high school, Leslie would join the percussion
+      section in his school's band class. Initially only interested in the drums, he would later come around to the pitched
+      percussion and eventually push to play pieces on the piano as well. During this time, Leslie would teach himself how to
+      use Source's Hammer World Editor to create custom levels for Portal 2. His work since 2017 would lead into both his
+      university career and his time as a Level Designer on Catalyst, where he would take on the role of Secondary Writer
+      later on.</p>
+  </section>
+  <section class="about">
+    <div>{% image "src/assets/about.png", "Images of Person", "512px", "eager" %}</div>
+    <blockquote>
+      <p>"When it comes to my work, I'm often inspired by those around me. Whether I'm making something for someone or with
+        others, I'm always aiming for what I make to get a positive reaction. I believe the most important aspect to any project
+        I work on is that it needs to come from a genuine place of enjoyment rather than one of obligation. If it’s genuine, I
+        won’t be afraid to experiment and contribute beyond what was initially expected of me. Even if I might not have the
+        skillset required, I’ll still take a shot at any problems that might’ve occurred as it gives me a chance to grow my
+        skills. I believe that my best work comes from projects that challenge me creatively, technically, and emotionally."</p>
+    </blockquote>
+  </section>
+  <h2>Get in Touch</h2>
+  <section class="contact">
+    <details class="context">
+      <summary class="context-button">General</summary>
+      <div class="context-details">
+        <p>Want to rattle my brain about something? Feel free to get my attention over on
+          <a href="https://mstdn.ca/@personmeetup">Mastodon</a>
+          (@personmeetup@mstdn.ca). Just be prepared for me not to respond right away!
+        </p>
+        <p>You can also
+          <a href="mailto:contact@personmeetup.ca">email me</a>
+          at contact@personmeetup.ca</p>
+      </div>
+    </details>
+    <details class="context">
+      <summary class="context-button">Business</summary>
+      <div class="context-details">
+        <p>If you're curious about what professional work I've done, I'd encourage you to
+          <a href="https://ca.linkedin.com/in/leslie-swan-9b895526a">look through my LinkedIn profile</a>.</p>
+        <p>For any other business or work related inquiries, please
+          <a href="mailto:business@personmeetup.ca">email me</a>
+          at business@personmeetup.ca</p>
+      </div>
+    </details>
+  </section>
+{% endblock %}

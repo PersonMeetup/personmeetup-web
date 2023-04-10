@@ -1,20 +1,28 @@
 ---
 title: Blog
-layout: layouts/base.njk
 eleventyNavigation:
   key: Blog
   order: 3
 ---
-<h1 class="text-center">{{ title }}</h1>
-{% currate "blog" %}
-<div class="blog-nav">
-	{% set postslist = collections.blog %}
-	{% set class = "post-item" %}
-	<section>
-	{% for post in postslist | reverse %}
-		{% include "postslist.njk" %}
-	{% endfor %}
-	</section>
 
-	{% include "tagslist.njk" %}
-</div>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/blognav.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>{{ title }}</h1>
+  {% currate "blog" %}
+  <div class="blog-nav">
+    {% set postslist = collections.blog %}
+    {% set class = "post-item" %}
+    <section>
+      {% for post in postslist | reverse %}
+        {% include "postslist.njk" %}
+      {% endfor %}
+    </section>
+    {% include "tagslist.njk" %}
+  </div>
+{% endblock %}

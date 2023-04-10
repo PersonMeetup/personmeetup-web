@@ -26,24 +26,3 @@
 		margin: 0;
 	}
 }
-
-.feed-item {
-	border: 0.125em dashed var(--clr-neutral-200);
-	padding: 0.4em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	height: 8em;
-}
-
-.feeds {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 0.26em;
-}
-
-@include mq(medium) {
-	.feeds {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-}

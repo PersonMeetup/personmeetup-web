@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.contactBtn {
+	text-align: center;
+
+	button {
+		@include button(12em);
+		list-style: none;
+		cursor: pointer;
+	}
+}
+
+.table-of-contents {
+	border: 0.375em solid var(--clr-primary-400);
+	background-color: var(--clr-primary-500);
+	padding: 0.4em;
+	margin: 2rem 8rem;
+	& * {
+		margin: 0;
+	}
+
+	& > ol {
+		margin: 1em 0;
+	}
+
+	ol {
+		counter-reset: list-item;
+	}
+	li {
+		display: block;
+		counter-increment: list-item;
+
+		a {
+			color: #fff;
+		}
+		&::before {
+			content: counters(list-item, ".") ": ";
+		}
+	}
+}

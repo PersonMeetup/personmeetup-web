@@ -4,12 +4,15 @@ const projects = document.querySelectorAll(".project-item");
 projects.forEach((project) => {
 	const link = JSON.parse(project.getAttribute("data-primary-link"));
 	const embed = project.querySelector(".project-image");
-	console.log(embed);
+	const name = project
+		.querySelector(".project-details")
+		.querySelector("a").innerHTML;
 
 	if ("soundcloud" in link) {
 		embed.insertAdjacentHTML(
 			"afterbegin",
 			`<iframe
+			title="Play Track: ${name}"
       scrolling="no"
       frameborder="no"
       allow="autoplay"
@@ -36,9 +39,7 @@ projects.forEach((project) => {
 		}
 		const videoid = new RegExp("(?<=v=|.be/).*?(?=$|&)");
 		const listid = new RegExp("(?<=list=).*?(?=$|&)");
-		let name = project
-			.querySelector(".project-details")
-			.querySelector("a").innerHTML;
+
 		let playlist = "";
 		if (listid.test(link.youtube)) {
 			playlist = `&listType=playlist&list=${link.youtube.match(listid)}`;

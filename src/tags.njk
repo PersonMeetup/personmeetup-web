@@ -4,21 +4,29 @@ pagination:
   size: 1
   alias: tag
   addAllPagesToCollections: true
-layout: layouts/base.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /blog/tags/{{ tag | slugify }}/
 ---
-<h1 class="text-center">{{ title }}</h1>
-{% currate tag %}
-<div class="blog-nav">
-	{% set postslist = collections[ tag ] %}
-	{% set class = "post-item" %}
-	<section>
-	{% for post in postslist | reverse %}
-		{% include "postslist.njk" %}
-	{% endfor %}
-	</section>
 
-	{% include "tagslist.njk" %}
-</div>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/blognav.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>{{ title }}</h1>
+  {% currate tag %}
+  <div class="blog-nav">
+    {% set postslist = collections[ tag ] %}
+    {% set class = "post-item" %}
+    <section>
+      {% for post in postslist | reverse %}
+        {% include "postslist.njk" %}
+      {% endfor %}
+    </section>
+    {% include "tagslist.njk" %}
+  </div>
+{% endblock %}
