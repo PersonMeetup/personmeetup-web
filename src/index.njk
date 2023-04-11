@@ -1,47 +1,56 @@
 ---
-layout: layouts/base.njk
 eleventyNavigation:
   key: Home
   order: 1
 ---
-<ul class="index" aria-label="Portfolio">
-	<li class="index-item index-games"><a href="/portfolio/games/"><span class="index-text">GAMES</span></a></li>
-	<li class="index-item index-music"><a href="/portfolio/music/"><span class="index-text">MUSIC</span></a></li>
-	<li class="index-item index-video"><a href="/portfolio/video/"><span class="index-text">VIDEO</span></a></li>
-	<li class="index-item index-programming"><a href="https://github.com/PersonMeetup"><span class="index-text">PROGRAMMING</span></a></li>
-	<li class="index-item index-competitive"><a href="/portfolio/competitive/"><span class="index-text">COMPETITIVE</span></a></li>
-	<li class="index-item index-miscellaneous"><a href="/portfolio/miscellaneous/"><span class="index-text">MISCELLANEOUS</span></a></li>
-</ul>
 
-<section class="about">
-	<div>{% image "src/assets/about.png", "Images of Person", "512px", "eager" %}</div>
-	<div>{% markdown %}{% include "about.md" %}{% endmarkdown %}</div>
-</section>
-
-<nav class="latest" aria-label="Latest Updates">
-	{% set class = "latest-item" %}
-	<section>
-		<h2 class="text-center">Latest Project</h2>
-		{% set projectslist = collections.portfolio | head(-1) %}
-		{% for project in projectslist | reverse %}
-			<div class="{{ class }}">
-				<div class="project-image">
-					<a href="{{ project.url | url }}">
-						{% image project.data.img, project.data.title, "512px" %}
-					</a>
-				</div>
-				<div class="project-details">
-					<h3><a href="{{ project.url | url }}">{{ project.data.title }}</a></h3>
-					<p class="caption"><time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time></p>
-				</div>
-			</div>
-		{% endfor %}
-	</section>
-	<section>
-		<h2 class="text-center">Latest Blogpost</h2>
-		{% set postslist = collections.blog | head(-1) %}
-		{% for post in postslist | reverse %}
-			{% include "postslist.njk" %}
-		{% endfor %}
-	</section>
-</nav>
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/home.scss" %}
+  </style>
+{% endblock %}
+{% block content %}
+  <ul class="index" aria-label="Portfolio">
+    {% set navPortfolio = collections.all | eleventyNavigation("Portfolio") %}
+    {% for entry in navPortfolio %}
+      <li class="index-item index-{{ entry.title | slugify }}">
+        <a href="{{ entry.url }}">
+          <span class="index-text">{{ entry.title | upper }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  <nav class="latest" aria-label="Latest Updates">
+    {% set class = "latest-item" %}
+    <section>
+      <h2 class="text-center">Latest Project</h2>
+      {% set projectslist = collections.portfolio | head(-1) %}
+      {% for project in projectslist | reverse %}
+        <div class="{{ class }}">
+          <div class="project-image">
+            <a href="{{ project.url | url }}">
+              {% image project.data.img, project.data.title, "512px" %}
+            </a>
+          </div>
+          <div class="project-details">
+            <h3>
+              <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+            </h3>
+            <p class="caption">
+              <time datetime="{{ project.date | htmlDateString }}">{{ project.date | readableDate }}</time>
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+    <section>
+      <h2 class="text-center">Latest Blogpost</h2>
+      {% set postslist = collections.blog | head(-1) %}
+      {% for post in postslist | reverse %}
+        {% include "postslist.njk" %}
+      {% endfor %}
+    </section>
+  </nav>
+{% endblock %}

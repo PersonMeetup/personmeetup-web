@@ -1,9 +1,23 @@
-<aside class="post-item blog-tagnav">
-	<h2 class="text-center">Tags</h2>
-	<ul>
-	{% for tag in collections.tagList %}
-		{% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
-		<li><a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a></li>
-	{% endfor %}
-	</ul>
+<aside class="blog-tagnav">
+  <div class="sticky">
+    <div>
+      {% set tagUrl = "/blog/tags/" %}
+      <details class="context" {% if tagUrl in page.url %} open="true" {% endif %}>
+        <summary class="context-button">Show Tags</summary>
+        <div class="context-details">
+          <ul>
+            {% for tag in collections.tagList %}
+              {% set tagUrl %}/blog/tags/{{ tag | slugify }}/{% endset %}
+              <li>
+                <a class="blog-tag" {% if tagUrl == page.url %} aria-current="page" href="/blog/" {% else %} href="{{ tagUrl | url }}" {% endif %}>{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </details>
+      <button class="back-to-top">
+        <a href="#main-content">Back to Top</a>
+      </button>
+    </div>
+  </div>
 </aside>

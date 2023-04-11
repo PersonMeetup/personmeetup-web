@@ -2,39 +2,35 @@
 permalink: /feeds/all.xml
 eleventyExcludeFromCollections: true
 ---
-{% extends "xmlfeed.njk" %}
 
+{% extends "xmlfeed.njk" %}
 {% block title %}All{% endblock %}
 {% block self %}all.xml{% endblock %}
 {% block page %}{% endblock %}
 {% block id %}{% endblock %}
-
 {% block subtitle %}Latest Site Updates{% endblock %}
-
-{% block update %}{{ collections.archive | rssLastUpdatedDate }}{% endblock %}
-
-{% block entries %}	
-	{% for item in collections.archive | reverse %}
-		{% set icon %}
-			{% if item.data.type == 'Games' %}🎮
-			{% elif item.data.type == 'Video' %}📺
-			{% elif item.data.type == 'Music' %}📻
-			{% elif item.data.type == 'Web Design' %}🔗
-			{% else %}📃{% endif %}
-		{% endset %}
-	{% set absoluteItemUrl %}{{ item.url | url | absoluteUrl(site.url) }}{% endset %}
-	<entry>
-		<title>{{ icon }} {{ item.data.title }}</title>
-		<link href="{{ absoluteItemUrl }}"/>
-		<updated>{{ item.date | rssDate }}</updated>
-		<id>{{ absoluteItemUrl }}</id>
-		<summary>{{ item.data.description }}</summary>
-		<content type="html">
-			{% if item.data.type %}
-				<img src="{{ item.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ item.data.title }}"/>
-			{% endif %}
-			{{ item.templateContent | htmlToAbsoluteUrls(absoluteItemUrl) }}
-		</content>
-	</entry>
-	{% endfor %}
+{% block update %}
+  {{ collections.archive | rssLastUpdatedDate }}
+{% endblock %}
+{% block entries %}
+  {% for item in collections.archive | reverse %}
+    {% set icon %}
+    {% if item.data.type == 'Games' %}🎮 {% elif item.data.type == 'Video' %}📺 {% elif item.data.type == 'Music' %}📻 {% elif item.data.type == 'Web Design' %}🔗 {% elif item.data.type == 'Overflow' %}🔮 {% else %}📃{% endif %}
+    {% endset %}
+    {% set absoluteItemUrl %}{{ item.url | url | absoluteUrl(site.url) }}{% endset %}
+    <entry>
+      <title>{{ icon }}
+        {{ item.data.title }}</title>
+      <link href="{{ absoluteItemUrl }}"/>
+      <updated>{{ item.date | rssDate }}</updated>
+      <id>{{ absoluteItemUrl }}</id>
+      <summary>{{ item.data.description }}</summary>
+      <content type="html">
+        {% if item.data.type %}
+          <img src="{{ item.data.img | url | absoluteUrl(site.url) }}" alt="Thumbnail for {{ item.data.title }}"/>
+        {% endif %}
+        {{ item.templateContent | htmlToAbsoluteUrls(absoluteItemUrl) }}
+      </content>
+    </entry>
+  {% endfor %}
 {% endblock %}

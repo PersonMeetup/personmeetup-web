@@ -1,8 +1,9 @@
 <script src="/js/lite-yt-embed.js"></script>
-
-<!-- Web component for lite-youtube-embed -->
-<lite-youtube videoid="{{ videoId }}" style="background-image: url('https://i.ytimg.com/vi/{{ videoId }}/hqdefault.jpg');" {% if params %} params="{{ params }}"{% endif %}>
-	<button type="button" class="lty-playbtn">
-		<span class="lyt-visually-hidden">Play Video: {{ videoTitle }}</span>
-	</button>
-</lite-youtube>
+<link
+  rel="stylesheet" href="/css/lite-yt-embed.css">
+  <!-- Web component for lite-youtube-embed -->
+  <lite-youtube videoid="{{ videoId }}" style="background-image: url('https://i.ytimg.com/vi/{{ videoId }}/hqdefault.jpg');" {% if params %} params="{{ params }}" {% endif %}>
+    <button type="button" class="lty-playbtn">
+      <span class="lyt-visually-hidden">Play Video: {{ videoTitle }}</span>
+    </button>
+  </lite-youtube>

@@ -5,7 +5,7 @@ date: 2022-08-02
 img: "src/assets/portfolio/sn0wydirect.png"
 type: Video
 links:
-  - youtube: https://www.youtube.com/playlist?list=PLpDSn8R_Xvci0yHufIcusiiCXMDvHI1sA
+  - youtube: https://www.youtube.com/watch?v=cutWBfWzw00&list=PLpDSn8R_Xvci0yHufIcusiiCXMDvHI1sA
   - soundcloud: https://soundcloud.com/sn0wydirect/sets/sn0wy-direct-phase-1
 layout: layouts/project.njk
 ---

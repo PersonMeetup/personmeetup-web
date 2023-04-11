@@ -9,4 +9,6 @@ This site uses [open-source](/open-source) projects, and has its code available 
 	<li><a href="https://ko-fi.com/personmeetup">{% include "icons/kofi.njk" %}</a></li>
 </ul>
 
-<div class="social"><a rel="license external" href="http://creativecommons.org/licenses/by-sa/4.0/">{% image "src/assets/cc-bysa.png", "Unless stated otherwise, all content on this website is licenced under a CC BY-SA 4.0 License", "88px"%}</a> <a rel="external" href="https://neocities.org/">{% image "src/assets/neocities.gif", "This website is hosted by Neocities", "88px" %}</a> <a href="/links/">{% image "src/assets/retro.gif", "Take a spin, now you're in with the techno-set. You're going surfin' on the internet!", "88px" %}</a></div>
+<div class="social">
+	<a rel="license external" title="Unless stated otherwise, all content on this website is licenced under a CC BY-SA 4.0 License" href="https://creativecommons.org/licenses/by-sa/4.0/">{% image "src/assets/cc-bysa.png", "CC BY-SA 4.0", "88px"%}</a> <a rel="external" title="This website is hosted by Neocities" href="https://neocities.org/">{% image "src/assets/neocities.gif", "Hosted on Neocities", "88px" %}</a> <a href="/links/" title="Take a spin, now you're in with the techno-set. You're going surfin' on the internet!">{% image "src/assets/retro.gif", "Rabbit Hole", "88px" %}</a>
+</div>

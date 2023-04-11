@@ -11,7 +11,7 @@ Web development is an interesting beast, with no "wrong" way to approach it. The
 
 Before I get into the thick of things, I should preface that this article will involve programming and getting your hands dirty with the command line. It's avoidable for Markdown but inevitable for Static-Site Generators, given how they work. If you're going to continue reading I'll assume that you're comfortable with a little bit of programming, which I'll keep as minimal as I can. I'm also assuming you have a lot of content to go over in your site, and will immediately concede the ground that if you're doing [microblogging](https://neonaut.neocities.org/brain/rejecting-ssg.html) using a generator might be overblown.
 
-[[toc]]
+[toc]
 
 ## Plain Ol' White Bread
 

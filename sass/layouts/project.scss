@@ -1,0 +1,14 @@
+@charset 'utf-8';
+@use "../layouts/post.scss" as *;
+@use "../components/projectlinks" as *;
+
+.project-platforms {
+	border: 0.125em dashed var(--clr-neutral-200);
+	padding: 0.4em;
+	margin: 2.5rem 0;
+}
+
+article a[href^="https://"]::after
+{
+	content: "";
+}

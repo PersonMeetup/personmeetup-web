@@ -1,0 +1,25 @@
+@charset 'utf-8';
+@use "../abstracts/" as *;
+@use "../components/context" as *;
+@use "../layouts/post.scss" as *;
+
+.feed-item {
+	border: 0.125em dashed var(--clr-neutral-200);
+	padding: 0.4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 8em;
+}
+
+.feeds {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.26em;
+}
+
+@include mq(medium) {
+	.feeds {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

@@ -3,7 +3,7 @@ title: Frontier Corps.
 description: Developed as a university project, Frontier Corps. is a Titanfall/Apex Legends fansite.
 date: 2021-11-16
 img: "src/assets/portfolio/frontier-corps.png"
-type: Miscellaneous
+type: Web Design
 links:
   - other: https://frontiercorps.neocities.org/
 layout: layouts/project.njk

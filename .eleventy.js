@@ -1,72 +1,37 @@
 const { DateTime } = require("luxon");
-const cheerio = require("cheerio");
-var hljs = require("highlight.js");
+const path = require("path");
+const { readdir } = require("fs/promises");
+const fs = require("fs");
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItContainer = require("markdown-it-container");
+const markdownItBiblatex = require("@arothuis/markdown-it-biblatex");
 const markdownIt = require("markdown-it")({
 	html: true,
 	breaks: true,
 	linkify: true,
-	highlight: function (str, lang) {
-		if (lang && hljs.getLanguage(lang)) {
-			try {
-				return (
-					`<pre class="language-${lang}"><code>` +
-					hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
-					"</code></pre>"
-				);
-			} catch (__) {}
-		}
-
-		return (
-			`<pre class="language-${lang}"><code>` +
-			markdownIt.utils.escapeHtml(str) +
-			"</code></pre>"
-		);
-	},
 })
 	.use(require("markdown-it-footnote"))
+	.use(require("markdown-it-sup"))
 	.use(require("markdown-it-mark"))
 	.use(markdownItAnchor, {
 		permalink: markdownItAnchor.permalink.headerLink(),
 	})
-	.use(require("markdown-it-table-of-contents"), {
-		includeLevel: [2, 3, 4, 5, 6],
-	})
-	.use(markdownItContainer, "info", {
-		render: function (tokens, idx) {
-			if (tokens[idx].nesting === 1) {
-				// opening tag
-				return `<div class="info">
-						<figure>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
-								<path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/>
-							</svg>
-							<figcaption>Information</figcaption>
-						</figure>`;
-			} else {
-				// closing tag
-				return "</div>\n";
-			}
-		},
-	})
-	.use(markdownItContainer, "construction", {
-		render: function (tokens, idx) {
-			if (tokens[idx].nesting === 1) {
-				// opening tag
-				return '<div class="construction"><img src="src/assets/wip.gif" alt="UNDER CONSTRUCTION">';
-			} else {
-				// closing tag
-				return "</div>\n";
-			}
-		},
+	.use(require("markdown-it-toc-done-right"))
+	.use(markdownItBiblatex, {
+		bibPath: "./src/_data/citations.bib",
+		stylePath: "./src/_data/modern-language-association.csl",
+		bibliographyMark: "[bibliography]",
+		bibliographyTitle:
+			'<h2 id="bibliography" tabindex="-1"><a class="header-anchor" href="#bibliography">Bibliography</a></h2>',
+		bibliographyContentsWrapper: "ul",
+		bibliographyEntryWrapper: "li",
 	});
 
 const eleventyNav = require("@11ty/eleventy-navigation");
 const eleventyRSS = require("@11ty/eleventy-plugin-rss");
 const eleventySyntax = require("@11ty/eleventy-plugin-syntaxhighlight");
-const eleventySass = require("eleventy-sass");
+const eleventySass = require("@11tyrocks/eleventy-plugin-sass-lightningcss");
 const eleventyImg = require("@11ty/eleventy-img");
 
 /**
@@ -143,7 +108,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyNav);
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
-
+	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(eleventySass);
 
 	// Parse markdown referenced within nunjucks
@@ -151,7 +116,46 @@ module.exports = function (eleventyConfig) {
 		return markdownIt.render(content);
 	});
 
-	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+	eleventyConfig.addPairedShortcode("info", function (content) {
+		return `<div class="info">
+							<figure>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24">
+									<path fill="currentColor" d="M13 7.5a1 1 0 11-2 0 1 1 0 012 0zm-3 3.75a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v4.25h.75a.75.75 0 010 1.5h-3a.75.75 0 010-1.5h.75V12h-.75a.75.75 0 01-.75-.75zM12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zM2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0z"/>
+								</svg>
+								<figcaption>Information</figcaption>
+							</figure>
+							${markdownIt.render(content)}</div>\n`;
+	});
+
+	eleventyConfig.addPairedShortcode("constructiton", function (content) {
+		return `<div class="construction">
+							<img src="src/assets/wip.gif" alt="UNDER CONSTRUCTION">
+							${markdownIt.render(content)}</div>\n`;
+	});
+
+	eleventyConfig.addAsyncShortcode("image", imageShortcode);
+
+	eleventyConfig.addAsyncShortcode("currate", async function (target) {
+		target = target.toLowerCase();
+		try {
+			const files = await readdir("./src/_includes/currate");
+			// If file found in _includes/currate, import into document
+			for (const file of files) {
+				if (file.startsWith(target)) {
+					const targetData = fs.readFileSync(
+						`./src/_includes/currate/${target}.md`,
+						"utf8"
+					);
+					return `<article><details class="context" open="true"><summary class="context-button">Toggle Curration</summary><div class="context-details">${markdownIt.render(
+						targetData
+					)}</div></details></article>`;
+				}
+			}
+			return "";
+		} catch (err) {
+			return "";
+		}
+	});
 
 	eleventyConfig.setLibrary("md", markdownIt);
 
@@ -198,17 +202,17 @@ module.exports = function (eleventyConfig) {
 	});
 
 	// Copy media folders to the output
-	eleventyConfig.addPassthroughCopy("src/assets/index");
-	eleventyConfig.addPassthroughCopy("src/links");
-	eleventyConfig.addPassthroughCopy("src/fonts");
-	eleventyConfig.addPassthroughCopy("src/js");
-	eleventyConfig.addPassthroughCopy({ "src/favicon": "/" });
+	eleventyConfig.addPassthroughCopy("./src/assets/index");
+	eleventyConfig.addPassthroughCopy("./src/links");
+	eleventyConfig.addPassthroughCopy("./src/fonts");
+	eleventyConfig.addPassthroughCopy("./src/js");
+	eleventyConfig.addPassthroughCopy({ "./src/favicon": "/" });
 
 	// Copy robots.txt to output
-	eleventyConfig.addPassthroughCopy("src/robots.txt");
+	eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
 	// Copy feed.xsl to output
-	eleventyConfig.addPassthroughCopy("src/feeds/feed.xsl");
+	eleventyConfig.addPassthroughCopy("./src/feeds/feed.xsl");
 
 	return {
 		markdownTemplateEngine: "njk",

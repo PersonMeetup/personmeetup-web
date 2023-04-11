@@ -4,8 +4,8 @@
 	"description": "Personal website for Leslie 'Person Meetup' Swan",
 	"main": "index.js",
 	"scripts": {
-		"build": "eleventy",
-		"start": "eleventy --serve --quiet"
+		"start": "eleventy --serve --quiet",
+		"build": "eleventy"
 	},
 	"keywords": [],
 	"author": "",
@@ -17,18 +17,16 @@
 		"@11ty/eleventy-navigation": "^0.3.5",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-		"cheerio": "^1.0.0-rc.12",
-		"css-select": "^5.1.0",
+		"@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.0.2",
+		"@arothuis/markdown-it-biblatex": "^1.0.1",
 		"dotenv": "^16.0.3",
-		"eleventy-sass": "^2.2.1",
-		"highlight.js": "^11.7.0",
 		"luxon": "^2.5.2",
 		"markdown-it": "^12.3.2",
 		"markdown-it-anchor": "^8.6.7",
-		"markdown-it-container": "^3.0.0",
 		"markdown-it-footnote": "^3.0.3",
 		"markdown-it-mark": "^3.0.1",
-		"markdown-it-table-of-contents": "^0.6.0",
+		"markdown-it-sup": "^1.0.0",
+		"markdown-it-toc-done-right": "^4.2.0",
 		"prettier": "2.7.1"
 	}
 }

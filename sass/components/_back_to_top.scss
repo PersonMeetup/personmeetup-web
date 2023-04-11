@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.back-to-top {
+	@include button(100%);
+	cursor: pointer;
+	position: sticky;
+	top: 0;
+	margin-bottom: 2em;
+	z-index: 9;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}

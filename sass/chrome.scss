@@ -1,0 +1,35 @@
+@use "abstracts" as *;
+
+@property --navActive {
+	syntax: "<color>";
+	initial-value: #fff0;
+	inherits: false;
+}
+@property --navHover {
+	syntax: "<percentage>";
+	initial-value: 100%;
+	inherits: false;
+}
+
+li[aria-current="page"]:not(:has([aria-label="Person Meetup"])) {
+	--navActive: var(--clr-primary-200);
+}
+
+header nav ul li:not(:has([aria-label="Person Meetup"])) {
+	background: linear-gradient(
+		180deg,
+		var(--navActive) var(--navHover),
+		var(--clr-primary-300) 0%
+	);
+	transition: --navHover 150ms;
+
+	&:hover {
+		--navHover: 0%;
+	}
+}
+
+@include mq(medium) {
+	.background {
+		backdrop-filter: url(#paperBgd);
+	}
+}

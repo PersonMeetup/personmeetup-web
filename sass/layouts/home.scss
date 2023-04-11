@@ -1,0 +1,135 @@
+@charset 'utf-8';
+@use "../abstracts/" as *;
+@use "../components/tags" as *;
+
+.index {
+	list-style-type: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(14.8rem, 1fr));
+	gap: 0.26em;
+	max-width: 54em;
+	margin-inline: auto;
+}
+.index-text {
+	font-weight: 700;
+	font-stretch: 75%;
+	font-size: var(--fs-600);
+	color: #fff;
+	transition: font-size 200ms;
+}
+.index-item {
+	border: 0.125em solid var(--clr-neutral-200);
+	min-height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	background-position: center;
+	background-size: cover;
+	filter: grayscale(1);
+	transition: filter 800ms;
+
+	> * {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	&:hover {
+		filter: grayscale(0);
+
+		.index-text {
+			font-size: var(--fs-700);
+		}
+	}
+}
+
+.index-games {
+	background-image: url(/assets/index/index-games.jpg);
+}
+.index-music {
+	background-image: url(/assets/index/index-music.jpg);
+}
+.index-video {
+	background-image: url(/assets/index/index-video.jpg);
+}
+.index-web-design {
+	background-image: url(/assets/index/index-programming.jpg);
+}
+.index-overflow {
+	background-image: url(/assets/index/index-miscellaneous.jpg);
+}
+
+.latest {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin: 4em 0 8em;
+}
+.latest-item {
+	border: 0.125em dashed var(--clr-neutral-200);
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.latest img {
+	height: auto;
+	width: auto;
+}
+
+@include mq(small) {
+	.latest {
+		flex-direction: row;
+
+		> * {
+			flex-basis: 100%;
+		}
+	}
+
+	.latest-item {
+		min-height: 32vh;
+	}
+}
+@include mq(medium) {
+	.index {
+		grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+		grid-template-rows: 32rem 8rem;
+		margin: 3em auto;
+	}
+
+	.index-item {
+		grid-column: span 2;
+		&:hover {
+			.index-text {
+				font-size: var(--fs-800);
+			}
+		}
+	}
+	.index-web-design {
+		grid-column: 2 / span 2;
+	}
+	.index-overflow {
+		grid-column: 4 / span 2;
+	}
+
+	.latest {
+		margin: 8em 0 2em;
+	}
+
+	.latest-item {
+		flex-direction: row;
+		flex-basis: 100%;
+		align-items: center;
+		justify-content: left;
+		gap: 1em;
+		min-height: 24vh;
+
+		.project-image {
+			max-width: 50%;
+		}
+	}
+}
