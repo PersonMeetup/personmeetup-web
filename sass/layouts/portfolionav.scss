@@ -3,6 +3,7 @@
 @use "../components/back_to_top" as *;
 @use "../components/context" as *;
 @use "../components/article" as *;
+@use "../components/projectlinks" as *;
 
 .portfolio-nav {
 	padding: 0.5rem 0;
@@ -71,17 +72,5 @@
 	.project-details {
 		margin: 0.2em;
 		text-align: center;
-	}
-}
-
-.project-links {
-	padding: 0.4em 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: auto;
-
-	svg {
-		height: 2.5em;
 	}
 }

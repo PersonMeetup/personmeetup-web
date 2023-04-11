@@ -25,7 +25,7 @@ permalink: /portfolio/{{ type | slugify }}/
   <div class="project-nav">
     {% for project in projectslist | reverse %}
       {% if filter == project.data.type %}
-        <div class="project-item">
+        <div class="project-item" data-primary-link="{{ project.data.links[0] | dump }}">
           <div class="project-image">
             <a href="{{ project.url | url }}">
               {% image project.data.img, project.data.title, "320px" %}
@@ -40,17 +40,8 @@ permalink: /portfolio/{{ type | slugify }}/
             </p>
           </div>
           <div class="social project-links">
-            {% for link in project.data.links %}
-              {% if link.steam %}
-                <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
-              {% elif link.youtube %}
-                <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
-              {% elif link.soundcloud %}
-                <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
-              {% elif link.other %}
-                <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
-              {% endif %}
-            {% endfor %}
+            {% from 'projectlinks.njk' import projectLinks %}
+            {{ projectLinks(project.data.links) }}
           </div>
         </div>
       {% endif %}

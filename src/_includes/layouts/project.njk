@@ -1,4 +1,10 @@
 {% extends "layouts/base.njk" %}
+{% block styles %}
+  <style>
+    {% renderFile "./sass/critical.scss" %}
+    {% renderFile "./sass/layouts/project.scss" %}
+  </style>
+{% endblock %}
 {% block content %}
   <div class="billboard">
     {% image img, title, "100vw, (max-width: 800px) 50vw", "eager" %}
@@ -12,17 +18,8 @@
     <div class="project-platforms">
       <h2 class="text-center">Available On:</h2>
       <div class="social project-links">
-        {% for link in links %}
-          {% if link.steam %}
-            <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
-          {% elif link.youtube %}
-            <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
-          {% elif link.soundcloud %}
-            <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
-          {% elif link.other %}
-            <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
-          {% endif %}
-        {% endfor %}
+        {% from 'projectlinks.njk' import projectLinks %}
+        {{ projectLinks(links) }}
       </div>
     </div>
     {% include "comments.njk" %}

@@ -29,17 +29,8 @@ eleventyNavigation:
           </p>
         </div>
         <div class="social project-links">
-          {% for link in project.data.links %}
-            {% if link.steam %}
-              <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
-            {% elif link.youtube %}
-              <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
-            {% elif link.soundcloud %}
-              <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
-            {% elif link.other %}
-              <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
-            {% endif %}
-          {% endfor %}
+          {% from 'projectlinks.njk' import projectLinks %}
+          {{ projectLinks(project.data.links) }}
         </div>
       </div>
     {% endfor %}
