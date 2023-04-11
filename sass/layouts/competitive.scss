@@ -1,7 +1,6 @@
 @charset 'utf-8';
 @use "../layouts/post.scss" as *;
 
-// Reminder: Links page should also be cleaned up (Put into it's own folder)
 article {
 	p:first-child {
 		font-size: var(--fs-500);

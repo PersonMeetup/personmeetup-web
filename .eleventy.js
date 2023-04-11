@@ -109,7 +109,6 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(eleventyRSS);
 	eleventyConfig.addPlugin(eleventySyntax);
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
-
 	eleventyConfig.addPlugin(eleventySass);
 
 	// Parse markdown referenced within nunjucks
