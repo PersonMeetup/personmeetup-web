@@ -1,3 +1,4 @@
 {
-	"tags": ["portfolio", "archive"]
+	"tags": ["portfolio", "archive"],
+	"layout": "layouts/project.njk"
 }
