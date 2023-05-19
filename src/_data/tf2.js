@@ -73,8 +73,10 @@ module.exports = async function getUser() {
 				}
 			}
 		});
-	} catch (error) {
-		console.error(error);
+	} catch (err) {
+		console.log(
+			"Failed to get Steam API data! Do you have the enviroment variables set correctly?"
+		);
 	}
 
 	return hours;
