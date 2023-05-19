@@ -7,14 +7,14 @@ eleventyNavigation:
 meta: true
 ---
 
-{% extends "layouts/base.njk" %}
-{% block styles %}
+{%- extends "layouts/base.njk" -%}
+{%- block styles -%}
   <style>
     {% renderFile "./sass/critical.scss" %}
     {% renderFile "./sass/layouts/competitive.scss" %}
   </style>
-{% endblock %}
-{% block content %}
+{%- endblock -%}
+{%- block content -%}
   <h1>Competitive</h1>
   <article>
     <p>I've spent a lot of time playing
@@ -117,4 +117,4 @@ meta: true
       <a href="/portfolio/overflow/">Back to Overflow</a>
     </p>
   </article>
-{% endblock %}
+{%- endblock -%}

@@ -3,12 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      {% if title %}
-        {{ title }} -
-      {% endif %}
-      {{ site.title }}
-    </title>
+    <title>{%- if title -%}{{ title }} - {% endif -%}{{ site.title }}</title>
     <link rel="preload" href="/fonts/RadioCanada.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/RadioCanada-Italic.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="description" content="{{ description or site.description }}">
@@ -21,9 +16,11 @@
     <meta name="twitter:site" content="@PersonMeetup">
     <meta name="twitter:creator" content="@PersonMeetup">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    {% block styles %}
-      <style>{% renderFile "./sass/critical.scss" %}</style>
-    {% endblock %}
+    {%- block styles -%}
+      <style>
+				{% renderFile "./sass/critical.scss" %}
+			</style>
+    {%- endblock -%}
     <script>
       if (!!window.chrome) {
         var style = document.createElement("link");
@@ -53,40 +50,40 @@
         <header>
           <a class="nav-skip" href="#main-content">Skip to content</a>
           <nav aria-label="Primary">
-            {% set navPages = collections.all | eleventyNavigation | head(4) %}
+            {% set navPages = collections.all | eleventyNavigation | head(4) -%}
             <ul>
-              {% for entry in navPages %}
-                <li {% if entry.url in page.url %} aria-current="page" {% endif %}>
+              {%- for entry in navPages %}
+                <li {%- if entry.url in page.url %} aria-current="page" {%- endif -%}>
                   <a href="{{ entry.url }}">
-                    {% if entry.title == "Home" %}
-                      {% include "icons/logo.njk" %}
-                    {% else %}
+                    {%- if entry.title == "Home" -%}
+                      {%- include "icons/logo.njk" -%}
+                    {%- else -%}
                       {{ entry.title }}
-                    {% endif %}
+                    {%- endif -%}
                   </a>
                 </li>
-              {% endfor %}
+              {%- endfor %}
             </ul>
           </nav>
         </header>
         <main id="main-content">
-          {% block content %}
+          {%- block content -%}
             <br/>
-          {% endblock %}
+          {%- endblock -%}
         </main>
         <footer>
           <nav aria-label="Secondary">
-            {% set navPages = collections.all | eleventyNavigation | head(6) %}
+            {%- set navPages = collections.all | eleventyNavigation | head(6) -%}
             <ul>
-              {% for entry in navPages %}
+              {%- for entry in navPages -%}
                 <li>
                   <a href="{{ entry.url }}">{{ entry.title }}</a>
                 </li>
-              {% endfor %}
+              {%- endfor -%}
             </ul>
           </nav>
           <aside aria-label="Credits">
-            {% markdown %}{% include "credits.md" %}{% endmarkdown %}
+            {%- markdown -%}{%- include "credits.md" -%}{%- endmarkdown -%}
           </aside>
         </footer>
         <svg xmlns="http://www.w3.org/2000/svg" height="0" aria-hidden="true">

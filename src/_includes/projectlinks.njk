@@ -1,15 +1,15 @@
-{% macro projectLinks(links = ['']) %}
-  {% for link in links %}
-    {% if link.steam %}
-      <a href="{{ link.steam }}">{% include "icons/steam-lrg.njk" %}</a>
-    {% elif link.youtube %}
-      <a href="{{ link.youtube }}">{% include "icons/youtube-lrg.njk" %}</a>
-    {% elif link.soundcloud %}
-      <a href="{{ link.soundcloud }}">{% include "icons/soundcloud-lrg.njk" %}</a>
-    {% elif link.github %}
-      <a href="{{ link.github }}">{% include "icons/github-lrg.njk" %}</a>
-    {% elif link.other %}
-      <a href="{{ link.other }}">{% include "icons/link-lrg.njk" %}</a>
-    {% endif %}
-  {% endfor %}
-{% endmacro %}
+{%- macro projectLinks(links = ['']) -%}
+  {%- for link in links -%}
+    {%- if link.steam -%}
+      <a href="{{ link.steam }}">{%- include "icons/steam-lrg.njk" -%}</a>
+    {%- elif link.youtube -%}
+      <a href="{{ link.youtube }}">{%- include "icons/youtube-lrg.njk" -%}</a>
+    {%- elif link.soundcloud -%}
+      <a href="{{ link.soundcloud }}">{%- include "icons/soundcloud-lrg.njk" -%}</a>
+    {%- elif link.github -%}
+      <a href="{{ link.github }}">{%- include "icons/github-lrg.njk" -%}</a>
+    {%- elif link.other -%}
+      <a href="{{ link.other }}">{%- include "icons/link-lrg.njk" -%}</a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endmacro -%}

@@ -2,15 +2,15 @@
 permalink: /feeds/portfolio.json
 eleventyExcludeFromCollections: true
 ---
-{% extends "jsonfeed.njk" %}
+{%- extends "jsonfeed.njk" -%}
 
-{% block self %}portfolio.json{% endblock %}
+{%- block self -%}portfolio.json{%- endblock -%}
 
-{% block subtitle %}Latest Projects{% endblock %}
+{%- block subtitle -%}Latest Projects{%- endblock -%}
 
-{% block entries %}
+{%- block entries -%}
 	{% for project in collections.portfolio | reverse %}
-	{% set absoluteProjectUrl %}{{ project.url | url | absoluteUrl(site.url) }}{% endset %}
+	{%- set absoluteProjectUrl -%}{{ project.url | url | absoluteUrl(site.url) }}{%- endset -%}
 	{
 		"id": "{{ absoluteProjectUrl }}",
 		"url": "{{ absoluteProjectUrl }}",
@@ -19,8 +19,8 @@ eleventyExcludeFromCollections: true
 		"summary": "{{ post.data.description }}",
 		"date_published": "{{ project.date | rssDate }}"
 	}
-	{% if not loop.last %}
+	{%- if not loop.last -%}
 	,
-	{% endif %}
+	{%- endif %}
 	{% endfor %}
-{% endblock %}
+{%- endblock -%}

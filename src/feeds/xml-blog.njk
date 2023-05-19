@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
 
 {% block entries %}	
 	{% for post in collections.blog | reverse %}
-	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+	{%- set absolutePostUrl -%}{{ post.url | url | absoluteUrl(site.url) }}{%- endset -%}
 	<entry>
 		<title>📃 {{ post.data.title }}</title>
 		<link href="{{ absolutePostUrl }}"/>

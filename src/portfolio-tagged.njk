@@ -15,20 +15,20 @@ eleventyComputed:
 permalink: /portfolio/{{ type | slugify }}/
 ---
 
-{% set filter = type %}
-{% set projectslist = collections.portfolio %}
-{% currate type %}
+{%- set filter = type -%}
+{%- set projectslist = collections.portfolio -%}
+{%- currate type -%}
 <div>
   <button class="back-to-top">
     <a href="#main-content">Back to Top</a>
   </button>
   <div class="project-nav">
-    {% for project in projectslist | reverse %}
-      {% if filter == project.data.type %}
+    {%- for project in projectslist | reverse -%}
+      {%- if filter == project.data.type -%}
         <div class="project-item" data-primary-link="{{ project.data.links[0] | dump }}">
           <div class="project-image">
             <a href="{{ project.url | url }}">
-              {% image project.data.img, project.data.title, "320px" %}
+              {%- image project.data.img, project.data.title, "320px" -%}
             </a>
           </div>
           <div class="project-details">
@@ -40,12 +40,12 @@ permalink: /portfolio/{{ type | slugify }}/
             </p>
           </div>
           <div class="social project-links">
-            {% from 'projectlinks.njk' import projectLinks %}
+            {%- from 'projectlinks.njk' import projectLinks -%}
             {{ projectLinks(project.data.links) }}
           </div>
         </div>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 </div>
 <script src="/js/portfolio-embeds.js" type="module"></script>

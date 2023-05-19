@@ -2,17 +2,17 @@
 <?xml-stylesheet type="text/css" href="/css/feed.css"?>
 <?xml-stylesheet type="text/xsl" href="feed.xsl" media="screen"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{% block title %}Blog{% endblock %} - {{ site.title }}</title>
-	<description>{% block subtitle %}{{ site.description }}{% endblock %}</description>
-	{% set absoluteUrl %}{{ page.filePathStem | url | absoluteUrl(site.url) }}{% endset %}
+	<title>{%- block title -%}Blog{%- endblock %} - {{ site.title }}</title>
+	<description>{%- block subtitle -%}{{ site.description }}{%- endblock -%}</description>
+	{%- set absoluteUrl -%}{{ page.filePathStem | url | absoluteUrl(site.url) }}{%- endset -%}
 	<link href="{{ site.url }}/feeds/{% block self %}blog.xml{% endblock %}" rel="self"/>
 	<link href="{{ site.url }}/{% block page %}blog/{% endblock %}"/>
-	<updated>{% block update %}{{ collections.blog | rssLastUpdatedDate }}{% endblock %}</updated>
-	<id>{{ site.url }}/{% block id %}blog/{% endblock %}</id>
+	<updated>{%- block update -%}{{ collections.blog | rssLastUpdatedDate }}{%- endblock -%}</updated>
+	<id>{{ site.url }}/{%- block id -%}blog/{%- endblock -%}</id>
 	<author>
 		<name>{{ site.author.name }}</name>
 		<email>{{ site.author.email }}</email>
 	</author>
-	{% block entries %}
-	{% endblock %}
+	{%- block entries -%}
+	{%- endblock -%}
 </feed>

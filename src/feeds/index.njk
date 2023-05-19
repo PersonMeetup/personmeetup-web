@@ -3,14 +3,14 @@ title: Feeds
 meta: True
 ---
 
-{% extends "layouts/base.njk" %}
-{% block styles %}
+{%- extends "layouts/base.njk" -%}
+{%- block styles -%}
   <style>
     {% renderFile "./sass/critical.scss" %}
     {% renderFile "./sass/layouts/feeds.scss" %}
   </style>
-{% endblock %}
-{% block content %}
+{%- endblock -%}
+{%- block content -%}
   <h1>Feeds</h1>
   <article>
     <p>Interested in knowing whenever I release something new? Consider bookmarking one of my Web Feeds! They're a great way
@@ -18,7 +18,7 @@ meta: True
     </p>
     <details class="context">
       <summary class="context-button">Learn More</summary>
-      <div class="context-details">{% markdown %}{% include "aboutfeeds.md" %}{% endmarkdown %}</div>
+      <div class="context-details">{%- markdown -%}{% include "aboutfeeds.md" %}{%- endmarkdown -%}</div>
     </details>
   </article>
   <div class="feeds">
@@ -41,4 +41,4 @@ meta: True
       <p class="text-center">The most verbose feed, giving updates on both new projects and blogposts.</p>
     </div>
   </div>
-{% endblock %}
+{%- endblock -%}

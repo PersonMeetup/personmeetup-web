@@ -1,8 +1,12 @@
 ---
-title: Blog
-eleventyNavigation:
-  key: Blog
-  order: 3
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /blog/tags/{{ tag | slugify }}/
 ---
 
 {%- extends "layouts/base.njk" -%}
@@ -14,13 +18,15 @@ eleventyNavigation:
 {%- endblock -%}
 {%- block content -%}
   <h1>{{ title }}</h1>
-  {%- currate "blog" -%}
+  {%- currate tag -%}
   <div class="blog-nav">
     {%- set postslist = collections.blog -%}
     {%- set class = "post-item" -%}
     <section>
       {%- for post in postslist | reverse -%}
-        {%- include "postslist.njk" -%}
+        {%- if post in collections[ tag ] -%}
+          {%- include "postslist.njk" -%}
+        {%- endif -%}
       {%- endfor -%}
     </section>
     {%- include "tagslist.njk" -%}

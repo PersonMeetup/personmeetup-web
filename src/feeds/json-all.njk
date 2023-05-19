@@ -2,15 +2,15 @@
 permalink: /feeds/all.json
 eleventyExcludeFromCollections: true
 ---
-{% extends "jsonfeed.njk" %}
+{%- extends "jsonfeed.njk" -%}
 
-{% block self %}all.json{% endblock %}
+{%- block self -%}all.json{%- endblock -%}
 
-{% block subtitle %}Latest Site Updates{% endblock %}
+{%- block subtitle -%}Latest Site Updates{%- endblock -%}
 
-{% block entries %}
+{%- block entries -%}
 	{% for item in collections.blog | reverse %}
-	{% set absoluteItemUrl %}{{ item.url | url | absoluteUrl(site.url) }}{% endset-%}
+	{%- set absoluteItemUrl -%}{{ item.url | url | absoluteUrl(site.url) }}{%- endset -%}
 	{
 		"id": "{{ absoluteItemUrl }}",
 		"url": "{{ absoluteItemUrl }}",
@@ -19,8 +19,8 @@ eleventyExcludeFromCollections: true
 		"summary": "{{ post.data.description }}",
 		"date_published": "{{ item.date | rssDate }}"
 	}
-	{% if not loop.last %}
+	{%- if not loop.last -%}
 	,
-	{% endif %}
+	{%- endif %}
 	{% endfor %}
-{% endblock %}
+{%- endblock -%}

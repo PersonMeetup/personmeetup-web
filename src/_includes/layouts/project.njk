@@ -1,13 +1,13 @@
-{% extends "layouts/base.njk" %}
-{% block styles %}
+{%- extends "layouts/base.njk" -%}
+{%- block styles -%}
   <style>
     {% renderFile "./sass/critical.scss" %}
     {% renderFile "./sass/layouts/project.scss" %}
   </style>
-{% endblock %}
-{% block content %}
+{%- endblock -%}
+{%- block content -%}
   <div class="billboard">
-    {% image img, title, "100vw, (max-width: 800px) 50vw", "eager" %}
+    {%- image img, title, "100vw, (max-width: 800px) 50vw", "eager" -%}
     <h1>{{ title }}</h1>
     <p class="caption text-center">Released
       <time class="postlist-date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
@@ -18,10 +18,10 @@
     <div class="project-platforms">
       <h2 class="text-center">Available On:</h2>
       <div class="social project-links">
-        {% from 'projectlinks.njk' import projectLinks %}
+        {%- from 'projectlinks.njk' import projectLinks -%}
         {{ projectLinks(links) }}
       </div>
     </div>
-    {% include "comments.njk" %}
+    {%- include "comments.njk" -%}
   </article>
 {% endblock %}

@@ -214,6 +214,8 @@ module.exports = function (eleventyConfig) {
 	// Copy feed.xsl to output
 	eleventyConfig.addPassthroughCopy("./src/feeds/feed.xsl");
 
+	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
 	return {
 		markdownTemplateEngine: "njk",
 		HTMLTemplateEngine: "njk",

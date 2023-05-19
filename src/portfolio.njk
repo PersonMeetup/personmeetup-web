@@ -6,18 +6,18 @@ eleventyNavigation:
   order: 2
 ---
 
-{% currate "portfolio" %}
+{%- currate "portfolio" -%}
 <div>
   <button class="back-to-top">
     <a href="#main-content">Back to Top</a>
   </button>
   <div class="project-nav">
-    {% set projectslist = collections.portfolio %}
-    {% for project in projectslist | reverse %}
+    {%- set projectslist = collections.portfolio -%}
+    {%- for project in projectslist | reverse -%}
       <div class="project-item" data-primary-link="{{ project.data.links[0] | dump }}">
         <div class="project-image">
           <a href="{{ project.url | url }}">
-            {% image project.data.img, project.data.title, "320px", "eager" %}
+            {%- image project.data.img, project.data.title, "320px", "eager" -%}
           </a>
         </div>
         <div class="project-details">
@@ -29,11 +29,11 @@ eleventyNavigation:
           </p>
         </div>
         <div class="social project-links">
-          {% from 'projectlinks.njk' import projectLinks %}
+          {%- from 'projectlinks.njk' import projectLinks -%}
           {{ projectLinks(project.data.links) }}
         </div>
       </div>
-    {% endfor %}
+    {%- endfor -%}
   </div>
 </div>
 <script src="/js/portfolio-embeds.js" type="module"></script>
