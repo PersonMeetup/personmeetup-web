@@ -13,9 +13,6 @@
 		"editor.formatOnSave": true,
 		"emmet.includeLanguages": {
 			"njk": "html"
-		},
-		"[njk]": {
-			"editor.defaultFormatter": "eseom.nunjucks-template"
 		}
 	}
 }
