@@ -1,7 +1,7 @@
-const { DateTime } = require("luxon");
-const path = require("path");
-const { readdir } = require("fs/promises");
 const fs = require("fs");
+const htmlmin = require("html-minifier");
+const { DateTime } = require("luxon");
+const { readdir } = require("fs/promises");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 const markdownItAnchor = require("markdown-it-anchor");
@@ -200,6 +200,23 @@ module.exports = function (eleventyConfig) {
 
 		return filterTagList([...tagSet]);
 	});
+
+	eleventyConfig.addTransform("htmlmin", function (content) {
+		if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyJS: true,
+			});
+			return minified;
+		}
+		return content;
+	});
+
+	/**
+	 * Copy over required files
+	 */
 
 	// Copy media folders to the output
 	eleventyConfig.addPassthroughCopy("./src/assets/index");

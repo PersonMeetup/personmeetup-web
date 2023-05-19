@@ -1,8 +1,8 @@
 {%- extends "layouts/base.njk" -%}
 {%- block styles -%}
   <style>
-    {% renderFile "./sass/critical.scss" %}
-    {% renderFile "./sass/layouts/portfolionav.scss" %}
+    {%- renderFile "./sass/critical.scss" -%}
+    {%- renderFile "./sass/layouts/portfolionav.scss" -%}
   </style>
 {%- endblock -%}
 {%- block content -%}
@@ -24,6 +24,6 @@
   <hr class="nav-sep">
     <h2 class="text-center">
       {%- if not(title == "Portfolio") -%}{{ title }}{%- else -%}All Projects{%- endif -%}
-    </h1>
+    </h2>
     {{ content | safe }}
   {%- endblock -%}
