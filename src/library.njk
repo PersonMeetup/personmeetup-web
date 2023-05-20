@@ -1,7 +1,7 @@
 ---
-title: Blog
+title: Library
 eleventyNavigation:
-  key: Blog
+  key: Library
   order: 3
 ---
 
@@ -14,17 +14,16 @@ eleventyNavigation:
 {%- endblock -%}
 {%- block content -%}
   <h1>{{ title }}</h1>
-  {%- currate "blog" -%}
   <div class="blog-nav">
-    {%- set postslist = collections.blog -%}
-    {%- set class = "post-item" -%}
+    {%- set postslist = collections.library -%}
+    {%- set class = "bookmark-item" -%}
     <section>
       {%- for post in postslist | reverse -%}
         {%- include "postslist.njk" -%}
       {%- endfor -%}
     </section>
-		{%- set type = "blog" -%}
-		{%- set tagList = collections.blogTagList -%}
-		{%- include "tagslist.njk" -%}
-	</div>
+		{%- set type = "library" -%}
+		{%- set tagList = collections.libraryTagList -%}
+    {%- include "tagslist.njk" -%}
+  </div>
 {%- endblock -%}

@@ -186,15 +186,26 @@ module.exports = function (eleventyConfig) {
 	function filterTagList(tags) {
 		return (tags || []).filter(
 			(tag) =>
-				["all", "nav", "blog", "portfolio", "archive"].indexOf(tag) === -1
+				["all", "nav", "blog", "library", "portfolio", "archive"].indexOf(
+					tag
+				) === -1
 		);
 	}
 	eleventyConfig.addFilter("filterTagList", filterTagList);
 
 	// Create an array of all tags
-	eleventyConfig.addCollection("tagList", function (collection) {
+	eleventyConfig.addCollection("blogTagList", function (collection) {
 		let tagSet = new Set();
-		collection.getAll().forEach((item) => {
+		collection.getFilteredByTag("blog").forEach((item) => {
+			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
+		});
+
+		return filterTagList([...tagSet]);
+	});
+
+	eleventyConfig.addCollection("libraryTagList", function (collection) {
+		let tagSet = new Set();
+		collection.getFilteredByTag("library").forEach((item) => {
 			(item.data.tags || []).forEach((tag) => tagSet.add(tag));
 		});
 
@@ -215,7 +226,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	/**
-	 * Copy over required files
+	 * Copy over required files into /dist/ on compile
 	 */
 
 	// Copy media folders to the output

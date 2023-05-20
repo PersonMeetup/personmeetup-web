@@ -1,14 +1,15 @@
 <aside class="blog-tagnav">
   <div class="sticky">
     <div>
-      {%- set tagUrl = "/blog/tags/" -%}
+      {%- set tagUrl -%}/{{ type }}/tags/{%- endset -%}
       <details class="context" {% if tagUrl in page.url -%} open="true" {%- endif -%}>
         <summary class="context-button">Show Tags</summary>
         <div class="context-details">
           <ul>
-            {%- for tag in collections.tagList -%}
-              {%- set tagUrl -%}/blog/tags/{{ tag | slugify }}/{%- endset -%}
+            {%- for tag in tagList -%}
+              {%- set tagUrl -%}/{{ type }}/tags/{{ tag | slugify }}/{%- endset -%}
               <li>
+								<!-- Use current page data to check if URL's match -->
                 <a class="blog-tag" {% if tagUrl == page.url -%} aria-current="page" href="/blog/" {%- else -%} href="{{ tagUrl | url }}" {%- endif -%}>{{ tag }}</a>
               </li>
             {%- endfor -%}

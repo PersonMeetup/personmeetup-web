@@ -1,12 +1,12 @@
 ---
 pagination:
-  data: collections.blogTagList
+  data: collections.libraryTagList
   size: 1
   alias: tag
   addAllPagesToCollections: true
 eleventyComputed:
-  title: Blog - Tagged “{{ tag }}”
-permalink: /blog/tags/{{ tag | slugify }}/
+  title: Library - Tagged “{{ tag }}”
+permalink: /library/tags/{{ tag | slugify }}/
 ---
 
 {%- extends "layouts/base.njk" -%}
@@ -18,19 +18,18 @@ permalink: /blog/tags/{{ tag | slugify }}/
 {%- endblock -%}
 {%- block content -%}
   <h1>{{ title }}</h1>
-  {%- currate tag -%}
   <div class="blog-nav">
-    {%- set postslist = collections.blog -%}
-    {%- set class = "post-item" -%}
+    {%- set postslist = collections.library -%}
+    {%- set class = "bookmark-item" -%}
     <section>
       {%- for post in postslist | reverse -%}
-        {%- if post in collections[ tag ] -%}
-          {%- include "postslist.njk" -%}
-        {%- endif -%}
+				{%- if post in collections[ tag ] -%}
+        	{%- include "postslist.njk" -%}
+				{%- endif -%}
       {%- endfor -%}
     </section>
-		{%- set type = "blog" -%}
-		{%- set tagList = collections.blogTagList -%}
-		{%- include "tagslist.njk" -%}
-	</div>
+		{%- set type = "library" -%}
+		{%- set tagList = collections.libraryTagList -%}
+    {%- include "tagslist.njk" -%}
+  </div>
 {%- endblock -%}

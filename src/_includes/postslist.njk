@@ -5,6 +5,17 @@
 			<p class="caption"><time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time> | {% for tag in post.data.tags | filterTagList %}{%- set tagUrl -%}/blog/tags/{{ tag | slug }}/{%- endset -%}<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> {% endfor %}</p>
 			{%- markdown -%}{{ post.data.description }}{%- endmarkdown -%}
 		</div>
+	{% elif class == "bookmark-item" %}
+		<h2><a href="{{ post.data.url | url }}">{{ post.data.title }}</a></h2>
+		<p class="caption">Added 
+			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+			 | 
+			{% for tag in post.data.tags | filterTagList %}
+				{% set tagUrl %}/library/tags/{{ tag | slug }}/{% endset %}
+				<a class="blog-tag" href="{{ tagUrl | url }}">{{ tag }}</a> 
+			{% endfor -%}
+		</p>
+		{{ post.content | safe }}
 	{% else %}
 		<h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
 		<p class="caption">
