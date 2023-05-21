@@ -1,7 +1,6 @@
 const fs = require("fs");
 const htmlmin = require("html-minifier");
 const { DateTime } = require("luxon");
-const { readdir } = require("fs/promises");
 const { EleventyRenderPlugin } = require("@11ty/eleventy");
 
 const markdownItAnchor = require("markdown-it-anchor");
@@ -138,7 +137,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addAsyncShortcode("currate", async function (target) {
 		target = target.toLowerCase();
 		try {
-			const files = await readdir("./src/_includes/currate");
+			const files = fs.readdirSync("./src/_includes/currate");
 			// If file found in _includes/currate, import into document
 			for (const file of files) {
 				if (file.startsWith(target)) {
