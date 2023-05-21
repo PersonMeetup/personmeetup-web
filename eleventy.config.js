@@ -101,6 +101,8 @@ async function imageShortcode(
 }
 
 // Portions of code sourced from https://github.com/11ty/eleventy-base-blog
+
+/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function (eleventyConfig) {
 	eleventyConfig.setDataDeepMerge(true);
 
@@ -110,11 +112,12 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyRenderPlugin);
 	eleventyConfig.addPlugin(eleventySass);
 
-	// Parse markdown referenced within nunjucks
+	// Parse markdown referenced within templates
 	eleventyConfig.addPairedShortcode("markdown", function (content) {
 		return markdownIt.render(content);
 	});
 
+	// Additional content blocks
 	eleventyConfig.addPairedShortcode("info", function (content) {
 		return `<div class="info">
 							<figure>
@@ -125,15 +128,11 @@ module.exports = function (eleventyConfig) {
 							</figure>
 							${markdownIt.render(content)}</div>\n`;
 	});
-
 	eleventyConfig.addPairedShortcode("constructiton", function (content) {
 		return `<div class="construction">
 							<img src="src/assets/wip.gif" alt="UNDER CONSTRUCTION">
 							${markdownIt.render(content)}</div>\n`;
 	});
-
-	eleventyConfig.addAsyncShortcode("image", imageShortcode);
-
 	eleventyConfig.addAsyncShortcode("currate", async function (target) {
 		target = target.toLowerCase();
 		try {
@@ -155,6 +154,8 @@ module.exports = function (eleventyConfig) {
 			return "";
 		}
 	});
+
+	eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
 	eleventyConfig.setLibrary("md", markdownIt);
 
@@ -182,6 +183,7 @@ module.exports = function (eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, { zone: "mst" }).toFormat("yyyy-LL-dd");
 	});
 
+	// Filter meta collections (archive, blog, library, ect) from regular tag collections
 	function filterTagList(tags) {
 		return (tags || []).filter(
 			(tag) =>
@@ -192,7 +194,7 @@ module.exports = function (eleventyConfig) {
 	}
 	eleventyConfig.addFilter("filterTagList", filterTagList);
 
-	// Create an array of all tags
+	// Create an array of all tags within a meta collection
 	eleventyConfig.addCollection("blogTagList", function (collection) {
 		let tagSet = new Set();
 		collection.getFilteredByTag("blog").forEach((item) => {
@@ -201,7 +203,6 @@ module.exports = function (eleventyConfig) {
 
 		return filterTagList([...tagSet]);
 	});
-
 	eleventyConfig.addCollection("libraryTagList", function (collection) {
 		let tagSet = new Set();
 		collection.getFilteredByTag("library").forEach((item) => {
@@ -224,21 +225,13 @@ module.exports = function (eleventyConfig) {
 		return content;
 	});
 
-	/**
-	 * Copy over required files into /dist/ on compile
-	 */
-
-	// Copy media folders to the output
+	// Copy over required files into /dist/ on compile
 	eleventyConfig.addPassthroughCopy("./src/assets/index");
 	eleventyConfig.addPassthroughCopy("./src/links");
 	eleventyConfig.addPassthroughCopy("./src/fonts");
 	eleventyConfig.addPassthroughCopy("./src/js");
 	eleventyConfig.addPassthroughCopy({ "./src/favicon": "/" });
-
-	// Copy robots.txt to output
 	eleventyConfig.addPassthroughCopy("./src/robots.txt");
-
-	// Copy feed.xsl to output
 	eleventyConfig.addPassthroughCopy("./src/feeds/feed.xsl");
 
 	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
