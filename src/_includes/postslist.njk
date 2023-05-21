@@ -6,7 +6,7 @@
 			{%- markdown -%}{{ post.data.description }}{%- endmarkdown -%}
 		</div>
 	{% elif class == "bookmark-item" %}
-		<h2><a href="{{ post.data.url | url }}">{{ post.data.title }}</a></h2>
+		<h2><a href="{{ post.data.link | url }}">{{ post.data.title }}</a></h2>
 		<p class="caption">Added 
 			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
 			 | 
