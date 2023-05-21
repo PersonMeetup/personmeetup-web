@@ -3,7 +3,6 @@ title: Common Beat
 description: Test results seemed to suffer when subjects were looking at or within the confines of a maintenance area.
 date: 2023-04-10
 img: "src/assets/portfolio/common-beat.png"
-type: Overflow
 links:
   - github: https://github.com/PersonMeetup/CommonBeat
 layout: layouts/project.njk
