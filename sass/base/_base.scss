@@ -1,9 +1,5 @@
 @use "../abstracts/" as *;
 
-* {
-	scrollbar-color: var(--clr-primary-400) var(--clr-secondary-100);
-}
-
 header,
 main,
 footer {
