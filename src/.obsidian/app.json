@@ -1,0 +1,22 @@
+{
+  "userIgnoreFilters": [
+    "js/",
+    "favicon/",
+    "fonts/",
+    "css/",
+    "feeds/",
+    "links/",
+    "_data/",
+    "_includes/icons/",
+    "_includes/layouts/"
+  ],
+  "useMarkdownLinks": true,
+  "attachmentFolderPath": "assets/blog",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "blog",
+  "alwaysUpdateLinks": true,
+  "spellcheckDictionary": [
+    "Sn0wy"
+  ],
+  "spellcheck": false
+}

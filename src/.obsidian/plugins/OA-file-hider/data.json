@@ -1,0 +1,14 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "links",
+    "js",
+    "fonts",
+    "feeds",
+    "favicon",
+    "css",
+    "_includes/icons",
+    "_includes/layouts",
+    "_data"
+  ]
+}
