@@ -1,10 +1,9 @@
 ---
-title: How Does One Write?
-description: Writing a blogpost is not as easy as writing what you're interested in; at least to me.
+title: "How Does One Write?"
+description: "Writing a blogpost is not as easy as writing what you're interested in; at least to me."
 tags:
-  - Perspective
-  - Composing
-layout: layouts/post.njk
+  - "Perspective"
+  - "Composing"
 ---
 
 Whenever I want to write something, the hardest part is always figuring out how to start. I'll often think to myself for a while about what that first line should be, coming up with multiple ideas that I don't even bother writing down because they simply don't sound right. Eventually, something in my head will ring out and I'll manage to catch it with my words. Often it will be approaching the subject matter bluntly that stokes the flames that allow me to steam ahead with writing, but even that will be delayed by me figuring out what the best angle of approach is.

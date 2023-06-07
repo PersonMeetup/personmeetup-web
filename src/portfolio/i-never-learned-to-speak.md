@@ -1,11 +1,11 @@
 ---
-title: I Never Learned To Speak
-description: I can't articulate just how much Word salad is a thing numbs my brain.
+title: "I Never Learned To Speak"
+description: "I can't articulate just how much Word salad is a thing numbs my brain."
 date: 2023-05-15
-img: "src/assets/portfolio/i-never-learned-to-speak.png"
-type: Web Design
+img: "assets/portfolio/i-never-learned-to-speak.png"
+type: "Web Design"
 links:
-  - other: https://personmeetup.github.io/NMED4520-FontAnimation/
+  - other: "https://personmeetup.github.io/NMED4520-FontAnimation/"
 ---
 
 {% info %} This overview focuses on the technical aspects of *I never learned to speak*, as I feel I've already said much of what I need to about its artistic intent within the page itself. {% endinfo %}

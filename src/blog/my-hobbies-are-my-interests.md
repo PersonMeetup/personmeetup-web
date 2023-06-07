@@ -1,9 +1,8 @@
 ---
-title: My Hobbies Are My Interests
-description: A comment about my site's purpose got me thinking about how my active interests formed.
+title: "My Hobbies Are My Interests"
+description: "A comment about my site's purpose got me thinking about how my active interests formed."
 tags:
-  - Perspective
-layout: layouts/post.njk
+  - "Perspective"
 ---
 Recently, I had the opportunity to get feedback on my site from my classmates as part of the “Portfolio & Professional Development” course I'm taking this semester in university. In it, one of the major projects we have to work on during the semester is a portfolio site for showcasing our work and letting employers get in contact. Because I had this site that I was working on already, though, the professor was kind enough to let me keep working on it for the class. Our most recent class was focused on going around and leaving thoughts about the website drafts that others had made. Much of the feedback I got were ideas for relatively minor tweaks and additions for improving the styling and navigation of the site, and I'm planning on using that feedback as a list of things to work on. There was one piece of feedback that really stood out to me, though, which was a critical comment about my intent with the site.
 

@@ -1,10 +1,9 @@
 ---
 title: "Computation Induced Exhaustion: The Impact of Computers"
-description: Despite how important computers are, they're a bit of a problem for our climate.
+description: "Despite how important computers are, they're a bit of a problem for our climate."
 tags:
-  - Technology
-  - Academic-Writing
-layout: layouts/post.njk
+  - "Technology"
+  - "Academic-Writing"
 ---
 
 {% info %} This is an extended version of the essay published in the University of Lethbridge Climate Justice Working Group's _Earth Day 2022_ Zine. Special thanks to both Heather Kehoe and Meghan Rennie for their editorial comments on that original essay. {% endinfo %}

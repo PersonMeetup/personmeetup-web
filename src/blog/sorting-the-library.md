@@ -1,10 +1,9 @@
 ---
-title: Sorting the Library
-description: Continuing my digital organization, I tackle how my bookmarks are organized.
+title: "Sorting the Library"
+description: "Continuing my digital organization, I tackle how my bookmarks are organized."
 tags:
-  - Organization
-  - Technology
-layout: layouts/post.njk
+  - "Organization"
+  - "Technology"
 ---
 After surviving the last of my university assignments for the semester, I went back to work on my digital reorganization. I've spent the last few days working on my bookmarks, and I'm pretty happy with how it's looking at the moment. [Much like before](cleaning-the-mailboxes), I figured I'd write about how the process went.
 

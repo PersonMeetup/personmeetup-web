@@ -66,8 +66,8 @@ markdownIt.renderer.rules.image = function (tokens, idx, options, env, self) {
 		decoding: "async",
 	};
 
-	eleventyImg(imgSrc, eleventyImgOpts);
-	const metadata = eleventyImg.statsSync(imgSrc, eleventyImgOpts);
+	eleventyImg(`src/${imgSrc}`, eleventyImgOpts);
+	const metadata = eleventyImg.statsSync(`src/${imgSrc}`, eleventyImgOpts);
 
 	const generated = eleventyImg.generateHTML(metadata, {
 		sizes: "(max-width: 710px) 100vw, 710px",
@@ -88,7 +88,7 @@ async function imageShortcode(
 	sizes = "(max-width: 710px) 100vw, 710px",
 	loading = "lazy"
 ) {
-	let metadata = await eleventyImg(src, eleventyImgOpts);
+	let metadata = await eleventyImg(`src/${src}`, eleventyImgOpts);
 
 	let imageAttributes = {
 		alt,

@@ -1,12 +1,11 @@
 ---
-title: Office
-description: Don't go into the Portal 2 elevator at 3 AM, you'll end up in Home Depot hell.
+title: "Office"
+description: "Don't go into the Portal 2 elevator at 3 AM, you'll end up in Home Depot hell."
 date: 2021-06-27
-img: "src/assets/portfolio/office.png"
-type: Games
+img: "assets/portfolio/office.png"
+type: "Games"
 links:
-  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2531941695
-layout: layouts/project.njk
+  - steam: "https://steamcommunity.com/sharedfiles/filedetails/?id=2531941695"
 ---
 
 > Don't go into the Portal 2 elevator at 3 AM, you'll end up in Home Depot hell.

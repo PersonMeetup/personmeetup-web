@@ -1,12 +1,11 @@
 ---
-title: Rations
-description: Wandering for food in an apocalyptic landscape, a man comes across a self-proclaimed king who taunts them as he tells stories about the beginning of the end.
+title: "Rations"
+description: "Wandering for food in an apocalyptic landscape, a man comes across a self-proclaimed king who taunts them as he tells stories about the beginning of the end."
 date: 2021-04-22
-img: "src/assets/portfolio/rations.jpg"
-type: Video
+img: "assets/portfolio/rations.jpg"
+type: "Video"
 links:
-  - youtube: https://www.youtube.com/watch?v=BLQ3_954sRs
-layout: layouts/project.njk
+  - youtube: "https://www.youtube.com/watch?v=BLQ3_954sRs"
 ---
 
 > Wandering for food in an apocalyptic landscape, a man comes across a self-proclaimed king who taunts them as he tells stories about the beginning of the end.

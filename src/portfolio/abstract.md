@@ -1,12 +1,11 @@
 ---
-title: Abstract
-description: Founded while Zepheniah was still alive, this facility now has radio and missile launching capabilities in the present day.
+title: "Abstract"
+description: "Founded while Zepheniah was still alive, this facility now has radio and missile launching capabilities in the present day."
 date: 2020-04-17
-img: "src/assets/portfolio/abstract.png"
-type: Games
+img: "assets/portfolio/abstract.png"
+type: "Games"
 links:
-  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2063636056
-layout: layouts/project.njk
+  - steam: "https://steamcommunity.com/sharedfiles/filedetails/?id=2063636056"
 ---
 
 > Founded while Zepheniah was still alive, this facility now has radio and missile launching capabilities in the present day. The reasoning for territory being undisputed being Mann Co. owning all assets to the building, until their recent development on an Australium based missile silo. Since then, the property has been split in half for both RED and BLU respectively. _Capture will result in control of ~50km of land._

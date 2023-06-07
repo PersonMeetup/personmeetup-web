@@ -1,12 +1,11 @@
 ---
-title: Person Meetup (The Site)
-description: The central hub for everything I create!
+title: "Person Meetup (The Site)"
+description: "The central hub for everything I create!"
 date: 2022-03-01T13:37:25Z
-img: "src/assets/portfolio/generic-single.jpg"
-type: Web Design
+img: "assets/portfolio/generic-single.jpg"
+type: "Web Design"
 links:
-  - other: https://personmeetup.ca/
-layout: layouts/project.njk
+  - other: "https://personmeetup.ca/"
 ---
 
 I initially wasn't sure about developing my own website. Despite having previously learned about web development both on my own and in university as well as discovering [Neocities](https://neocities.org), it was something that I kept putting off for later. That is, until I saw [NetworkChuck's video on making a website](https://www.youtube.com/watch?v=gwUz3E9AW0w). While the rest of the video wasn't applicable to me, I found myself paying attention to the big 3 reasons Chuck gave for making a website; Standing out, making a difference, and creating opportunities.

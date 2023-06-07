@@ -1,13 +1,11 @@
 ---
-title: Sn0wy Direct
-description: A Discord live show hosted by Cocodotts with co-host Person Meetup and special guest Kalil.
+title: "Sn0wy Direct"
+description: "A Discord live show hosted by Cocodotts with co-host Person Meetup and special guest Kalil."
 date: 2022-08-02
-img: "src/assets/portfolio/sn0wydirect.png"
-type: Video
+img: "assets/portfolio/sn0wydirect.png"
+type: "Video"
 links:
-  - youtube: https://www.youtube.com/watch?v=cutWBfWzw00&list=PLpDSn8R_Xvci0yHufIcusiiCXMDvHI1sA
-  - soundcloud: https://soundcloud.com/sn0wydirect/sets/sn0wy-direct-phase-1
-layout: layouts/project.njk
+  - youtube: "https://www.youtube.com/watch?v=cutWBfWzw00&list=PLpDSn8R_Xvci0yHufIcusiiCXMDvHI1sA"
 ---
 
 _Sn0wy Direct_ was a ~~podcast~~ live show created to give the latest news and host discussions on [wallaceprower's](https://twitter.com/wallaceprower) web-series called [_Sn0wy_](https://www.youtube.com/c/Sn0wyYT). And by give the latest news and host discussions, I mean spread misinformation and berate Wallace. This was another project I worked on with [Cocodotts](https://twitter.com/cocodotts) and [Kalil](https://twitter.com/kvlmiv), coming about spontaneously from Cocodotts asking me to record a stage VC he had set up in the Prower's House. I don't think any of us expected this project to take the direction it did, but it was a fantastic experience nevertheless.

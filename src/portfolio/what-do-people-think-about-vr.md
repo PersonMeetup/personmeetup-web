@@ -1,12 +1,11 @@
 ---
-title: What do people think about VR?
+title: "What do people think about VR?"
 description: "Spurred on by the announcement of Half-Life: Alyx, I asked what the current thoughts on VR were at the time."
 date: 2020-03-21
-img: "src/assets/portfolio/thoughts-about-vr.png"
-type: Video
+img: "assets/portfolio/thoughts-about-vr.png"
+type: "Video"
 links:
-  - youtube: https://www.youtube.com/watch?v=QjKefgd_pzU
-layout: layouts/project.njk
+  - youtube: "https://www.youtube.com/watch?v=QjKefgd_pzU"
 ---
 
 When _Half-Life: Alyx_ got announced, I noticed that the Steam Discussions were all focused on the fact that it was a Half-Life game in VR. Seeing the heat in some discussions, I took to making my own thread with the following question:

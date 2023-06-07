@@ -1,12 +1,11 @@
 ---
-title: Detour
-description: Dang sparking door, now I got to do some dumb tests with even more doors.
+title: "Detour"
+description: "Dang sparking door, now I got to do some dumb tests with even more doors."
 date: 2018-09-01
-img: "src/assets/portfolio/detour.jpg"
-type: Games
+img: "assets/portfolio/detour.jpg"
+type: "Games"
 links:
-  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1499605287
-layout: layouts/project.njk
+  - steam: "https://steamcommunity.com/sharedfiles/filedetails/?id=1499605287"
 ---
 
 > Dang sparking door, now I got to do some dumb tests with even more doors.

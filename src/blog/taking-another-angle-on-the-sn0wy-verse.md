@@ -1,9 +1,8 @@
 ---
-title: Taking Another Angle on the Sn0wy-Verse
-description: Rethinking how the Imagisphere is referred to in *Sn0wy*.
+title: "Taking Another Angle on the Sn0wy-Verse"
+description: "Rethinking how the Imagisphere is referred to in *Sn0wy*."
 tags:
-  - Creative-Writing
-layout: layouts/post.njk
+  - "Creative-Writing"
 ---
 
 As of recent, my friends [Cocodotts](https://twitter.com/cocodotts), [Kalil](https://twitter.com/kvlmiv) and I have been working on a ~~podcast~~ live show where we talk about [wallaceprower's](https://twitter.com/wallaceprower "Also known for sleeping on a couch and talking to his phone during graduation.") [_Sn0wy_](https://www.youtube.com/c/Sn0wyYT "Give us the password already.") series. Our last episode gave me the excuse to look back at some of the fundamental lore of the series, that being it's use of _LittleBigPlanet's_ Imagisphere. As I was forming my notes for the episode I ended up reconsidering how the Imagisphere works within the series, challenging the way we previously discussed the lore as well as how it has been presented. I didn't manage to get my thoughts either fully or clearly, so this post is dedicated to remedying that.
@@ -22,7 +21,7 @@ Finally, there's the minute detail of badges. These function as level selectors 
 
 While it's use of the Imagisphere is near identical to _LittleBigPlanet_, _Sn0wy_ differentiates itself with its use of dimensions. The concept was introduced by Wallace as he explained how people from the Third Dimension are able to create worlds in the Imagisphere, while those in the second dimension cannot. This is best understood with "The _Sn0wy_ Dimension Travel Diagram", created by Cocodotts, which visualizes the relationship between the various cast members and their ability to navigate different worlds. Keep in mind that the yellow line represents those from the Third Dimension while the blue is for those from the Second Dimension.
 
-![Cocodott's “Sn0wy Dimension Travel Diagram.”](src/assets/blog/taking-another-angle-on-the-sn0wy-verse/sn0wy-dimension-model.jpg)
+![Cocodott's “Sn0wy Dimension Travel Diagram.”](assets/blog/taking-another-angle-on-the-sn0wy-verse/sn0wy-dimension-model.jpg)
 
 As well put together as the diagram is, it's clear to see it's a bit convoluted. Within the image, there's questions regarding how Wallace is able to access the Therapy Room and if Tw1g is able to access the same areas as Wallace since their change in the _LittleBigPlanet_ episode. Beyond the image, the episode "[VAPORWAVE & ESCAPISM](https://www.youtube.com/watch?v=FtYbr7RPDXw)" calls into question how accurate Wallace's understanding of the Imagisphere is with Sn0wy accidentally sending him and Clementine into another world. Discussion on the topic of multiple dimensions is itself a challenge to mentally visualize. Not to mention Noir's comment to Wallace that "\[his] theory is a bit shaky in certain areas."
 

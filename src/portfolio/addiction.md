@@ -1,12 +1,11 @@
 ---
-title: Addiction
-description: Test results seemed to suffer when subjects were looking at or within the confines of a maintenance area.
+title: "Addiction"
+description: "Test results seemed to suffer when subjects were looking at or within the confines of a maintenance area."
 date: 2019-11-15
-img: "src/assets/portfolio/addiction.jpg"
-type: Games
+img: "assets/portfolio/addiction.jpg"
+type: "Games"
 links:
-  - steam: https://steamcommunity.com/sharedfiles/filedetails/?id=1913266991
-layout: layouts/project.njk
+  - steam: "https://steamcommunity.com/sharedfiles/filedetails/?id=1913266991"
 ---
 
 > Test results seemed to suffer when subjects were looking at or within the confines of a maintenance area. Currently, there is no reason as to why this happens, with the best theory being the magnitude and endlessness of the environment get in the test subject's head.

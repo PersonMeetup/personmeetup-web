@@ -1,10 +1,9 @@
 ---
-title: Getting ISO Time with Python Datetime
-description: Garnished with a side of Dateutil and Pyperclip
+title: "Getting ISO Time with Python Datetime"
+description: "Garnished with a side of Dateutil and Pyperclip"
 tags:
-  - Programming
-  - Python
-layout: layouts/post.njk
+  - "Programming"
+  - "Python"
 ---
 
 A bit of context before we jump into the code: As I'm finishing a blog post, I include the current date and time in the markdown file's YAML data. The one special thing about that is how it's in ISO 8601 format, which is done so that I can alter the data when it gets processed through [Eleventy](https://www.11ty.dev/), the static site generator I use to make this site. When I [first started properly timestamping](https://github.com/PersonMeetup/personmeetup-web/issues/8), I created a small little Python script that got the current time and copied it into my computer's clipboard in the format I needed. Now that I'm doing my writing within [Obsidian](https://obsidian.md/), that little script I made has been made redundant with templates and their date time formatting options. There's still quite a bit going on in this tiny script, though, so I figured I'd give it a moment to shine before I retired it.

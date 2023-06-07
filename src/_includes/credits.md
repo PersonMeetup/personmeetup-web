@@ -10,5 +10,5 @@ This site uses [open-source](/open-source) projects, and has its code available 
 </ul>
 
 <div class="social">
-	<a rel="license external" title="Unless stated otherwise, all content on this website is licenced under a CC BY-SA 4.0 License" href="https://creativecommons.org/licenses/by-sa/4.0/">{% image "src/assets/cc-bysa.png", "CC BY-SA 4.0", "88px"%}</a> <a rel="external" title="This website is hosted by Neocities" href="https://neocities.org/">{% image "src/assets/neocities.gif", "Hosted on Neocities", "88px" %}</a> <a href="/links/" title="Take a spin, now you're in with the techno-set. You're going surfin' on the internet!">{% image "src/assets/retro.gif", "Rabbit Hole", "88px" %}</a>
+	<a rel="license external" title="Unless stated otherwise, all content on this website is licenced under a CC BY-SA 4.0 License" href="https://creativecommons.org/licenses/by-sa/4.0/">{% image "assets/cc-bysa.png", "CC BY-SA 4.0", "88px"%}</a> <a rel="external" title="This website is hosted by Neocities" href="https://neocities.org/">{% image "assets/neocities.gif", "Hosted on Neocities", "88px" %}</a> <a href="/links/" title="Take a spin, now you're in with the techno-set. You're going surfin' on the internet!">{% image "assets/retro.gif", "Rabbit Hole", "88px" %}</a>
 </div>

@@ -1,9 +1,8 @@
 ---
-title: Hello, World!
-description: We all need to start from somewhere...
+title: "Hello, World!"
+description: "We all need to start from somewhere..."
 tags:
-  - Perspective
-layout: layouts/post.njk
+  - "Perspective"
 ---
 Hey there! My name's Leslie Swan, and this is the first blog post to my website. Being honest, it feels kinda weird to introduce myself by my real name since I often go by Person Meetup online; Even this website is named that! I guess I want to get in front of the name before anything happens, making sure it's clear that Person and I are the same person.
 
@@ -11,7 +10,7 @@ Speaking of this website, its purpose is to give me a space to show off my work 
 
 ## How did we get here?
 
-I included an [about section](/#about) on the index, but I want to go deeper regarding how I got into my main interests. It also serves as a jumping off point for my past, which I'm sure I'll end up mentioning in the future.
+I included an about section on the index, but I want to go deeper regarding how I got into my main interests. It also serves as a jumping off point for my past, which I'm sure I'll end up mentioning in the future.
 
 Much like other kids in the late 2000s, I spent my time on the Internet. I stayed within the closest thing to an Internet safe zone, however, as my web activities consisted of playing _Poptropica_ and _Miniclip_. It also included watching and making my own _Zimmer Twinz_ episodes, which begins a theme throughout my childhood of digital creation. I enjoyed making my own house in _Everybody Edits_, and took advantage of the creative potential that _Minecraft_ offered. I spent my free time creating for fun, and many of the friends I met at the time came from a passion to create as well. (Shoutouts to Blue, Sam, and the rest of the ol' Minecraft gang!)
 
