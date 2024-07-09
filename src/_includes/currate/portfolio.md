@@ -1,4 +1,4 @@
-While I'm happy with many of the projects I've worked on in the past, the ones I'm truly proud of are the ones I'm working on currently. One of those projects is [_Catalyst_](https://www.moddb.com/mods/portal-catalyst), a mod for _Portal 2_ that begins right before GLaDOS's destruction. In the midst of a facility tearing itself apart, Catalyst takes players through Aperture's transitional period between the clinical style of the original to the elaborate vistas of the sequel. The second project is [_Covalria Sow_](https://twitter.com/COVALRIASOW), a fantasy, slice of life webcomic that's still in active development.
+While I'm happy with many of the projects I've worked on in the past, the ones I'm truly proud of are the ones I'm working on currently. One of those projects is [_Catalyst_](https://www.moddb.com/mods/portal-catalyst), a mod for _Portal 2_ that takes players through the visual transition between the two games. The second project is [_COVALRIA_](https://covalria.com), a fantasy, slice of life webcomic that's still in active development.
 
 Beyond my upcoming work, there are quite a few released projects I'm still proud of:
 
