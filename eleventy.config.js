@@ -174,13 +174,13 @@ module.exports = function (eleventyConfig) {
 	// Datetime Filters from https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "mst" }).toFormat(
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(
 			format || "DD"
 		);
 	});
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-		return DateTime.fromJSDate(dateObj, { zone: "mst" }).toFormat("yyyy-LL-dd");
+		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
 	});
 
 	// Filter meta collections (archive, blog, library, ect) from regular tag collections
