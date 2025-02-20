@@ -1,6 +1,7 @@
 ---
 title: "Facing Creative Road-Blocks"
 description: "I find myself not working on the things I really want to. This blog-post is me pointing out the reasons why."
+date: 2022-04-26
 tags:
   - "Perspective"
 ---

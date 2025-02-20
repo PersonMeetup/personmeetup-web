@@ -1,0 +1,4 @@
+{
+	"tags": ["blog", "archive"],
+	"layout": "layouts/post.njk"
+}

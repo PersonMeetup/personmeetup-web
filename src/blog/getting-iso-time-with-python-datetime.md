@@ -1,6 +1,7 @@
 ---
 title: "Getting ISO Time with Python Datetime"
 description: "Garnished with a side of Dateutil and Pyperclip"
+date: 2023-02-12
 tags:
   - "Programming"
   - "Python"

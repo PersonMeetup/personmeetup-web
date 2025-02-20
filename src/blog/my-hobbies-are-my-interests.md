@@ -1,6 +1,7 @@
 ---
 title: "My Hobbies Are My Interests"
 description: "A comment about my site's purpose got me thinking about how my active interests formed."
+date: 2023-02-20
 tags:
   - "Perspective"
 ---

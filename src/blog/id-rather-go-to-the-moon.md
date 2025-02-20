@@ -1,7 +1,7 @@
 ---
 title: "I'd Rather Go To The Moon"
 description: "Thinking back about neglected projects and self-criticism."
-date: "2023-08-20T20:04"
+date: 2023-08-20T20:04
 tags:
   - "Perspective"
 ---
@@ -12,7 +12,7 @@ That plan didn't work out. In fact, I ended up with *more* projects on my plate 
 
 I have a love/hate relationship with this pile of ideas. On the one hand, I can pull something from it and be garanteed it will be of interest to me! On the other, there are some projects that have a magnettic pull to them from either how long they've been shelved or how complete they are. And as the pile fills with more ideas to realize and skills to develop, it's gotten big enough that I occasionally get distracted by it when doing things for either school or work.
 
-It's also worth mentioning that this summer has given me more long-term projects I'll be working on alongside [Covalria Sow](http://covalriasow.com) and [Catalyst](https://www.moddb.com/mods/portal-catalyst), both of which I've been doing writing for. As their stories have become more developed, I've been feeling more of a pull as I get closer to writing the scenes I've been thinking about for ages. While I appreciate the motivation that gives me, it still adds to the chaos of figuring out what to work on.
+It's also worth mentioning that this summer has given me more long-term projects I'll be working on alongside [_COVALRIA_](https://covalria.com) and [Catalyst](https://www.moddb.com/mods/portal-catalyst), both of which I've been doing writing for. As their stories have become more developed, I've been feeling more of a pull as I get closer to writing the scenes I've been thinking about for ages. While I appreciate the motivation that gives me, it still adds to the chaos of figuring out what to work on.
 
 Another long-term project that also happens to involve writing is this website. Emotionally, it's one of the oddest projects I've worked on since I've felt it was neglected while actively developing it. My mindset was that since I wasn't updating the blog spesifically, the changes I was making to my site were pointless. As much as I value the [“Perspective”](/blog/tags/perspective/) tag, the root idea of most articles with it up to this point is "I'm neglecting the blog."
 
